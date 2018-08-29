@@ -1,0 +1,6 @@
+[submodule "src/assets/logos"]
+	path = src/assets/logos
+	url = https://JamesClow@bitbucket.org/atticusAI/futura-logos.git
+[submodule "src/assets/_logos"]
+	path = src/assets/_logos
+	url = https://JamesClow@bitbucket.org/atticusAI/futura-logos.git

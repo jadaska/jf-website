@@ -1,0 +1,432 @@
+@import "./constants";
+
+.button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #FFF;
+  box-shadow: $z_depth_1;
+  text-decoration: none;
+  padding: 5px 12px;
+  user-select: none;
+  .fa{
+    font-size: 15px;
+    margin-right: 6px;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+  &:active{
+    box-shadow: $z_depth_0;
+  }
+  &.flat{
+    box-shadow: $z_depth_0 !important;
+  }
+  &.circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    box-shadow: $z_depth_2;
+    padding: 0px;
+    .fa{
+      font-size: 18px;
+      margin-right: 0px;
+      z-index: 2;
+    }
+    &.small{
+      width: 25px;
+      height: 25px;
+      font-size: 11px;
+      box-shadow: $z_depth_1;
+      .fa{
+        font-size: 11px;
+      }
+      .fa-level-up{
+        transform: rotateZ(90deg);
+      }
+      // .fa-download{
+      //   font-size: 13px;
+      // }
+      .loader{
+        top: -5px;
+        left: -5px;
+        width: 35px;
+        height: 35px;
+      }
+    }
+    &.medium{
+      width: 30px;
+      height: 30px;
+      box-shadow: $z_depth_1;
+      .fa{
+        font-size: 13px;
+      }
+    }
+    &.medium-large{
+      width: 35px;
+      height: 35px;
+      box-shadow: $z_depth_1;
+      .fa{
+        font-size: 16px;
+      }
+    }
+    &:active{
+      box-shadow: $z_depth_0;
+    }
+    .fade-spinner-enter-active, .fade-spinner-leave-active {
+      transition: opacity .6s
+    }
+    .fade-spinner-enter, .fade-spinner-leave-to /* .fade-leave-active below version 2.1.8 */ {
+      opacity: 0
+    }
+    .loader {
+      z-index: 1;
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      -webkit-animation: load3 0.6s infinite linear;
+      animation: load3 0.6s infinite linear;
+      -webkit-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
+      &:before {
+        width: 50%;
+        height: 50%;
+        border-radius: 100% 0 0 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+      }
+      &:after {
+        width: 75%;
+        height: 75%;
+        border-radius: 50%;
+        content: '';
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+      &.purple{
+        background: -moz-linear-gradient(left, $dp 10%, rgba(255, 255, 255, 0) 42%);
+        background: -webkit-linear-gradient(left, $dp 10%, rgba(255, 255, 255, 0) 42%);
+        background: -o-linear-gradient(left, $dp 10%, rgba(255, 255, 255, 0) 42%);
+        background: -ms-linear-gradient(left, $dp 10%, rgba(255, 255, 255, 0) 42%);
+        background: linear-gradient(to right, $dp 10%, rgba(255, 255, 255, 0) 42%);
+        &:before {
+          background: $dp;
+        }
+        &:after{
+          background: $p;
+        }
+      }
+      &.yellow{
+        background: -moz-linear-gradient(left, $dy 10%, rgba(255, 255, 255, 0) 42%);
+        background: -webkit-linear-gradient(left, $dy 10%, rgba(255, 255, 255, 0) 42%);
+        background: -o-linear-gradient(left, $dy 10%, rgba(255, 255, 255, 0) 42%);
+        background: -ms-linear-gradient(left, $dy 10%, rgba(255, 255, 255, 0) 42%);
+        background: linear-gradient(to right, $dy 10%, rgba(255, 255, 255, 0) 42%);
+        &:before {
+          background: $dy;
+        }
+        &:after{
+          background: $y;
+        }
+      }
+      &.blue{
+        background: -moz-linear-gradient(left, $db 10%, rgba(255, 255, 255, 0) 42%);
+        background: -webkit-linear-gradient(left, $db 10%, rgba(255, 255, 255, 0) 42%);
+        background: -o-linear-gradient(left, $db 10%, rgba(255, 255, 255, 0) 42%);
+        background: -ms-linear-gradient(left, $db 10%, rgba(255, 255, 255, 0) 42%);
+        background: linear-gradient(to right, $db 10%, rgba(255, 255, 255, 0) 42%);
+        &:before {
+          background: $db;
+        }
+        &:after{
+          background: $b;
+        }
+      }
+      &.light-blue{
+        background: -moz-linear-gradient(left, $elb 10%, rgba(255, 255, 255, 0) 42%);
+        background: -webkit-linear-gradient(left, $elb 10%, rgba(255, 255, 255, 0) 42%);
+        background: -o-linear-gradient(left, $elb 10%, rgba(255, 255, 255, 0) 42%);
+        background: -ms-linear-gradient(left, $elb 10%, rgba(255, 255, 255, 0) 42%);
+        background: linear-gradient(to right, $elb 10%, rgba(255, 255, 255, 0) 42%);
+        &:before {
+          background: $elb;
+        }
+        &:after{
+          background: $b;
+        }
+      }
+      &.green{
+        background: -moz-linear-gradient(left, $dg 10%, rgba(255, 255, 255, 0) 42%);
+        background: -webkit-linear-gradient(left, $dg 10%, rgba(255, 255, 255, 0) 42%);
+        background: -o-linear-gradient(left, $dg 10%, rgba(255, 255, 255, 0) 42%);
+        background: -ms-linear-gradient(left, $dg 10%, rgba(255, 255, 255, 0) 42%);
+        background: linear-gradient(to right, $dg 10%, rgba(255, 255, 255, 0) 42%);
+        &:before {
+          background: $dg;
+        }
+        &:after{
+          background: $g;
+        }
+      }
+      &.red{
+        background: -moz-linear-gradient(left, $dlr 10%, rgba(255, 255, 255, 0) 42%);
+        background: -webkit-linear-gradient(left, $dlr 10%, rgba(255, 255, 255, 0) 42%);
+        background: -o-linear-gradient(left, $dlr 10%, rgba(255, 255, 255, 0) 42%);
+        background: -ms-linear-gradient(left, $dlr 10%, rgba(255, 255, 255, 0) 42%);
+        background: linear-gradient(to right, $dlr 10%, rgba(255, 255, 255, 0) 42%);
+        &:before {
+          background: $dlr;
+        }
+        &:after{
+          background: $lr;
+        }
+      }
+    }
+    .white-cover{
+      z-index: 3;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: #FFF;
+      border-radius: 50%;
+    }
+  }
+  &.macro{
+    margin: 0px 7px 10px 7px;
+    padding: 10px 15px;
+    font-size: 18px;
+    box-shadow: $z_depth_1;
+    .fa{
+      margin-right: 8px;
+      font-size: 18px;
+    }
+  }
+  &.toggle{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $y;
+    border: 2px solid $y;
+    font-weight: 600;
+    .fa{
+      margin: 0px;
+    }
+    &:hover{
+      background-color: $y;
+      color: #FFF;
+    }
+    &.active{
+      border-color: $dy;
+      background-color: $dy;
+      color: #FFF;
+    }
+    &.blue{
+      color: $b;
+      border: 2px solid $b;
+      background-color: #FFF;
+      &:hover{
+        color: #FFF;
+        border: 2px solid $b;
+        background-color: $b;
+      }
+      &.active{
+        color: #FFF;
+        border-color: $db;
+        background-color: $db;
+      }
+    }
+  }
+  input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  /////////////////////////////////// Colors ///////////////////////////////////
+
+  &.f-white{
+    background-color: #FFF;
+    color: $fp;
+    border: 3px solid $fp;
+    font-weight: 500;
+    padding: 10px 30px;
+    font-size: 24px;
+    &:hover{
+      // background-color: $fr;
+      border-color: $fr;
+      color: $fr;
+      // transform: scale(1.05);
+    }
+  }
+  &.purple{
+    background-color: $p;
+    &:hover{
+      background-color: $dp;
+    }
+  }
+  &.blue{
+    background-color: $b;
+    &:hover{
+      background-color: $db;
+    }
+  }
+  &.light-blue{
+    background-color: $lb;
+    &:hover{
+      background-color: $b;
+    }
+  }
+  &.green{
+    background-color: $g;
+    &:hover{
+      background-color: $dg;
+    }
+    &.inverse{
+      color: $g;
+      border-color: $g;
+      &:hover{
+        background-color: $g;
+      }
+    }
+  }
+  &.yellow{
+    background-color: $y;
+    &:hover{
+      background-color: $dy;
+    }
+    &.inverse{
+      // background-color: $bar_color;
+      border-width: 3px;
+      color: $y;
+      border-color: $y;
+      &:hover{
+        background-color: $y;
+      }
+      &.active{
+        border-color: $dy;
+        background-color: $dy;
+      }
+    }
+  }
+  &.orange{
+    background-color: $o;
+    &:hover{
+      background-color: $do;
+    }
+  }
+  &.light-red{
+    background-color: $lr;
+    &:hover{
+      background-color: $dlr;
+    }
+  }
+  &.red{
+    background-color: $r;
+    &:hover{
+      background-color: $dr;
+    }
+  }
+  &.white{
+    color: #777;
+    background-color: #FFF;
+    &:hover{
+      background-color: #DDD;
+    }
+  }
+  &.light-grey{
+    background-color: #CCC;
+    &:hover{
+      background-color: #BBB;
+    }
+    &.inverse{
+      color: #CCC;
+      border-color: #CCC;
+      &:hover{
+        background-color: #CCC;
+      }
+    }
+  }
+  &.grey{
+    background-color: #BBB;
+    &:hover{
+      background-color: #999;
+    }
+    &.inverse{
+      color: #BBB;
+      border-color: #BBB;
+      &:hover{
+        background-color: #BBB;
+      }
+    }
+  }
+  &.black{
+    background-color: #222;
+    &:hover{
+      background-color: #000;
+    }
+  }
+  &.grey-red{
+    background-color: #BBB;
+    &:hover{
+      background-color: $dr;
+    }
+  }
+  &.inverse{
+    border: 2px solid #FFF;
+    background-color: #FFF;
+    &:hover{
+      color: #FFF;
+    }
+  }
+  &.low-profile{
+    opacity: 0.4;
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+
+
+.button-component{
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  margin: 0px 7px 20px 7px;
+  box-shadow: $z_depth_1;
+  .button{
+    margin: 0px;
+    box-shadow: $z_depth_0;
+  }
+  input{
+    height: 100%;
+    padding: 10px 15px 8px 15px;
+    border-bottom: 2px solid #FFF;
+    font-size: 18px;
+    &:focus{
+      border-bottom: 2px solid $b;
+    }
+  }
+}

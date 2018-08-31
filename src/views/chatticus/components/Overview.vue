@@ -55,7 +55,7 @@
           </div>
         </div>
         <span class="scroll-down">
-          <span class="scroll-down-row" @click="scrollToSection(sections[1])">
+          <span class="scroll-down-row" @click="$emit('scroll-to-section', sections[1])">
             <span class="fa fa-arrow-down"></span>
             Learn More
           </span>
@@ -143,44 +143,15 @@
 <script>
   import { TweenLite, TimelineLite } from "gsap";
   export default{
-    props: [ "saveScroll" ],
+    props: [ "appElm", "sections", "saveScroll" ],
     mounted: function(){
-      this.chatticus_elm = document.getElementById("chatticus");
-      if(this.saveScroll){
-        this.chatticus_elm.scrollTop = this.saveScroll;
-      }else{
-        this.chatticus_elm.scrollTop = 0;
-      }
-      this.chatticus_elm.addEventListener('scroll', (e)=>{
-        this.scrollDownEvent();
-      });
-      this.sections = document.getElementsByClassName("page-section full-page");
-    },
-    data(){
-      return{
-        sections: [],
-        active_section: 0,
-      }
-    },
-    methods: {
-      scrollToSection(section){
-        // console.log("---------");
-        // console.log(this.chatticus_elm.scrollTop);
-        // console.log(this.chatticus_elm.clientHeight);
-        // console.log(this.chatticus_elm.scrollHeight);
-        // console.log(section.scrollHeight)
-        var section_margin = section.currentStyle || window.getComputedStyle(section);
-        var section_margin_top = parseInt(section_margin.marginTop.replace("px", ""));
-        TweenLite.to(this.chatticus_elm, 1, {scrollTop: section.offsetTop - section.scrollTop + section.clientTop - section_margin_top - 60, ease: Sine.easeInOut})
-      },
-      scrollDownEvent(){
-        for(var s in this.sections){
-          if(this.chatticus_elm.scrollTop < this.sections[s].offsetTop){
-            this.active_section = s;
-            break;
-          }
+      if(this.appElm){
+        if(this.saveScroll){
+          this.appElm.scrollTop = this.saveScroll;
+        }else{
+          this.appElm.scrollTop = 0;
         }
-      },
-    }
+      }
+    },
   }
 </script>

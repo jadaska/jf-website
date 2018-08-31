@@ -2,8 +2,14 @@
   @import "@/styles/constants.scss";
   @import "@/styles/generics.scss";
   @import "@/styles/buttons.scss";
+  .product-page{
+    margin-bottom: 20px !important;
+  }
   .scroll-down{
     margin-bottom: 40px;
+    &.bottom{
+      margin-top: 120px;
+    }
   }
 </style>
 
@@ -119,6 +125,12 @@
             </div>
           </div>
         </div>
+        <span class="scroll-down bottom">
+          <span class="scroll-down-row" @click="$router.push('/chatticus')">
+            <span class="fa fa-arrow-left"></span>
+            Back
+          </span>
+        </span>
       </div>
     </div>
   </div>

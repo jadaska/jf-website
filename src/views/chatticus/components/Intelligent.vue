@@ -4,6 +4,9 @@
   @import "@/styles/buttons.scss";
   .scroll-down{
     margin-bottom: 40px;
+    &.tight{
+      margin-bottom: 20px;
+    }
   }
 </style>
 

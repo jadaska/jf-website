@@ -73,32 +73,6 @@ body{
   line-height: 100%;
 }
 
-#section-nav{
-  position: absolute;
-  left: 20px;
-  top: 50vh;
-  transform: translateY(-50%);
-  cursor: pointer;
-  .section{
-    padding: 8px 0px;
-    &:hover{
-      // width: 40px;
-      .box{
-        background-color: $fp;
-      }
-    }
-    .box{
-      width: 30px;
-      height: 12px;
-      background-color: #DDD;
-      transition: width 0.1s ease;
-      &.active{
-        width: 50px;
-      }
-    }
-  }
-}
-
 .relative-page-nav{
   .next{
 
@@ -109,13 +83,13 @@ body{
 }
 
 .product-container{
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
+  // width: 100%;
+  // height: 100%;
+  // overflow-y: auto;
+  // overflow-x: hidden;
   color: $fp;
   .product-col{
-    min-height: 100%;
+    min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,39 +100,13 @@ body{
       max-width: 1000px;
       padding: 0px 20px;
       .page-section{
-        margin-top: 120px;
+        margin-top: 100px;
         &.full-page{
           margin-top: calc(50vh - 260px);
           padding-bottom: 40px;
         }
         .button-row{
           margin-bottom: 50px;
-        }
-        .scroll-down{
-          font-size: 22px;
-          font-weight: 600;
-          color: $fp;
-          display: inline-block;
-          &.small{
-            font-size: 18px;
-            font-weight: 600;
-          }
-          .scroll-down-row{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            &:hover{
-              color: $fr;
-              cursor: pointer;
-            }
-            .fa{
-              margin-right: 12px;
-            }
-            .fa-arrow-right{
-              margin-right: 0px;
-              margin-left: 12px;
-            }
-          }
         }
         .side-2-side{
           display: flex;
@@ -198,6 +146,32 @@ body{
             .card-description{
               padding: 22px 36px 22px 6px;
             }
+          }
+        }
+      }
+      .scroll-down{
+        font-size: 22px;
+        font-weight: 600;
+        color: $fp;
+        display: inline-block;
+        &.small{
+          // font-size: 18px;
+          // font-weight: 600;
+        }
+        .scroll-down-row{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover{
+            color: $fr;
+            cursor: pointer;
+          }
+          .fa{
+            margin-right: 12px;
+          }
+          .fa-arrow-right{
+            margin-right: 0px;
+            margin-left: 12px;
           }
         }
       }

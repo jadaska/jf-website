@@ -36,22 +36,67 @@
             display: flex;
             align-items: center;
             #futura-banner-logo{
-              height: calc(100% - 10px);
+              height: calc(100% - 30px);
               margin-right: 20px;
-              margin-left: -8px;
             }
             .nav-item{
+              position: relative;
               margin: 0px 20px;
               padding: 3px;
-              border: 3px solid #FFF;
               font-size: 18px;
               font-weight: 500;
-              &:hover{
-                cursor: pointer;
-                color: $fp;
+              .nav-title{
+                position: relative;
+                // border: 3px solid #FFF;
+                user-select: none;
+                &:hover{
+                  cursor: pointer;
+                  color: $fp;
+                }
+                &.active{
+                  color: $fp;
+                  &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: -5px;
+                    left: -3px;
+                    width: calc(100% + 6px);
+                    height: 2px;
+                    background-color: $fp;
+                  }
+                  // border-bottom: 3px solid $fp;
+                }
               }
-              &.active{
-                border-bottom: 3px solid $fp;
+              .nav-menu{
+                position: absolute;
+                bottom: -16px;
+                left: -24px;
+                transform: translateY(100%);
+                background-color: #FFF;
+                padding: 10px 0px 0px 0px;
+                box-shadow: $z_depth_1;
+                .nav-mask{
+                  position: absolute;
+                  top: -5px;
+                  left: 0px;
+                  width: 100%;
+                  height: 10px;
+                  background-color: #FFF;
+                }
+                .nav-link{
+                  display: block;
+                  text-decoration: none;
+                  padding: 0px 30px 18px 30px;
+                  // font-family: "fresno",sans-serif;
+                  // letter-spacing: 5px;
+                  color: $fp;
+                  font-size: 20px;
+                  font-weight: 500;
+                  &:hover{
+                    cursor: pointer;
+                    color: $fr;
+                  }
+                }
               }
             }
             .nav-fill{
@@ -74,6 +119,10 @@
             }
           }
         }
+        #view-container{
+          padding-top: 60px;
+          height: calc(100% - 60px);
+        }
       }
     }
   }
@@ -85,13 +134,31 @@
       <div id="nav-container">
         <img id="futura-banner-logo" src="@/assets/_logos/futura_horizontal.svg" />
         <div class="nav-item">
-          Products
+          <div class="nav-title" :class="{'active': nav_selected == 0}" @click="nav_selected = 0">
+            Products
+          </div>
+          <div class="nav-menu" v-if="nav_selected == 0" v-click-outside="()=>{nav_selected = -1}">
+            <div class="nav-mask"></div>
+            <div class="nav-link">
+              Scribe
+            </div>
+            <div @click="goTo('/Chatticus')" class="nav-link">
+              Chatticus
+            </div>
+            <div class="nav-link">
+              ROAR
+            </div>
+          </div>
         </div>
         <div class="nav-item">
-          About
+          <div class="nav-title">
+            About
+          </div>
         </div>
         <div class="nav-item">
-          Jobs
+          <div class="nav-title">
+            Jobs
+          </div>
         </div>
         <div class="nav-fill">
           <div class="login">
@@ -100,6 +167,24 @@
         </div>
       </div>
     </div>
-    <router-view/>
+    <div id="view-container">
+      <router-view/>
+    </div>
   </div>
 </template>
+
+<script>
+  export default{
+    data(){
+      return{
+        nav_selected: -1,
+      }
+    },
+    methods: {
+      goTo(route){
+        this.nav_selected = -1;
+        this.$router.push(route)
+      }
+    }
+  }
+</script>

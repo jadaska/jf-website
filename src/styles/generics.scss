@@ -9,7 +9,7 @@ body{
   margin-bottom: 10px;
   font-family: "fresno",sans-serif;
   color: $fr;
-  font-size: 120px;
+  font-size: 140px;
   letter-spacing: 16px;
 }
 .futura-sub-title{
@@ -17,6 +17,9 @@ body{
   color: $fp;
   font-size: 48px;
   font-weight: 600;
+  &.red{
+    color: $fr;
+  }
 }
 
 .section-title{
@@ -37,7 +40,7 @@ body{
 }
 .section-content{
   margin-bottom: 30px;
-  color: $fp;
+  color: #79677e;
   font-size: 26px;
   &.bold{
     font-weight: 600;

@@ -2,11 +2,15 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from './views/Home.vue'
+
 import Chatticus from './views/chatticus/Chatticus.vue'
 import ChatticusOverview from './views/chatticus/components/Overview.vue'
 import ChatticusIntegrations from './views/chatticus/components/Inteigrations.vue'
 import ChatticusIntelligent from './views/chatticus/components/Intelligent.vue'
 import ChatticusCustom from './views/chatticus/components/Custom.vue'
+
+import Scribe from './views/scribe/Scribe.vue'
+import ScribeOverview from './views/scribe/components/Overview.vue'
 
 Vue.use(Router)
 
@@ -43,6 +47,19 @@ export default new Router({
           component: ChatticusCustom,
           meta: { transition_name: 'slide'},
         }
+      ]
+    },{
+      path: '/scribe',
+      name: 'scribe',
+      component: Scribe,
+      // meta: { transition_name: },
+      children: [
+        {
+          path: '',
+          name: 'overview',
+          component: ScribeOverview,
+          meta: { transition_name: 'slide', save_scroll: true },
+        },
       ]
     },
   ],

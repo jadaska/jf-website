@@ -145,14 +145,14 @@
           </div>
           <div class="nav-menu" v-if="nav_selected == 0" v-click-outside="()=>{nav_selected = -1}">
             <div class="nav-mask"></div>
-            <div class="nav-link">
+            <div @click="goTo('/Scribe')" class="nav-link">
               Scribe
             </div>
             <div @click="goTo('/Chatticus')" class="nav-link">
-              Chatticus
+              Atticus
             </div>
             <div class="nav-link">
-              ROAR
+              Respondent
             </div>
           </div>
         </div>

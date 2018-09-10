@@ -7,6 +7,10 @@
     margin-right: 20px;
   }
 }
+#scribe-text{
+  // width: 600px;
+  // margin-bottom: -90px;
+}
 .section-image{
   position: relative;
   .box{
@@ -39,51 +43,59 @@
   <div class="product-col">
     <div class="product-page">
       <div class="page-section full-page">
-        <div class="futura-title">
-          Atticus
-        </div>
-        <div class="futura-sub-title">
-          A platform for improving <br />
-          legal practitioners’ workflow
-        </div>
-        <div class="button-row">
-          <div class="button f-white">
-            Get Started
+        <div class="side-2-side">
+          <div class="section-text">
+            <div class="futura-title">
+              <!-- <img id="scribe-text" src="../assets/scribe_text.svg" /> -->
+              Scribe
+            </div>
+            <div class="futura-sub-title">
+              Document Creation<br />
+              Simple and Swift
+            </div>
+            <div class="button-row">
+              <div class="button f-white">
+                Get Started
+              </div>
+            </div>
+            <span class="scroll-down">
+              <span class="scroll-down-row" @click="$emit('scroll-to-section', sections[1])">
+                <span class="fa fa-arrow-down"></span>
+                Learn More
+              </span>
+            </span>
           </div>
-          <div class="button f-white">
-            See What's New
+          <div class="section-image">
+            <img id="scribe-icon" src="../assets/scribe.svg" />
           </div>
         </div>
-        <span class="scroll-down">
-          <span class="scroll-down-row" @click="$emit('scroll-to-section', sections[1])">
-            <span class="fa fa-arrow-down"></span>
-            Learn More
-          </span>
-        </span>
       </div>
       <div class="page-section full-page">
         <div class="side-2-side">
           <div class="section-image">
             <!-- <div id="orbit-animation"></div> -->
             <!-- <div class="box"></div> -->
-            <img id="orbit-image" src="@/assets/planet-01.svg" />
+            <img id="scribe-icon" src="../assets/scribe_1.svg" />
           </div>
           <div class="section-text">
             <div class="section-title">
-              Streamline your work
+              More Files<br />
+              Less Time
             </div>
             <div class="section-sub-title">
-              Increase productivity, save time, and enjoy a frictionless technology experience.
+              Any Document, Any Format, Any Device, Any Time
             </div>
             <div class="section-content">
-              Chatticus unifies the various apps you already use under one conveint and easy to use interface that integrates directly into your email application.
+              Scribe helps you create frequently-used documents fast. We preload your document templates, so all you need to do is answer some quick questions online and your completed documents are ready.
             </div>
-            <span class="scroll-down small">
+            <!-- It also works across a variety of document types, including Word, Excel, PDF forms, email (EML), and calendar invites (ICS). -->
+            <!-- Send us your preferred document templates that include your legal language and the desired dynamic sections, and the Scribe team will generate template forms for you, creating a custom, easy-to-use Scribe application for the documents you frequently use. -->
+            <!-- <span class="scroll-down small">
               <span class="scroll-down-row" @click="$router.push('/chatticus/integrations')">
                 Learn More
                 <span class="fa fa-arrow-right"></span>
               </span>
-            </span>
+            </span> -->
           </div>
         </div>
       </div>
@@ -91,48 +103,47 @@
         <div class="side-2-side">
           <div class="section-text">
             <div class="section-title">
-              Intelligent Support
+              Simplicity <br />in Numbers
             </div>
             <div class="section-sub-title">
-              Leave the non-billable work to the machines and focus on what matters to you.
+              Whether you have just one document or hundreds
             </div>
             <div class="section-content">
-              Chatticus uses a sophistiacted AI layer to intelligently scan your emails, provide recomendations and transfer information into your favorite applications.
+              Scribe unifies common fields to ensure you only need to enter information once. No more headaches from managing and checking countless documents to ensure consistency. Instead free up your time to focus on what matters.
             </div>
-            <span class="scroll-down small">
+            <!-- <span class="scroll-down small">
               <span class="scroll-down-row" @click="$router.push('/chatticus/intelligent')">
                 Learn More
                 <span class="fa fa-arrow-right"></span>
               </span>
-            </span>
+            </span> -->
           </div>
           <div class="section-image">
-            <img id="intelligent-image" src="@/assets/intelligent-01.svg" />
+            <img id="scribe-icon" src="../assets/scribe_2.svg" />
           </div>
         </div>
       </div>
       <div class="page-section full-page">
         <div class="side-2-side">
           <div class="section-image">
-            <img id="custom-image" src="@/assets/custom-01.svg" />
+            <img id="scribe-icon" src="../assets/scribe_3.svg" />
           </div>
           <div class="section-text">
             <div class="section-title">
-              Custom Legal Solutions
+              Available <br />On-the-go
             </div>
             <div class="section-sub-title">
-              Our mission is to make your life easier.
+              No matter where you are
             </div>
             <div class="section-content">
-              We work with our users everyday to invent powerful new tools that are tailored to meet their needs.
-              <!-- From IP to Immigration, and Corporate to CommLit, our vision is to customize intelligent tools specific to your practice’s substantive legal work and administrative workflow needs. -->
+              Simply launch Scribe on your phone, tablet, or desktop, fill out the form, and generate your documents.  Immediately download the results for review or to share with colleagues, all from Scribe’s simple-to-use interface.
             </div>
-            <span class="scroll-down small">
+            <!-- <span class="scroll-down small">
               <span class="scroll-down-row" @click="$router.push('/chatticus/custom')">
                 Learn More
                 <span class="fa fa-arrow-right"></span>
               </span>
-            </span>
+            </span> -->
           </div>
         </div>
       </div>

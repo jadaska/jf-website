@@ -1,0 +1,112 @@
+@import "@/styles/constants.scss";
+
+#product-section {
+  width: 100%;
+  height: 700px;
+  background-color: $lp;
+  color: $w;
+  display: flex;
+	.selection-area {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $z_depth_1;
+    z-index: 1;
+    .row{
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 0px;
+      &:not(:first-child){
+        &:hover{
+          background-color: $elp;
+        }
+        &:active{
+          background-color: $dp;
+        }
+      }
+      .select{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-color: $p;
+      }
+      .selection-title {
+        width: 500px;
+        font-weight: 500;
+        font-size: 40px;
+        margin-bottom: 10px;
+  		}
+  		.selection {
+        width: 500px;
+        display: flex;
+        z-index: 1;
+        pointer-events: none;
+  			.bullet {
+          width: 34px;
+          height: 15px;
+          background-color: #FFF;
+          margin-top: 10px;
+          margin-right: 40px;
+  			}
+  			.selection-text {
+          font-size: 28px;
+  			}
+  		}
+    }
+	}
+
+	.product-area {
+    width: 50%;
+    background-color: $dp;
+    // box-shadow: $z_depth_1;
+    z-index: 0;
+    .drop-in-enter-active, .drop-in-leave-active {
+      transition: all 1s;
+    }
+    .drop-in-enter{
+      opacity: 0;
+    }
+    .drop-in-leave-to{
+      opacity: 0;
+    }
+		.product {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+			.product-module {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+				.product-logo {
+          height: 130px;
+          margin-bottom: 20px;
+          &.scribe{
+            // width: 140px;
+          }
+				}
+				.product-name {
+          margin-bottom: 20px;
+          font-family: "fresno",sans-serif;
+          font-size: 60px;
+          letter-spacing: 16px;
+          margin-left: 10px;
+				}
+				.product-learn-more {
+          font-size: 20px;
+          letter-spacing: 4px;
+				}
+			}
+		}
+	}
+}

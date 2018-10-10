@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from './views/Home.vue'
+import Home from './views/home/Home.vue'
 
 import Chatticus from './views/chatticus/Chatticus.vue'
 import ChatticusOverview from './views/chatticus/components/Overview.vue'

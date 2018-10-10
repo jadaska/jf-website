@@ -154,19 +154,6 @@
           background: $b;
         }
       }
-      &.light-blue{
-        background: -moz-linear-gradient(left, $elb 10%, rgba(255, 255, 255, 0) 42%);
-        background: -webkit-linear-gradient(left, $elb 10%, rgba(255, 255, 255, 0) 42%);
-        background: -o-linear-gradient(left, $elb 10%, rgba(255, 255, 255, 0) 42%);
-        background: -ms-linear-gradient(left, $elb 10%, rgba(255, 255, 255, 0) 42%);
-        background: linear-gradient(to right, $elb 10%, rgba(255, 255, 255, 0) 42%);
-        &:before {
-          background: $elb;
-        }
-        &:after{
-          background: $b;
-        }
-      }
       &.green{
         background: -moz-linear-gradient(left, $dg 10%, rgba(255, 255, 255, 0) 42%);
         background: -webkit-linear-gradient(left, $dg 10%, rgba(255, 255, 255, 0) 42%);
@@ -181,16 +168,16 @@
         }
       }
       &.red{
-        background: -moz-linear-gradient(left, $dlr 10%, rgba(255, 255, 255, 0) 42%);
-        background: -webkit-linear-gradient(left, $dlr 10%, rgba(255, 255, 255, 0) 42%);
-        background: -o-linear-gradient(left, $dlr 10%, rgba(255, 255, 255, 0) 42%);
-        background: -ms-linear-gradient(left, $dlr 10%, rgba(255, 255, 255, 0) 42%);
-        background: linear-gradient(to right, $dlr 10%, rgba(255, 255, 255, 0) 42%);
+        background: -moz-linear-gradient(left, $dr 10%, rgba(255, 255, 255, 0) 42%);
+        background: -webkit-linear-gradient(left, $dr 10%, rgba(255, 255, 255, 0) 42%);
+        background: -o-linear-gradient(left, $dr 10%, rgba(255, 255, 255, 0) 42%);
+        background: -ms-linear-gradient(left, $dr 10%, rgba(255, 255, 255, 0) 42%);
+        background: linear-gradient(to right, $dr 10%, rgba(255, 255, 255, 0) 42%);
         &:before {
-          background: $dlr;
+          background: $dr;
         }
         &:after{
-          background: $lr;
+          background: $r;
         }
       }
     }
@@ -293,12 +280,6 @@
       background-color: $db;
     }
   }
-  &.light-blue{
-    background-color: $lb;
-    &:hover{
-      background-color: $b;
-    }
-  }
   &.green{
     background-color: $g;
     &:hover{
@@ -329,18 +310,6 @@
         border-color: $dy;
         background-color: $dy;
       }
-    }
-  }
-  &.orange{
-    background-color: $o;
-    &:hover{
-      background-color: $do;
-    }
-  }
-  &.light-red{
-    background-color: $lr;
-    &:hover{
-      background-color: $dlr;
     }
   }
   &.red{

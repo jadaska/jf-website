@@ -1,0 +1,25 @@
+@import "@/styles/constants.scss";
+
+#contact-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $b1;
+  color: #FFF;
+  height: 300px;
+  font-size: 30px;
+  box-shadow: $z_depth_2;
+  z-index: 1;
+  .center-module{
+    .message{
+      margin-bottom: 30px;
+    }
+    .email{
+      // font-weight: 500;
+      // color: $y;
+      .address{
+        margin-left: 14px;
+      }
+    }
+  }
+}

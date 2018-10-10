@@ -21,14 +21,19 @@
     height: 400px;
     border: 3px solid $fp;
   }
-  #orbit-image{
-    margin-right: 100px;
+  #scribe-icon{
+    width: 350px;
+    // margin-left: 200px;
+    margin-left: 120px;
   }
-  #intelligent{
-    margin-left: 100px;
+  #scribe-icon-1{
+    margin: -40px 100px 0px -50px;
   }
-  #custom-image{
-    margin-right: 100px;
+  #scribe-icon-2{
+    margin: 0px -80px 0px 30px;
+  }
+  #scribe-icon-3{
+    margin: 0px 100px 0px -50px;
   }
 }
 .fade-enter, .fade-leave-active {
@@ -75,7 +80,7 @@
           <div class="section-image">
             <!-- <div id="orbit-animation"></div> -->
             <!-- <div class="box"></div> -->
-            <img id="scribe-icon" src="../assets/scribe_1.svg" />
+            <img id="scribe-icon-1" src="../assets/scribe_1.svg" />
           </div>
           <div class="section-text">
             <div class="section-title">
@@ -119,14 +124,14 @@
             </span> -->
           </div>
           <div class="section-image">
-            <img id="scribe-icon" src="../assets/scribe_2.svg" />
+            <img id="scribe-icon-2" src="../assets/scribe_2.svg" />
           </div>
         </div>
       </div>
       <div class="page-section full-page">
         <div class="side-2-side">
           <div class="section-image">
-            <img id="scribe-icon" src="../assets/scribe_3.svg" />
+            <img id="scribe-icon-3" src="../assets/scribe_3.svg" />
           </div>
           <div class="section-text">
             <div class="section-title">

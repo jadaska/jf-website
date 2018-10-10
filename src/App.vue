@@ -6,7 +6,7 @@
     width: 100%;
     height: 100%;
     font-family: 'Montserrat', sans-serif;
-    color: $text;
+    color: $dp;
     body{
       padding: 0px;
       margin: 0px;
@@ -138,7 +138,7 @@
   <div id="app">
     <div id="nav-bar">
       <div id="nav-container">
-        <img id="futura-banner-logo" src="@/assets/_logos/futura_horizontal.svg" />
+        <img id="futura-banner-logo" src="@/assets/_logos/futura_horizontal.svg" @click="goTo('/')" />
         <div class="nav-item">
           <div class="nav-title" :class="{'active': nav_selected == 0}" @click="nav_selected = 0">
             Products
@@ -148,22 +148,23 @@
             <div @click="goTo('/Scribe')" class="nav-link">
               Scribe
             </div>
+            <div class="nav-link">
+              OA_Scribe
+              <!-- Respondent -->
+            </div>
             <div @click="goTo('/Chatticus')" class="nav-link">
               Atticus
             </div>
-            <div class="nav-link">
-              Respondent
-            </div>
           </div>
         </div>
         <div class="nav-item">
           <div class="nav-title">
-            About
+            Our Story
           </div>
         </div>
         <div class="nav-item">
           <div class="nav-title">
-            Jobs
+            Contact
           </div>
         </div>
         <div class="nav-fill">

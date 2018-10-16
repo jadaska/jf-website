@@ -4,7 +4,7 @@ export default {
   created() {
     this.$router.beforeEach((to, from, next) => {
       if(from.meta.save_scroll){
-        this.saved_scroll = document.getElementById("app").scrollTop
+        this.saved_scroll = window.scrollY
       }
       let transition_name = to.meta.transition_name || from.meta.transition_name;
       if (transition_name === 'slide') {
@@ -24,22 +24,28 @@ export default {
     };
   },
   methods: {
+
     ///////////////////////////// Hide Footers ///////////////////////////////
-    beforeLeave(element) {
+    
+    beforeLeave(element){
+      console.log("LEAVE");
       var footer = document.getElementById("get-started-banner");
       var product_col = document.getElementsByClassName("product-col")[0];
-      var new_height = product_col.clientHeight + this.app_elm.clientHeight - footer.getBoundingClientRect().top
-      TweenLite.to(product_col, 0.1, {css: {height: new_height+"px"}, ease: Sine.easeInOut})
+      var new_height = product_col.clientHeight + window.innerHeight - footer.getBoundingClientRect().top + 10;
+      if(new_height > product_col.clientHeight){
+        TweenLite.to(product_col, 0.1, {css: {height: new_height+"px"}, ease: Sine.easeInOut})
+      }
     },
-    enter(element) {
+    enter(element){
+      console.log("ENTER");
       var footer = document.getElementById("get-started-banner");
       var product_col = document.getElementsByClassName("product-col")[0];
       var height = product_col.clientHeight;
-      var new_height = product_col.clientHeight + this.app_elm.clientHeight - footer.getBoundingClientRect().top
-      product_col.style.height = new_height+"px";
-      setTimeout(() => {
+      var new_height = product_col.clientHeight + window.innerHeight - footer.getBoundingClientRect().top + 10;
+      if(new_height > product_col.clientHeight){
+        product_col.style.height = new_height+"px";
         TweenLite.to(product_col, 0.1, {css: {height: height+"px"}, ease: Sine.easeInOut})
-      });
+      }
     },
   }
 }

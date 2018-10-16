@@ -3,49 +3,54 @@ import Router from 'vue-router'
 
 import Home from './views/home/Home.vue'
 
-import Chatticus from './views/chatticus/Chatticus.vue'
-import ChatticusOverview from './views/chatticus/components/Overview.vue'
-import ChatticusIntegrations from './views/chatticus/components/Inteigrations.vue'
-import ChatticusIntelligent from './views/chatticus/components/Intelligent.vue'
-import ChatticusCustom from './views/chatticus/components/Custom.vue'
+import Atticus from './views/atticus/Atticus.vue'
+import AtticusOverview from './views/atticus/components/Overview.vue'
+import AtticusIntegrations from './views/atticus/components/Inteigrations.vue'
+import AtticusIntelligent from './views/atticus/components/Intelligent.vue'
+import AtticusCustom from './views/atticus/components/Custom.vue'
 
 import Scribe from './views/scribe/Scribe.vue'
 import ScribeOverview from './views/scribe/components/Overview.vue'
 
+import OAS from './views/oas/OAS.vue'
+import OASOverview from './views/oas/components/Overview.vue'
+
+import Story from './views/story/Story.vue'
+
 Vue.use(Router)
 
-export default new Router({
+var router = new Router({
   routes: [
     {
       path: '/',
       name: 'home',
       component: Home
     },{
-      path: '/chatticus',
-      name: 'chatticus',
-      component: Chatticus,
+      path: '/atticus',
+      name: 'atticus',
+      component: Atticus,
       // meta: { transition_name: },
       children: [
         {
           path: '',
           name: 'overview',
-          component: ChatticusOverview,
-          meta: { transition_name: 'slide', save_scroll: true },
+          component: AtticusOverview,
+          meta: { transition_name: 'slide', save_scroll: true, scroll_position: 0},
         },{
           path: 'integrations',
           name: 'integrations',
-          component: ChatticusIntegrations,
-          meta: { transition_name: 'slide'},
+          component: AtticusIntegrations,
+          meta: { transition_name: 'slide', return_scroll: true},
         },{
           path: 'intelligent',
           name: 'intelligent',
-          component: ChatticusIntelligent,
-          meta: { transition_name: 'slide'},
+          component: AtticusIntelligent,
+          meta: { transition_name: 'slide', return_scroll: true},
         },{
           path: 'custom',
           name: 'custom',
-          component: ChatticusCustom,
-          meta: { transition_name: 'slide'},
+          component: AtticusCustom,
+          meta: { transition_name: 'slide', return_scroll: true},
         }
       ]
     },{
@@ -61,13 +66,77 @@ export default new Router({
           meta: { transition_name: 'slide', save_scroll: true },
         },
       ]
+    },{
+      path: '/OAScribe',
+      name: 'OAScribe',
+      component: OAS,
+      // meta: { transition_name: },
+      children: [
+        {
+          path: '',
+          name: 'overview',
+          component: OASOverview,
+          meta: { transition_name: 'slide', save_scroll: true },
+        },
+      ]
+    },{
+      path: '/Story',
+      name: 'Story',
+      component: Story,
+      // meta: { transition_name: },
     },
   ],
-  scrollBehavior (to, from, savedPosition) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve({ x: 0, y: 0 })
-      }, 500)
-    })
+  scrollBehavior(to, from, savedPosition){
+    // console.log(to);
+    // console.log(from);
+    // console.log(savedPosition);
+    // if(savedPosition){
+    //   console.log("C");
+    //   return savedPosition
+    // }else if(to.meta.save_scroll && from.meta.return_scroll){
+    //   return { x: 0, y: to.meta.scroll_position }
+    // }else{
+    //   console.log("D");
+    //   return { x: 0, y: 0 }
+    // }
+    if(savedPosition){
+      return savedPosition
+    }else{
+      return { x: 0, y: 0 }
+    }
+    //   return new Promise((resolve, reject) => {
+    //     if((to.meta.save_scroll && from.meta.return_scroll)||(to.meta.return_scroll && from.meta.save_scroll)){
+    //       setTimeout(() => {
+    //         if(to.meta.save_scroll && from.meta.return_scroll){
+    //           console.log("X");
+    //           console.log(to.meta.scroll_position);
+    //           // resolve({ x: 0, y: to.meta.scroll_position })
+    //           resolve({ x: 0, y: 0 })
+    //         }else{
+    //           console.log("B");
+    //           resolve({ x: 0, y: 0 })
+    //         }
+    //       }, 5000)
+    //     }else{
+    //       if(savedPosition){
+    //         console.log("C");
+    //         resolve(savedPosition);
+    //         // resolve({ x: 0, y: 0 })
+    //       }else{
+    //         console.log("D");
+    //         resolve({ x: 0, y: 0 })
+    //       }
+    //     }
+    //   })
+    // }
   }
 })
+
+router.beforeEach((to, from, next) => {
+  if(from.meta.save_scroll){
+    from.meta.scroll_position = window.scrollY;
+  }
+  next();
+})
+
+export default router

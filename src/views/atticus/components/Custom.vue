@@ -13,13 +13,13 @@
     <div class="product-page">
       <div class="page-section">
         <span class="scroll-down">
-          <span class="scroll-down-row" @click="$router.push('/chatticus')">
+          <span class="scroll-down-row" @click="$router.push('/atticus')">
             <span class="fa fa-arrow-left"></span>
             Back
           </span>
         </span>
         <div class="detail-page-app">
-          Chatticus
+          Atticus
         </div>
         <div class="detail-page-title">
           Custom Solutions

@@ -2,9 +2,11 @@
   @import "@/styles/constants.scss";
   @import "@/styles/generics.scss";
   @import "@/styles/buttons.scss";
-
   .scroll-down{
     margin-bottom: 40px;
+    &.tight{
+      margin-bottom: 20px;
+    }
   }
 </style>
 
@@ -13,22 +15,23 @@
     <div class="product-page">
       <div class="page-section">
         <span class="scroll-down">
-          <span class="scroll-down-row" @click="$router.push('/chatticus')">
+          <span class="scroll-down-row" @click="$router.push('/atticus')">
             <span class="fa fa-arrow-left"></span>
             Back
           </span>
         </span>
         <div class="detail-page-app">
-          Chatticus
+          Atticus
         </div>
         <div class="detail-page-title">
-          Custom Solutions
+          Always Learning <br />
+          Always Evolving
         </div>
         <div class="section-sub-title">
-          Our goal is to meet your needs and exceed them.
+          The more you use it, the better it gets.
         </div>
         <div class="section-content">
-          From IP to Immigration, and Corporate to CommLit, our vision is to build intelligent tools specific to your practice’s substantive legal work and administrative workflow needs. If you have thoughts about how your workflow could be improved reach out to our team and we will be happy to assist you!
+          As Atticus starts to learn your workflow and preferences, it will also provide recommendations on what else you might like to do, based on tasks that you regularly complete each day. While Atticus currently focuses on time entry, document management, and docketing-related applications, we are constantly expanding its functionality and intelligence.
         </div>
       </div>
     </div>

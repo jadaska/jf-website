@@ -37,19 +37,19 @@ export default{
       in_message_description: false,
       messages: [
         {
-          title: "Designed for legal practitioners.<br>Powered by a law firm",
+          title: "Designed for legal practitioners<br>by legal practitioners.",
           description: "Powered by US law firm Holland & Hart, our team of technology developers work daily with attorneys and practitioners to understand their needs, so we can invent powerful new tools to support their substantive legal work and administrative workflows.",
-          image_path: "./Focus.svg",
+          image_path: "./Test4.svg",
           color: "red",
         },{
-          title: "Focus on what matters ",
+          title: "Focus on What Matters",
           description: "We understand the pressures for legal practitioners to maximize efficiency without a compromise on work quality, and that too much time is spent on non-billable tasks.  Our solutions help practitioners focus on what matters and perform at their highest and best use, through removing some of the pain points and non-billable distractions they experience.",
           image_path: "./Test.svg",
           color: "blue",
         },{
-          title: "Solve the little things that can <br>make a big difference",
+          title: "Solve the Little Things That Can<br>Make a Big Difference",
           description: "Some legal technology solutions attempt to solve problems involving the highest functionalities or the highest stakes. We believe real value starts with the little things that will make an astronomical difference to practitioners’ day-to-day lives and their law firm’s bottom line.",
-          image_path: "./Test2.svg",
+          image_path: "./Test3.svg",
           color: "yellow",
         }
       ],
@@ -60,17 +60,20 @@ export default{
       animate_product_select: true,
       products: [
         {
-          name: "Scribe",
-          description: "Document Creation<br>Made Simple and Swift",
-          image_path: "./scribe.svg",
+          name: "Atticus",
+          description: "A platform for improving<br>legal practitioners’ workflow",
+          image_path: "./futura_atticus.svg",
+          link_path: "/Atticus"
         },{
           name: "Respondant",
           description: "Rapid Office Action<br>Responses",
           image_path: "./Respondant.svg",
+          link_path: "/OAScribe"
         },{
-          name: "Atticus",
-          description: "A platform for improving<br>legal practitioners’ workflow",
-          image_path: "./futura_atticus.svg",
+          name: "Scribe",
+          description: "Document Creation<br>Made Simple and Swift",
+          image_path: "./scribe.svg",
+          link_path: "/Scribe"
         }
       ]
     }
@@ -113,8 +116,31 @@ export default{
       el.style.zIndex = "2";
       var swipe_out = new TimelineLite();
       var slider = el.querySelector('.slider')
-      swipe_out.add( TweenLite.to(slider, 0.5, {width: "100%", ease: Sine.easeInOut}), 0);
-      swipe_out.add( TweenLite.to(el, 0.5, {x: "100%", ease: Sine.easeInOut}), 0.5);
+      if(el && slider){
+        swipe_out.add( TweenLite.to(slider, 0.5, {width: "100%", ease: Sine.easeInOut}), 0);
+        swipe_out.add( TweenLite.to(el, 0.5, {x: "100%", ease: Sine.easeInOut}), 0.5);
+        swipe_out.eventCallback("onComplete", function(){
+          done();
+        });
+      }else{
+        swipe_out.add( TweenLite.to(el, 0.5, {x: "100%", ease: Sine.easeInOut}), 0);
+        swipe_out.eventCallback("onComplete", function(){
+          done();
+        });
+      }
+    },
+    enterMessageDescription(el, done){
+      var swipe_out = new TimelineLite();
+      swipe_out.add( TweenLite.from(el, 0.5, {height: 0, ease: Sine.easeInOut}), 0);
+      swipe_out.add( TweenLite.from(el, 0.5, {opacity: 0, ease: Sine.easeInOut}), 0.4);
+      swipe_out.eventCallback("onComplete", function(){
+        done();
+      });
+    },
+    leaveMessageDescription(el, done){
+      var swipe_out = new TimelineLite();
+      swipe_out.add( TweenLite.to(el, 0.5, {opacity: 0, ease: Sine.easeInOut}), 0);
+      swipe_out.add( TweenLite.to(el, 0.5, {height: 0, ease: Sine.easeInOut}), 0.4);
       swipe_out.eventCallback("onComplete", function(){
         done();
       });
@@ -158,6 +184,9 @@ export default{
       this.active_product_index = index;
       this.animate_product_select = false;
       document.getElementById(index).style.opacity = "1";
+    },
+    goTo(route){
+      this.$router.push(route)
     }
   }
 }

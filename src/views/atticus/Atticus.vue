@@ -35,15 +35,15 @@
 </style>
 
 <template>
-  <div id="chatticus" class="product-container">
+  <div id="atticus" class="product-container">
     <section-nav></section-nav>
-    <transition :name="transition_name" mode="out-in" @beforeLeave="beforeLeave" @enter="enter">
-      <router-view :app-elm="app_elm" :sections="sections" :save-scroll="saved_scroll" @scroll-to-section="(sec)=>{scrollToSection(sec)}"></router-view>
-    </transition>
+    <!-- <transition :name="transition_name" mode="out-in" @beforeLeave="beforeLeave" @enter="enter"> -->
+      <router-view :sections="sections" :save-scroll="saved_scroll" @scroll-to-section="(sec)=>{scrollToSection(sec)}"></router-view>
+    <!-- </transition> -->
     <div id="get-started-banner" class="banner">
       <div class="banner-module">
         <div class="title">Get Started Today</div>
-        <div class="try-now">Try Chatticus</div>
+        <div class="try-now">Try Atticus</div>
       </div>
     </div>
     <contact-footer></contact-footer>

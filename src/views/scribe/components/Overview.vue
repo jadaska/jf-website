@@ -42,16 +42,34 @@
 .fade-enter-active, .fade-leave-active {
   transition: opacity 1s ease;
 }
+
+.scribe-logo{
+  width: 150px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
 </style>
 
 <template>
   <div class="product-col">
+    <div class="main-page">
+      <div class="title-module">
+        <img class="scribe-logo" src="@/../public/scribe.svg"></img>
+        <div class="product-title">
+          Scribe
+        </div>
+        <div class="product-sub-title">
+          Document Creation<br />
+          Simple and Swift
+        </div>
+      </div>
+    </div>
     <div class="product-page">
-      <div class="page-section full-page">
+      <!-- <div class="page-section full-page">
         <div class="side-2-side">
           <div class="section-text">
             <div class="futura-title">
-              <!-- <img id="scribe-text" src="../assets/scribe_text.svg" /> -->
               Scribe
             </div>
             <div class="futura-sub-title">
@@ -74,7 +92,7 @@
             <img id="scribe-icon" src="../assets/scribe.svg" />
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="page-section full-page">
         <div class="side-2-side">
           <div class="section-image">
@@ -91,12 +109,12 @@
               Any Document, Any Format, Any Device, Any Time
             </div>
             <div class="section-content">
-              Scribe helps you create frequently-used documents fast. We preload your document templates, so all you need to do is answer some quick questions online and your completed documents are ready.
+              Scribe helps you create frequently-used documents fast. We preload your documents, so all you need to do is answer some quick questions online and your completed documents are ready.
             </div>
             <!-- It also works across a variety of document types, including Word, Excel, PDF forms, email (EML), and calendar invites (ICS). -->
             <!-- Send us your preferred document templates that include your legal language and the desired dynamic sections, and the Scribe team will generate template forms for you, creating a custom, easy-to-use Scribe application for the documents you frequently use. -->
             <!-- <span class="scroll-down small">
-              <span class="scroll-down-row" @click="$router.push('/chatticus/integrations')">
+              <span class="scroll-down-row" @click="$router.push('/atticus/integrations')">
                 Learn More
                 <span class="fa fa-arrow-right"></span>
               </span>
@@ -114,10 +132,10 @@
               Whether you have just one document or hundreds
             </div>
             <div class="section-content">
-              Scribe unifies common fields to ensure you only need to enter information once. No more headaches from managing and checking countless documents to ensure consistency. Instead free up your time to focus on what matters.
+              Scribe unifies common fields across a variety of document types to ensure you only need to enter information once. This reduces the complexity of managing multiple documents, ensures accuracy, and frees up your time to focus on what matters.
             </div>
             <!-- <span class="scroll-down small">
-              <span class="scroll-down-row" @click="$router.push('/chatticus/intelligent')">
+              <span class="scroll-down-row" @click="$router.push('/atticus/intelligent')">
                 Learn More
                 <span class="fa fa-arrow-right"></span>
               </span>
@@ -144,7 +162,7 @@
               Simply launch Scribe on your phone, tablet, or desktop, fill out the form, and generate your documents.  Immediately download the results for review or to share with colleagues, all from Scribe’s simple-to-use interface.
             </div>
             <!-- <span class="scroll-down small">
-              <span class="scroll-down-row" @click="$router.push('/chatticus/custom')">
+              <span class="scroll-down-row" @click="$router.push('/atticus/custom')">
                 Learn More
                 <span class="fa fa-arrow-right"></span>
               </span>
@@ -160,14 +178,5 @@
   import { TweenLite, TimelineLite } from "gsap";
   export default{
     props: [ "appElm", "sections", "saveScroll" ],
-    mounted: function(){
-      if(this.appElm){
-        if(this.saveScroll){
-          this.appElm.scrollTop = this.saveScroll;
-        }else{
-          this.appElm.scrollTop = 0;
-        }
-      }
-    },
   }
 </script>

@@ -2,6 +2,7 @@
 @import "@/styles/constants.scss";
 @import "@/styles/generics.scss";
 @import "@/styles/buttons.scss";
+
 .button-row{
   .button{
     margin-right: 20px;
@@ -33,34 +34,36 @@
 .fade-enter-active, .fade-leave-active {
   transition: opacity 1s ease;
 }
+
+.atticus-logo{
+  width: 200px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
 </style>
 
 <template>
   <div class="product-col">
-    <div class="product-page">
-      <div class="page-section full-page">
-        <div class="futura-title">
+    <div class="main-page">
+      <div class="title-module">
+        <img class="atticus-logo" src="@/../public/futura_atticus.svg"></img>
+        <div class="product-title">
           Atticus
         </div>
-        <div class="futura-sub-title">
+        <div class="product-sub-title">
           A platform for improving <br />
-          legal practitioners’ workflow
+          legal workflows
         </div>
-        <div class="button-row">
-          <div class="button f-white">
-            Get Started
-          </div>
-          <div class="button f-white">
-            See What's New
-          </div>
-        </div>
-        <span class="scroll-down">
-          <span class="scroll-down-row" @click="$emit('scroll-to-section', sections[1])">
-            <span class="fa fa-arrow-down"></span>
-            Learn More
-          </span>
-        </span>
       </div>
+      <!-- <span class="scroll-down">
+        <span class="scroll-down-row" @click="$emit('scroll-to-section', sections[1])">
+          <span class="fa fa-arrow-down"></span>
+          Learn More
+        </span>
+      </span> -->
+    </div>
+    <div class="product-page">
       <div class="page-section full-page">
         <div class="side-2-side">
           <div class="section-image">
@@ -76,10 +79,10 @@
               Increase productivity, save time, and enjoy a frictionless technology experience.
             </div>
             <div class="section-content">
-              Chatticus unifies the various apps you already use under one conveint and easy to use interface that integrates directly into your email application.
+              Atticus is a digital platform that brings together attorney workflow tools under one conveint and easy to use interface that integrates directly into your favorite applications.
             </div>
             <span class="scroll-down small">
-              <span class="scroll-down-row" @click="$router.push('/chatticus/integrations')">
+              <span class="scroll-down-row" @click="$router.push('/atticus/integrations')">
                 Learn More
                 <span class="fa fa-arrow-right"></span>
               </span>
@@ -97,10 +100,10 @@
               Leave the non-billable work to the machines and focus on what matters to you.
             </div>
             <div class="section-content">
-              Chatticus uses a sophistiacted AI layer to intelligently scan your emails, provide recomendations and transfer information into your favorite applications.
+              Atticus intelligently scan your emails to provide recomendations and communicate with the existing applications you already use.
             </div>
             <span class="scroll-down small">
-              <span class="scroll-down-row" @click="$router.push('/chatticus/intelligent')">
+              <span class="scroll-down-row" @click="$router.push('/atticus/intelligent')">
                 Learn More
                 <span class="fa fa-arrow-right"></span>
               </span>
@@ -111,31 +114,30 @@
           </div>
         </div>
       </div>
-      <div class="page-section full-page">
+      <!-- <div class="page-section full-page">
         <div class="side-2-side">
           <div class="section-image">
             <img id="custom-image" src="../assets/custom-01.svg" />
           </div>
           <div class="section-text">
             <div class="section-title">
-              Custom Legal Solutions
+              Always Learning. Always Evolving
             </div>
             <div class="section-sub-title">
-              Our mission is to make your life easier.
+              The more you use it, the smarter it gets.
             </div>
             <div class="section-content">
-              We work with our users everyday to invent powerful new tools that are tailored to meet their needs.
-              <!-- From IP to Immigration, and Corporate to CommLit, our vision is to customize intelligent tools specific to your practice’s substantive legal work and administrative workflow needs. -->
+              While Atticus currently focuses on time entry, document management, and docketing-related applications, it continues to expand functionality and intelligence.
             </div>
             <span class="scroll-down small">
-              <span class="scroll-down-row" @click="$router.push('/chatticus/custom')">
+              <span class="scroll-down-row" @click="$router.push('/atticus/custom')">
                 Learn More
                 <span class="fa fa-arrow-right"></span>
               </span>
             </span>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -143,15 +145,17 @@
 <script>
   import { TweenLite, TimelineLite } from "gsap";
   export default{
-    props: [ "appElm", "sections", "saveScroll" ],
+    props: [ "sections", "saveScroll" ],
     mounted: function(){
-      if(this.appElm){
-        if(this.saveScroll){
-          this.appElm.scrollTop = this.saveScroll;
-        }else{
-          this.appElm.scrollTop = 0;
-        }
+      if(this.saveScroll){
+        this.$nextTick(()=>{
+          window.scrollTo( 0, this.saveScroll );
+        })
+      }else{
+        this.$nextTick(()=>{
+          window.scrollTo( 0, 0 );
+        })
       }
-    },
+    }
   }
 </script>

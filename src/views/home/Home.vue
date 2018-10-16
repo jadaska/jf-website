@@ -35,30 +35,36 @@
       </div>
       <transition-group name="swipe" mode="in-out" v-on:leave="leaveMessage">
         <div class="message-module" v-for="(msg, msg_index) in messages" v-if="msg_index == active_messages_index" :key="msg_index" :class="[msg.color]">
-          <div class="slider"></div>
-          <div class="image-contrainer">
-            <!-- <div class="fa" :class="msg.image_path"></div> -->
-            <img :src="msg.image_path" />
-          </div>
-          <div class="background">
-            <div class="message-container">
+          <transition name="swipe-out">
+            <div class="slider-container" v-if="!in_message_description">
+              <div class="slider"></div>
+              <div class="image-contrainer">
+                <!-- <div class="fa" :class="msg.image_path"></div> -->
+                <img :src="msg.image_path" />
+              </div>
+            </div>
+          </transition>
+          <div class="background" :class="{'full': in_message_description}">
+            <div class="message-container" @click="in_message_description = !in_message_description; setMessage(msg_index)">
               <div class="module">
-                <div class="message-back" v-if="in_message_description">
-                  <span class="fa fa-arrow-left"></span>
-                  Back
-                </div>
                 <div class="title">
                   <span v-html="msg.title"></span>
                 </div>
-                <transition name="switch" mode="out-in">
-                  <div class="message-learn-more" v-if="!in_message_description">
-                    Learn More
-                    <span class="fa fa-arrow-right"></span>
-                  </div>
-                  <div class="description" v-else>
+                <transition name="expand" @leave="leaveMessageDescription" @enter="enterMessageDescription">
+                  <div class="description" v-if="in_message_description">
                     {{ msg.description }}
+                    <br /><br />
                   </div>
                 </transition>
+                <!-- <br /><br /> -->
+                <div class="message-learn-more" v-if="!in_message_description">
+                  <!-- <span class="fa fa-arrow-down"></span> -->
+                  Show More
+                </div>
+                <div class="message-learn-more" v-if="in_message_description">
+                  <!-- <span class="fa fa-arrow-up"></span> -->
+                  Show Less
+                </div>
               </div>
             </div>
           </div>
@@ -90,7 +96,7 @@
               <div class="product-name">
                 {{product.name}}
               </div>
-              <div class="product-learn-more">
+              <div class="product-learn-more" @click="goTo(product.link_path)">
                 Learn More
               </div>
             </div>
@@ -113,7 +119,7 @@
         <img class="logo" src="@/assets/futura_logo_grey.svg" />
         <div class="text-container">
           <div class="thanks">
-            Special thanks to VueJs & Font Awesome!
+            Special thanks to VueJS & Font Awesome!
           </div>
           <div class="terms">
             Terms + Conditions

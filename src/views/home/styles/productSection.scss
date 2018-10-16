@@ -26,7 +26,7 @@
           background-color: $elp;
         }
         &:active{
-          background-color: $dp;
+          background-color: $p;
         }
       }
       .select{
@@ -77,13 +77,13 @@
     .drop-in-leave-to{
       opacity: 0;
     }
-		.product {
+		.product{
       width: 100%;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-			.product-module {
+			.product-module{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -103,8 +103,16 @@
           margin-left: 10px;
 				}
 				.product-learn-more {
+          padding: 2px 4px;
           font-size: 20px;
-          letter-spacing: 4px;
+          letter-spacing: 2px;
+          border-bottom: 2px solid rgba(0,0,0,0);
+          color: rgba(255,255,255,0.5);
+          &:hover{
+            cursor: pointer;
+            border-bottom: 2px solid #FFF;
+            color: #FFF;
+          }
 				}
 			}
 		}

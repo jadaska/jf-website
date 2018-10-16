@@ -21,13 +21,13 @@
       </div>
       <div class="page-section">
         <span class="scroll-down">
-          <span class="scroll-down-row" @click="$router.push('/chatticus')">
+          <span class="scroll-down-row" @click="$router.push('/atticus')">
             <span class="fa fa-arrow-left"></span>
             Back
           </span>
         </span>
         <div class="detail-page-app">
-          Chatticus
+          Atticus
         </div>
         <div class="detail-page-title">
           Integrations <br />
@@ -39,7 +39,7 @@
           Integrations
         </div>
         <div class="section-content">
-          Chatticus brings together many popular legal tools such as time entry, document management, and docketing, directly into your preferred email program. This removes the need for you to switch between applications to get your work done.
+          Atticus brings together many popular legal tools such as time entry, document management, and docketing, directly into your preferred email program. This removes the need for you to switch between applications to get your work done.
         </div>
         <div class="section-content bold">
           Current Integrations:
@@ -81,7 +81,7 @@
           Exclusives
         </div>
         <div class="section-content">
-          In addition to connecting with your existing application, Chatticus also comes with a many original tools that are only available through Chatticus.
+          In addition to connecting with your existing applications, Atticus also comes with a many original tools that are only available through Atticus.
         </div>
         <div class="section-content bold">
           Current Exclusives:
@@ -126,7 +126,7 @@
           </div>
         </div>
         <span class="scroll-down bottom">
-          <span class="scroll-down-row" @click="$router.push('/chatticus')">
+          <span class="scroll-down-row" @click="$router.push('/atticus')">
             <span class="fa fa-arrow-left"></span>
             Back
           </span>
@@ -139,6 +139,9 @@
 <script>
   import common from "./mixins/common.js";
   export default{
-    mixins: [ common ]
+    mixins: [ common ],
+    mounted: function(){
+      window.scrollTo( 0, 0 );
+    }
   }
 </script>

@@ -1,6 +1,8 @@
 <style lang="scss" scoped>
+  @import "@/styles/constants.scss";
   #credits-banner{
-    background-image: url("~@/assets/geo_purple.png");
+    // background-image: url("~@/assets/geo_purple.png");
+    background-color: $dp;
     .banner-module{
       width: 100%;
       display: flex;

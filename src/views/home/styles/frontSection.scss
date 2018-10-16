@@ -1,7 +1,7 @@
 @import "@/styles/constants.scss";
 
 #front-section{
-  height: 100%;
+  height: calc(100vh - 60px);
   #future-ribbon{
     position: absolute;
     bottom: 7%;

@@ -2,12 +2,15 @@
   @import "@/styles/generics.scss";
   #section-nav{
     position: fixed;
-    left: 20px;
+    right: 20px;
     top: 50vh;
     transform: translateY(-50%);
     cursor: pointer;
     .section{
       padding: 8px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
       &:hover{
         // width: 40px;
         .box{

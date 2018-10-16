@@ -3,25 +3,25 @@
   @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,800,900');
   @import "./styles/constants.scss";
   html{
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     font-family: 'Montserrat', sans-serif;
     color: $dp;
     body{
       padding: 0px;
       margin: 0px;
-      width: 100%;
-      height: 100%;
       color: #b5afb6;
+      max-width: 100%;
+      overflow-x: hidden;
       #app{
         // width: 100%;
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        overflow-y: auto;
-        overflow-x: hidden;
+        // position: fixed;
+        // top: 0px;
+        // left: 0px;
+        // width: 100%;
+        // height: 100%;
+        // overflow-y: auto;
+        // overflow-x: hidden;
         #nav-bar{
           position: fixed;
           top: 0px;
@@ -43,7 +43,7 @@
             align-items: center;
             #futura-banner-logo{
               height: calc(100% - 30px);
-              margin-right: 20px;
+              margin-right: 30px;
             }
             .nav-item{
               position: relative;
@@ -51,25 +51,31 @@
               padding: 3px;
               font-size: 18px;
               font-weight: 500;
+              color: $fp;
+              letter-spacing: 1px;
               .nav-title{
                 position: relative;
                 // border: 3px solid #FFF;
                 user-select: none;
+                padding: 2px 4px;
+                border-bottom: 2px solid #FFF;
                 &:hover{
                   cursor: pointer;
                   color: $fp;
+                  border-bottom: 2px solid $p;
                 }
                 &.active{
                   color: $fp;
-                  &::after{
-                    content: "";
-                    position: absolute;
-                    bottom: -5px;
-                    left: -3px;
-                    width: calc(100% + 6px);
-                    height: 2px;
-                    background-color: $fp;
-                  }
+                  border-bottom: 2px solid $p;
+                  // &::after{
+                  //   content: "";
+                  //   position: absolute;
+                  //   bottom: -5px;
+                  //   left: -3px;
+                  //   width: calc(100% + 6px);
+                  //   height: 2px;
+                  //   background-color: $fp;
+                  // }
                   // border-bottom: 3px solid $fp;
                 }
               }
@@ -79,7 +85,7 @@
                 left: -24px;
                 transform: translateY(100%);
                 background-color: #FFF;
-                padding: 10px 0px 0px 0px;
+                padding: 15px 0px 5px 0px;
                 box-shadow: $z_depth_1;
                 .nav-mask{
                   position: absolute;
@@ -92,12 +98,14 @@
                 .nav-link{
                   display: block;
                   text-decoration: none;
-                  padding: 0px 30px 18px 30px;
+                  padding: 0px 50px 22px 30px;
                   // font-family: "fresno",sans-serif;
                   // letter-spacing: 5px;
                   color: $fp;
                   font-size: 20px;
                   font-weight: 500;
+                  letter-spacing: 1px;
+                  white-space:nowrap;
                   &:hover{
                     cursor: pointer;
                     color: $fr;
@@ -146,19 +154,19 @@
           <div class="nav-menu" v-if="nav_selected == 0" v-click-outside="()=>{nav_selected = -1}">
             <div class="nav-mask"></div>
             <div @click="goTo('/Scribe')" class="nav-link">
-              Scribe
+              SCRIBE
             </div>
-            <div class="nav-link">
-              OA_Scribe
+            <div @click="goTo('/OAScribe')" class="nav-link">
+              RESPONDANT
               <!-- Respondent -->
             </div>
-            <div @click="goTo('/Chatticus')" class="nav-link">
-              Atticus
+            <div @click="goTo('/Atticus')" class="nav-link">
+              ATTICUS
             </div>
           </div>
         </div>
         <div class="nav-item">
-          <div class="nav-title">
+          <div class="nav-title" @click="goTo('/Story')">
             Our Story
           </div>
         </div>

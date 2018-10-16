@@ -67,7 +67,7 @@ export default{
         },{
           name: "Respondant",
           description: "Rapid Office Action<br>Responses",
-          image_path: "./Respondant.svg",
+          image_path: "./respondant.svg",
           link_path: "/OAScribe"
         },{
           name: "Scribe",

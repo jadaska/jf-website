@@ -34,7 +34,7 @@
   transition: opacity 1s ease;
 }
 
-.respondant-logo{
+.respondent-logo{
   width: 150px;
   margin-right: 20px;
   margin-bottom: 10px;
@@ -46,9 +46,9 @@
   <div class="product-col">
     <div class="main-page">
       <div class="title-module">
-        <img class="respondant-logo" src="@/../public/respondant.svg"></img>
+        <img class="respondent-logo" src="@/../public/respondent.svg"></img>
         <div class="product-title">
-          Respondant
+          Respondent
         </div>
         <div class="product-sub-title">
           Rapid Office Action Response
@@ -81,7 +81,7 @@
           </div>
           <div class="section-text">
             <div class="section-title">
-              IP Prosecution Re-defined
+              IP Prosecution<br />Re-defined
             </div>
             <div class="section-sub-title">
 
@@ -96,7 +96,7 @@
         <div class="side-2-side">
           <div class="section-text">
             <div class="section-title">
-              Intelligent Information Extraction
+              Intelligent<br />Information<br />Extraction
             </div>
             <div class="section-sub-title">
 
@@ -104,12 +104,6 @@
             <div class="section-content">
               Through scanning the USPTO office action, and extracting the core arguments/information, Scribe Office Action quickly pre-populates a response for the IP practitioner to review.
             </div>
-            <span class="scroll-down small">
-              <span class="scroll-down-row" @click="$router.push('/atticus/intelligent')">
-                Learn More
-                <span class="fa fa-arrow-right"></span>
-              </span>
-            </span>
           </div>
           <div class="section-image">
             <img id="intelligent-image" src="../assets/intelligent-01.svg" />
@@ -123,7 +117,7 @@
           </div>
           <div class="section-text">
             <div class="section-title">
-              Consistency in Response
+              Consistency<br />In Response
             </div>
             <div class="section-sub-title">
 

@@ -42,8 +42,8 @@
     <!-- </transition> -->
     <div id="get-started-banner" class="banner">
       <div class="banner-module">
-        <div class="title">Get Started Today</div>
-        <div class="try-now">Try Atticus</div>
+        <div class="title">Want to try Atticus?</div>
+        <div class="try-now">Get In Touch</div>
       </div>
     </div>
     <contact-footer></contact-footer>

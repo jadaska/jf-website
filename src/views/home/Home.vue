@@ -3,7 +3,6 @@
 <style src="./styles/messageSection.scss" lang="scss" scoped></style>
 <style src="./styles/productSection.scss" lang="scss" scoped></style>
 <style src="./styles/contactSection.scss" lang="scss" scoped></style>
-<style src="./styles/termsSection.scss" lang="scss" scoped></style>
 
 <template>
   <div id="home-page">
@@ -51,10 +50,7 @@
                   <span v-html="msg.title"></span>
                 </div>
                 <transition name="expand" @leave="leaveMessageDescription" @enter="enterMessageDescription">
-                  <div class="description" v-if="in_message_description">
-                    {{ msg.description }}
-                    <br /><br />
-                  </div>
+                  <div class="description" v-if="in_message_description" v-html="msg.description"></div>
                 </transition>
                 <!-- <br /><br /> -->
                 <div class="message-learn-more" v-if="!in_message_description">
@@ -110,20 +106,7 @@
           If you'd like to learn more, get in touch with our team.
         </div>
         <div class="email">
-          Email: <span class="address">Sales@JurisFutura.com</span>
-        </div>
-      </div>
-    </div>
-    <div id="terms-page">
-      <div class="center-module">
-        <img class="logo" src="@/assets/futura_logo_grey.svg" />
-        <div class="text-container">
-          <div class="thanks">
-            Special thanks to VueJS & Font Awesome!
-          </div>
-          <div class="terms">
-            Terms + Conditions
-          </div>
+          Email: <span class="address">sales@jurisfutura.com</span>
         </div>
       </div>
     </div>

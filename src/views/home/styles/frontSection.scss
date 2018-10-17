@@ -8,9 +8,27 @@
     right: 0px;
     background-color: $r;
     color: #FFF;
-    padding: 20px 40px 20px 30px;
+    padding: 20px 40px;
     font-size: 20px;
     box-shadow: $z_depth_1;
+    @media screen and (max-width: 1300px){
+      padding: 15px 30px;
+    }
+    @media screen and (max-width: 1000px){
+      font-size: 16px;
+      padding: 15px 30px;
+    }
+    @media screen and (max-width: 650px){
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+    @media screen and (max-width: 540px){
+      font-size: 12px;
+      padding: 8px 16px;
+    }
+    @media screen and (max-width: 430px){
+
+    }
   }
   #punch-title{
     position: relative;
@@ -20,6 +38,18 @@
     color: $fp;
     font-size: 95px;
     // letter-spacing: 16px;
+    @media screen and (max-width: 1300px){
+      font-size: 75px;
+    }
+    @media screen and (max-width: 1000px){
+      font-size: 55px;
+    }
+    @media screen and (max-width: 800px){
+      font-size: 8vw;
+    }
+    @media screen and (max-width: 350px){
+      font-size: 7vw;
+    }
     .static{
 
     }

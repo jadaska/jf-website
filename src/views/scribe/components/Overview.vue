@@ -60,8 +60,8 @@
           Scribe
         </div>
         <div class="product-sub-title">
-          Document Creation<br />
-          Simple and Swift
+          Simple and Swift<br />
+          Document Creation
         </div>
       </div>
     </div>
@@ -109,7 +109,7 @@
               Any Document, Any Format, Any Device, Any Time
             </div>
             <div class="section-content">
-              Scribe helps you create frequently-used documents fast. We preload your documents, so all you need to do is answer some quick questions online and your completed documents are ready.
+              Scribe helps you create frequently-used documents quickly. We preload your documents for you, so all you need to do is answer some quick questions online and your completed documents will be generated.
             </div>
             <!-- It also works across a variety of document types, including Word, Excel, PDF forms, email (EML), and calendar invites (ICS). -->
             <!-- Send us your preferred document templates that include your legal language and the desired dynamic sections, and the Scribe team will generate template forms for you, creating a custom, easy-to-use Scribe application for the documents you frequently use. -->
@@ -129,10 +129,10 @@
               Simplicity <br />in Numbers
             </div>
             <div class="section-sub-title">
-              Whether you have just one document or hundreds
+              Whether you have just one document a hundred
             </div>
             <div class="section-content">
-              Scribe unifies common fields across a variety of document types to ensure you only need to enter information once. This reduces the complexity of managing multiple documents, ensures accuracy, and frees up your time to focus on what matters.
+              Scribe unifies common fields across a variety of document types to ensure you only need to enter information once. This reduces the complexity of managing multiple documents, supports accuracy, and frees up your time.
             </div>
             <!-- <span class="scroll-down small">
               <span class="scroll-down-row" @click="$router.push('/atticus/intelligent')">

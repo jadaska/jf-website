@@ -37,18 +37,21 @@ export default{
       in_message_description: false,
       messages: [
         {
-          title: "Designed for legal practitioners<br>by legal practitioners.",
-          description: "Powered by US law firm Holland & Hart, our team of technology developers work daily with attorneys and practitioners to understand their needs, so we can invent powerful new tools to support their substantive legal work and administrative workflows.",
+          title: "Designed Specifically For<br>Legal Practitioners",
+          description: "Powered by US law firm Holland & Hart, our team works daily with legal practitioners to understand their needs, and creates technology solutions to support their substantive legal work and administrative workflows.<br><br>Through real-time feedback and direct access, we can help drive efficiencies, cost-savings, and increased productivity to positively impact practitioners’ lives and firms’ bottom lines.<br><br>",
+          //"Powered by US law firm Holland & Hart, our team of technology developers work daily with attorneys and practitioners to understand their needs, so we can invent powerful new tools to support their substantive legal work and administrative workflows.",
           image_path: "./Test4.svg",
           color: "red",
         },{
-          title: "Focus on What Matters",
-          description: "We understand the pressures for legal practitioners to maximize efficiency without a compromise on work quality, and that too much time is spent on non-billable tasks.  Our solutions help practitioners focus on what matters and perform at their highest and best use, through removing some of the pain points and non-billable distractions they experience.",
+          title: "Focus Time Where It Matters Most",
+          description: "We understand the pressures for legal practitioners to maximize efficiency without a compromise on quality, and that valuable time is often lost on administrative tasks.<br><br>Our solutions help practitioners focus their time and effort where it matters most, by solving tangible, everyday problems and removing some of the distractions they experience.<br><br>",
+          // "We understand the pressures for legal practitioners to maximize efficiency without a compromise on work quality, and that too much time is spent on non-billable tasks.  Our solutions help practitioners focus on what matters and perform at their highest and best use, through removing some of the pain points and non-billable distractions they experience."
           image_path: "./Test.svg",
           color: "blue",
         },{
-          title: "Solve the Little Things That Can<br>Make a Big Difference",
-          description: "Some legal technology solutions attempt to solve problems involving the highest functionalities or the highest stakes. We believe real value starts with the little things that will make an astronomical difference to practitioners’ day-to-day lives and their law firm’s bottom line.",
+          title: "A Frictionless Technology Experience",
+          description: "The simplicity of our legal automation technologies aim to minimize the need for practitioners to switch between technology applications to get their work done.<br><br>Our solutions insert new capabilities into practitioners’ existing workflows, learn users’ behavior and preferences, and automate tasks that do not need to be completed by a legal professional.<br><br>",
+          // "Some legal technology solutions attempt to solve problems involving the highest functionalities or the highest stakes. We believe real value starts with the little things that will make an astronomical difference to practitioners’ day-to-day lives and their law firm’s bottom line.",
           image_path: "./Test3.svg",
           color: "yellow",
         }
@@ -61,17 +64,17 @@ export default{
       products: [
         {
           name: "Atticus",
-          description: "A platform for improving<br>legal practitioners’ workflow",
+          description: "A platform for optimizing<br>legal practitioners’ workflow",
           image_path: "./futura_atticus.svg",
           link_path: "/Atticus"
         },{
-          name: "Respondant",
+          name: "Respondent",
           description: "Rapid Office Action<br>Responses",
-          image_path: "./respondant.svg",
+          image_path: "./respondent.svg",
           link_path: "/OAScribe"
         },{
           name: "Scribe",
-          description: "Document Creation<br>Made Simple and Swift",
+          description: "Simple and Swift<br>Document Creation",
           image_path: "./scribe.svg",
           link_path: "/Scribe"
         }

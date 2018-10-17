@@ -2,7 +2,7 @@
   @import "@/styles/constants.scss";
   #credits-banner{
     // background-image: url("~@/assets/geo_purple.png");
-    background-color: $dp;
+    background-color: $b1;
     .banner-module{
       width: 100%;
       display: flex;
@@ -14,7 +14,7 @@
         flex-direction: column;
         width: 50%;
         &.left-col{
-          border-right: 3px solid #FFF;
+          border-right: 2px solid #FFF;
           align-items: flex-end;
         }
         .title{
@@ -27,10 +27,10 @@
           // font-weight: 600;
           margin-bottom: 16px;
           #fututra-credit{
-            width: 240px;
+            width: 180px;
           }
           #hh-credit{
-            width: 280px;
+            width: 220px;
           }
         }
       }
@@ -46,7 +46,7 @@
           Contact The Team
         </div>
         <div class="row">
-          Atticus@HollandHart.com
+          sales@jurisfutura.com
         </div>
       </div>
       <div class="col">

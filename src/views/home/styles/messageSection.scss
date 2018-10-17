@@ -12,6 +12,9 @@
   //   opacity: 0;
   //   transform: translateY(30px);
   // }
+  @media screen and (max-width: 1550px){
+    height: 600px;
+  }
   #message-nav{
     z-index: 4;
     position: absolute;
@@ -26,15 +29,30 @@
       height: 16px;
       background-color: #FFF;
       margin-bottom: 20px;
-      transition: width 0.2s ease;
+      transition: transform 0.2s ease;
+      @media screen and (max-width: 1700px){
+        width: 30px;
+        height: 14px;
+        margin-bottom: 16px;
+      }
+      @media screen and (max-width: 1250px){
+        width: 25px;
+        height: 10px;
+        margin-bottom: 12px;
+      }
+      @media screen and (max-width: 1050px){
+        width: 20px;
+        height: 8px;
+        margin-bottom: 10px;
+      }
       &.active{
-        width: 70px;
+        transform: translateX(-50%) scaleX(2);
       }
       &:hover{
         cursor: pointer;
-        width: 45px;
+        transform: translateX(-25%) scaleX(1.5);
         &.active{
-          width: 70px;
+          transform: translateX(-50%) scaleX(2);
         }
       }
     }
@@ -129,33 +147,45 @@
         justify-content: center;
         .module{
           color: $w;
+          padding-top: 20px;
+          padding-right: 40px;
+          @media screen and (max-width: 1700px){
+            padding-right: 20px;
+          }
+          @media screen and (max-width: 1550px){
+            padding-right: 0px;
+          }
           .title{
             margin-bottom: 24px;
             font-size: 46px;
             font-weight: 500;
             min-width: 800px;
-            span{
-
+            @media screen and (max-width: 1700px){
+              font-size: 40px;
+              min-width: 700px;
+            }
+            @media screen and (max-width: 1550px){
+              font-size: 32px;
+              min-width: 600px;
+            }
+            @media screen and (max-width: 1250px){
+              font-size: 26px;
+              min-width: 500px;
+            }
+            @media screen and (max-width: 1050px){
+              font-size: 20px;
+              min-width: 400px;
+            }
+            @media screen and (max-width: 870px){
+              font-size: 18px;
+              min-width: 350px;
             }
           }
-          // .switch-enter-active, .switch-leave-active {
-          //   transition: opacity .5s;
-          // }
-          // .switch-enter, .switch-leave-to /* .fade-leave-active below version 2.1.8 */ {
-          //   opacity: 0;
-          // }
-          // .expand-enter, .expand-leave-to{
-          //   opacity: 0;
-          //   max-height: 0px;
-          // }
-          // .expand-leave-active, .expand-enter-active{
-          //   transition: all 3s ease;
-          // }
           .description{
             opacity: 1;
             overflow: hidden;
             max-width: 800px;
-            font-size: 26px;
+            font-size: 24px;
           }
           .message-learn-more, .message-back{
             color: rgba(255,255,255,0.5);

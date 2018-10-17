@@ -52,8 +52,7 @@
           Atticus
         </div>
         <div class="product-sub-title">
-          A platform for improving <br />
-          legal workflows
+          A platform for optimizing<br>legal workflow
         </div>
       </div>
       <!-- <span class="scroll-down">
@@ -73,20 +72,21 @@
           </div>
           <div class="section-text">
             <div class="section-title">
-              Streamline your work
+              Streamline<br />Your Work
             </div>
             <div class="section-sub-title">
               Increase productivity, save time, and enjoy a frictionless technology experience.
             </div>
             <div class="section-content">
-              Atticus is a digital platform that brings together attorney workflow tools under one conveint and easy to use interface that integrates directly into your favorite applications.
+              Atticus is a digital platform that brings together attorney workflow tools under one convenient and easy-to-use interface that integrates directly into your favorite applications. This removes the need for you to switch between applications to get your work done.
+              <!-- Atticus is a digital platform that brings together attorney workflow tools under one conveint and easy to use interface that integrates directly into your favorite applications. -->
             </div>
-            <span class="scroll-down small">
+            <!-- <span class="scroll-down small">
               <span class="scroll-down-row" @click="$router.push('/atticus/integrations')">
                 Learn More
                 <span class="fa fa-arrow-right"></span>
               </span>
-            </span>
+            </span> -->
           </div>
         </div>
       </div>
@@ -94,50 +94,44 @@
         <div class="side-2-side">
           <div class="section-text">
             <div class="section-title">
-              Intelligent Support
+              Intelligent<br />Support
             </div>
             <div class="section-sub-title">
               Leave the non-billable work to the machines and focus on what matters to you.
             </div>
             <div class="section-content">
-              Atticus intelligently scan your emails to provide recomendations and communicate with the existing applications you already use.
+              Atticus scans your emails and extracts relevant information to your task at hand. While Atticus currently focuses on time entry, document management, and docketing-related applications, we are constantly expanding its functionality and intelligence.
             </div>
-            <span class="scroll-down small">
+            <!-- <span class="scroll-down small">
               <span class="scroll-down-row" @click="$router.push('/atticus/intelligent')">
                 Learn More
                 <span class="fa fa-arrow-right"></span>
               </span>
-            </span>
+            </span> -->
           </div>
           <div class="section-image">
             <img id="intelligent-image" src="../assets/intelligent-01.svg" />
           </div>
         </div>
       </div>
-      <!-- <div class="page-section full-page">
+      <div class="page-section full-page">
         <div class="side-2-side">
           <div class="section-image">
-            <img id="custom-image" src="../assets/custom-01.svg" />
+            <img id="orbit-image" src="../assets/planet-01.svg" />
           </div>
           <div class="section-text">
             <div class="section-title">
-              Always Learning. Always Evolving
+              Always Learning<br />Always Evolving
             </div>
             <div class="section-sub-title">
-              The more you use it, the smarter it gets.
+              The more you use it, the better it gets.
             </div>
             <div class="section-content">
-              While Atticus currently focuses on time entry, document management, and docketing-related applications, it continues to expand functionality and intelligence.
+              As Atticus starts to learn your workflow and preferences, it will also start to provide recommendations on what else you might like to do, based on tasks that you regularly complete each day.
             </div>
-            <span class="scroll-down small">
-              <span class="scroll-down-row" @click="$router.push('/atticus/custom')">
-                Learn More
-                <span class="fa fa-arrow-right"></span>
-              </span>
-            </span>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>

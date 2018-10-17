@@ -75,8 +75,8 @@
             </div>
             <div class="section-content">
               <!-- Our solutions insert new capabilities into practitioners’ existing workflows, learn users’ behavior and preferences, and automate tasks that do not need to be completed by a legal professional. -->
-              <!-- Instead of needlessly disrupting the way practitioners work, our solutions insert new capabilities into existing workflows, learn users’ behavior and preferences, and automate tasks that are a nuisance or a distraction for the legal professional. -->
-              Instead of needlessly disrupting the way practitioners work, our solutions insert new capabilities into existing workflows, learn users’ behavior and preferences, and automate tasks that do not need to be completed by a legal professional.
+              Instead of needlessly disrupting the way practitioners work, our solutions insert new capabilities into existing workflows, learn users’ behavior and preferences, and automate tasks that are a nuisance or a distraction for the legal professional.
+              <!-- Instead of needlessly disrupting the way practitioners work, our solutions insert new capabilities into existing workflows, learn users’ behavior and preferences, and automate tasks that do not need to be completed by a legal professional. -->
               <br /><br />
               <!-- We help practitioners create a competitive edge by enabling them to focus time and effort where it provides the most value to their clients and to their firms, and through driving efficiencies, cost-savings, and increased productivity. -->
               We help practitioners gain a competitve edge by enabling them to focus time and effort where it provides the most value.

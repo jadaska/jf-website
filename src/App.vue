@@ -303,7 +303,7 @@
               ATTICUS
             </div>
             <div @click="goTo('/OAScribe')" class="nav-link">
-              RESPONDANT
+              RESPONDENT
               <!-- Respondent -->
             </div>
             <div @click="goTo('/Scribe')" class="nav-link">

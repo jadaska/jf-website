@@ -129,7 +129,7 @@
               Simplicity <br />in Numbers
             </div>
             <div class="section-sub-title">
-              Whether you have just one document a hundred
+              Whether You Have Just One Document or a Hundred
             </div>
             <div class="section-content">
               Scribe unifies common fields across a variety of document types to ensure you only need to enter information once. This reduces the complexity of managing multiple documents, supports accuracy, and frees up your time.
@@ -156,7 +156,7 @@
               Available <br />On-the-go
             </div>
             <div class="section-sub-title">
-              No matter where you are
+              No Matter Where You Are
             </div>
             <div class="section-content">
               Simply launch Scribe on your phone, tablet, or desktop, fill out the form, and generate your documents.  Immediately download the results for review or to share with colleagues, all from Scribe’s simple-to-use interface.

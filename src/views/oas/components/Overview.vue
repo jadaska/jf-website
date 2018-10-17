@@ -51,7 +51,7 @@
           Respondent
         </div>
         <div class="product-sub-title">
-          Rapid Office Action Response
+          Rapid Office Action Responses
         </div>
       </div>
     </div>
@@ -81,7 +81,7 @@
           </div>
           <div class="section-text">
             <div class="section-title">
-              IP Prosecution<br />Re-defined
+              IP Prosecution<br />Redefined
             </div>
             <div class="section-sub-title">
 

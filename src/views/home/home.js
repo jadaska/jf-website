@@ -43,13 +43,13 @@ export default{
           image_path: "./Test4.svg",
           color: "red",
         },{
-          title: "Focus Time Where It Matters Most",
+          title: "Focus Your Time<br>Where It Matters Most",
           description: "We understand the pressures for legal practitioners to maximize efficiency without a compromise on quality, and that valuable time is often lost on administrative tasks.<br><br>Our solutions help practitioners focus their time and effort where it matters most, by solving tangible, everyday problems and removing some of the distractions they experience.<br><br>",
           // "We understand the pressures for legal practitioners to maximize efficiency without a compromise on work quality, and that too much time is spent on non-billable tasks.  Our solutions help practitioners focus on what matters and perform at their highest and best use, through removing some of the pain points and non-billable distractions they experience."
           image_path: "./Test.svg",
           color: "blue",
         },{
-          title: "A Frictionless Technology Experience",
+          title: "Enjoy A Frictionless<br>Technology Experience",
           description: "The simplicity of our legal automation technologies aim to minimize the need for practitioners to switch between technology applications to get their work done.<br><br>Our solutions insert new capabilities into practitioners’ existing workflows, learn users’ behavior and preferences, and automate tasks that do not need to be completed by a legal professional.<br><br>",
           // "Some legal technology solutions attempt to solve problems involving the highest functionalities or the highest stakes. We believe real value starts with the little things that will make an astronomical difference to practitioners’ day-to-day lives and their law firm’s bottom line.",
           image_path: "./Test3.svg",
@@ -84,6 +84,9 @@ export default{
   computed: {
     active_punch(){
       return this.punches[this.active_punch_index];
+    },
+    mobile(){
+      return this.$store.getters.mobile
     }
   },
   methods: {

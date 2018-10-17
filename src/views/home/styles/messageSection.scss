@@ -15,6 +15,15 @@
   @media screen and (max-width: 1550px){
     height: 600px;
   }
+  @media screen and (max-width: 1250px){
+    height: 500px;
+  }
+  @media screen and (max-width: 1050px){
+    height: 400px;
+  }
+  @media screen and (max-width: 700px){
+    height: 340px;
+  }
   #message-nav{
     z-index: 4;
     position: absolute;
@@ -44,6 +53,16 @@
         width: 20px;
         height: 8px;
         margin-bottom: 10px;
+      }
+      @media screen and (max-width: 850px){
+        width: 16px;
+        height: 6px;
+        margin-bottom: 8px;
+      }
+      @media screen and (max-width: 580px){
+        width: 10px;
+        height: 4px;
+        margin-bottom: 6px;
       }
       &.active{
         transform: translateX(-50%) scaleX(2);
@@ -88,7 +107,7 @@
         background-color: $dy;
       }
     }
-    $section_width: 40%;
+    $section_width: 35%;
     .swipe-out-enter, .swipe-out-leave-to{
       transform: translateX(-$section_width);
     }
@@ -122,7 +141,8 @@
         justify-content: center;
         z-index: 2;
         img{
-          height: 480px;
+          // height: 480px;
+          width: 100%;
         }
         .fa{
           color: $w;
@@ -136,6 +156,10 @@
       padding-left: $section_width;
       z-index: 0;
       transition: padding-left 1s ease;
+      @media screen and (max-width: 540px){
+        padding-left: 0px;
+        padding-right: 20px;
+      }
       &.full{
         padding-left: 0px;
       }
@@ -148,13 +172,6 @@
         .module{
           color: $w;
           padding-top: 20px;
-          padding-right: 40px;
-          @media screen and (max-width: 1700px){
-            padding-right: 20px;
-          }
-          @media screen and (max-width: 1550px){
-            padding-right: 0px;
-          }
           .title{
             margin-bottom: 24px;
             font-size: 46px;
@@ -179,6 +196,17 @@
             @media screen and (max-width: 870px){
               font-size: 18px;
               min-width: 350px;
+              margin-bottom: 16px;
+            }
+            @media screen and (max-width: 700px){
+              min-width: 300px;
+              margin-bottom: 12px;
+            }
+            @media screen and (max-width: 580px){
+              min-width: 250px;
+            }
+            @media screen and (max-width: 380px){
+              font-size: 14px;
             }
           }
           .description{
@@ -186,6 +214,36 @@
             overflow: hidden;
             max-width: 800px;
             font-size: 24px;
+            @media screen and (max-width: 1700px){
+              max-width: 700px;
+            }
+            @media screen and (max-width: 1550px){
+              font-size: 20px;
+              max-width: 600px;
+            }
+            @media screen and (max-width: 1250px){
+              font-size: 18px;
+              max-width: 500px;
+            }
+            @media screen and (max-width: 1050px){
+              font-size: 14px;
+              max-width: 400px;
+            }
+            @media screen and (max-width: 870px){
+              font-size: 14px;
+              max-width: 350px;
+            }
+            @media screen and (max-width: 700px){
+              font-size: 12px;
+              max-width: 300px;
+            }
+            @media screen and (max-width: 580px){
+              max-width: 250px;
+            }
+            @media screen and (max-width: 380px){
+              font-size: 10px;
+              max-width: 200px;
+            }
           }
           .message-learn-more, .message-back{
             color: rgba(255,255,255,0.5);
@@ -194,6 +252,24 @@
             padding: 2px 6px;
             font-size: 24px;
             border-bottom: 2px solid rgba(0,0,0,0);
+            @media screen and (max-width: 1550px){
+              font-size: 20px;
+            }
+            @media screen and (max-width: 1250px){
+              font-size: 18px;
+            }
+            @media screen and (max-width: 1050px){
+              font-size: 16px;
+            }
+            @media screen and (max-width: 870px){
+              font-size: 14px;
+            }
+            @media screen and (max-width: 700px){
+              font-size: 12px;
+            }
+            @media screen and (max-width: 380px){
+              font-size: 10px;
+            }
             &:hover{
               cursor: pointer;
               color: #FFF;

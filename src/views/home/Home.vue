@@ -35,7 +35,7 @@
       <transition-group name="swipe" mode="in-out" v-on:leave="leaveMessage">
         <div class="message-module" v-for="(msg, msg_index) in messages" v-if="msg_index == active_messages_index" :key="msg_index" :class="[msg.color]">
           <transition name="swipe-out">
-            <div class="slider-container" v-if="!in_message_description">
+            <div class="slider-container" v-if="!in_message_description && !mobile">
               <div class="slider"></div>
               <div class="image-contrainer">
                 <!-- <div class="fa" :class="msg.image_path"></div> -->

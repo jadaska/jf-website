@@ -19,12 +19,10 @@
         }
         .title{
           font-size: 18px;
-          // font-weight: 300;
           margin-bottom: 20px;
         }
         .row{
           font-size: 26px;
-          // font-weight: 600;
           margin-bottom: 16px;
           #fututra-credit{
             width: 180px;

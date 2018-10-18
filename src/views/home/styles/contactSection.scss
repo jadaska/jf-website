@@ -6,19 +6,41 @@
   justify-content: center;
   background-color: $b1;
   color: #FFF;
-  height: 300px;
-  font-size: 30px;
+  height: 400px;
   box-shadow: $z_depth_2;
   z-index: 1;
+  @media screen and (max-width: 1550px){
+    height: 350px;
+  }
+  @media screen and (max-width: 1050px){
+    height: 300px;
+  }
+  @media screen and (max-width: 650px){
+    height: 250px;
+  }
   .center-module{
+    font-size: 28px;
     .message{
-      margin-bottom: 30px;
-    }
-    .email{
-      // font-weight: 500;
-      // color: $y;
-      .address{
-        margin-left: 14px;
+      @media screen and (max-width: 1550px){
+        font-size: 20px;
+      }
+      @media screen and (max-width: 1250px){
+        font-size: 18px;
+      }
+      @media screen and (max-width: 1050px){
+        font-size: 16px;
+      }
+      @media screen and (max-width: 870px){
+        font-size: 14px;
+      }
+      @media screen and (max-width: 700px){
+        font-size: 12px;
+      }
+      @media screen and (max-width: 380px){
+        font-size: 10px;
+      }
+      .email{
+
       }
     }
   }

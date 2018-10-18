@@ -28,6 +28,7 @@
           left: 0px;
           height: 60px;
           width: 100%;
+          max-width: 100vw;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -62,6 +63,9 @@
                 height: 20px;
                 width: 137px;
                 margin-right: 20px;
+              }
+              &:hover{
+                cursor: pointer;
               }
             }
             .nav-item{
@@ -232,24 +236,31 @@
           position: fixed;
           top: 0px;
           left: 0px;
-          width: 100vw;
+          width: 120vw;
           height: 100vh;
           background-color: $p;
           z-index: 50;
           box-shadow: $z_depth_3;
-          padding: 100px 60px;
+          padding-top: 80px;
           .menu-group{
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             font-weight: 500;
             .title{
+              padding: 10px 60px;
               color: $r;
-              font-size: 26px;
-              margin-bottom: 20px;
+              font-size: 22px;
             }
             .link{
-              font-size: 30px;
+              padding: 10px 60px;
+              font-size: 26px;
               color: #FFF;
-              margin-bottom: 20px;
+              &:hover{
+                background-color: $dp;
+                cursor: pointer;
+              }
+              &:active{
+                background-color: $dp;
+              }
             }
           }
         }
@@ -263,22 +274,52 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          height: 100px;
+          height: 80px;
           z-index: 0;
+          font-size: 16px;
+          @media screen and (max-width: 1550px){
+            font-size: 14px;
+            height: 70px;
+          }
+          @media screen and (max-width: 1050px){
+            font-size: 12px;
+            height: 60px;
+          }
+          @media screen and (max-width: 700px){
+            font-size: 10px;
+            height: 50px;
+          }
+          @media screen and (max-width: 540px){
+            font-size: 8px;
+            height: 40px;
+          }
         	.center-module {
             display: flex;
             align-items: center;
         		.logo {
-              width: 30px;
+              width: 26px;
               margin-right: 20px;
+              @media screen and (max-width: 1050px){
+                width: 24px;
+                margin-right: 16px;
+              }
+              @media screen and (max-width: 700px){
+                width: 18px;
+                margin-right: 12px;
+              }
+              @media screen and (max-width: 540px){
+                width: 14px;
+                margin-right: 10px;
+              }
         		}
         		.text-container {
-        			.thanks {
-                color: #777;
-                margin-bottom: 6px;
-        			}
+              color: #777;
+              line-height: 140%;
         			.terms {
-
+                color: #FFF;
+                &:hover{
+                  cursor: pointer;
+                }
         			}
         		}
         	}
@@ -383,9 +424,7 @@
       <div class="center-module">
         <img class="logo" src="@/assets/futura_logo_grey.svg" />
         <div class="text-container">
-          <div class="thanks">
-            Special thanks to VueJS & Font Awesome!
-          </div>
+          Special thanks to VueJS & Font Awesome!<br />
           <div class="terms">
             Terms + Conditions
           </div>

@@ -30,7 +30,9 @@
     </div>
     <div id="message-section">
       <div id="message-nav">
-        <div class="message-section" v-for="(msg, msg_index) in messages" @click="setMessage(msg_index)" :class="{'active': msg_index == active_messages_index}"></div>
+        <div class="message-section" v-for="(msg, msg_index) in messages" @click="setMessage(msg_index)">
+          <div class="tab" :class="{'active': msg_index == active_messages_index}"></div>
+        </div>
       </div>
       <transition-group name="swipe" mode="in-out" v-on:leave="leaveMessage">
         <div class="message-module" v-for="(msg, msg_index) in messages" v-if="msg_index == active_messages_index" :key="msg_index" :class="[msg.color]">
@@ -68,7 +70,7 @@
       </transition-group>
     </div>
     <div id="product-section">
-      <div class="selection-area">
+      <div class="selection-area" v-if="!mobile">
         <div class="row">
           <div class="selection-title">
             Our Solutions
@@ -84,7 +86,7 @@
           </div>
         </div>
       </div>
-      <div class="product-area">
+      <div class="product-area" v-if="!mobile">
         <transition name="drop-in" mode="out-in">
           <div class="product" v-for="(product, product_index) in products" :key="product_index" v-if="active_product_index == product_index">
             <div class="product-module">
@@ -99,14 +101,30 @@
           </div>
         </transition>
       </div>
+      <div class="mobile-area" v-if="mobile">
+        <div class="solutions">
+          Our Solutions
+        </div>
+        <div class="product" v-for="(product, product_index) in products">
+          <div class="product-module">
+            <img class="product-logo" :class="product.name.toLowerCase()" :src="product.image_path" />
+            <div class="product-name">
+              {{product.name}}
+            </div>
+            <div class="product-description" v-html="product.description"></div>
+            <div class="product-learn-more" @click="goTo(product.link_path)">
+              Learn More
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div id="contact-page">
       <div class="center-module">
         <div class="message">
-          If you'd like to learn more, get in touch with our team.
-        </div>
-        <div class="email">
-          Email: <span class="address">sales@jurisfutura.com</span>
+          Want to sechdule a demo or learn more?<br />
+          Email our team. We are always happy to chat!<br /><br />
+          <div class="email">Sales@JurisFutura.com</div>
         </div>
       </div>
     </div>

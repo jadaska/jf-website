@@ -12,6 +12,15 @@
   @media screen and (max-width: 1050px){
     height: 400px;
   }
+  @media screen and (max-width: 750px){
+    height: 350px;
+  }
+  @media screen and (max-width: 650px){
+    height: 300px;
+  }
+  @media screen and (max-width: 540px){
+    height: auto;
+  }
 	.selection-area {
     width: 50%;
     display: flex;
@@ -20,6 +29,9 @@
     justify-content: center;
     box-shadow: $z_depth_1;
     z-index: 1;
+    @media screen and (max-width: 750px){
+      width: 55%;
+    }
     .row{
       width: 100%;
       position: relative;
@@ -29,6 +41,9 @@
       padding: 30px 0px;
       @media screen and (max-width: 1550px){
         padding: 20px 0px;
+      }
+      @media screen and (max-width: 650px){
+        padding: 16px 0px;
       }
       &:not(:first-child){
         &:hover{
@@ -74,6 +89,9 @@
         @media screen and (max-width: 380px){
           font-size: 14px;
         }
+        @media screen and (max-width: 650px){
+          width: 200px;
+        }
   		}
   		.selection {
         width: 500px;
@@ -89,23 +107,44 @@
         @media screen and (max-width: 870px){
           width: 250px;
         }
+        @media screen and (max-width: 650px){
+          width: 200px;
+        }
   			.bullet {
           width: 34px;
           height: 15px;
           background-color: #FFF;
           margin-top: 10px;
           margin-right: 40px;
+          @media screen and (max-width: 1700px){
+            width: 30px;
+            height: 14px;
+          }
           @media screen and (max-width: 1550px){
-            width: 28px;
-            height: 12px;
-            margin-top: 5px;
-            margin-right: 30px;
+           margin-top: 5px;
+           margin-right: 30px;
+         }
+          @media screen and (max-width: 1250px){
+            width: 25px;
+            height: 10px;
           }
           @media screen and (max-width: 1050px){
             width: 20px;
             height: 8px;
             margin-top: 3px;
             margin-right: 20px;
+          }
+          @media screen and (max-width: 850px){
+            width: 12px;
+            height: 6px;
+          }
+          @media screen and (max-width: 540px){
+            width: 12px;
+            height: 6px;
+          }
+          @media screen and (max-width: 380px){
+            width: 10px;
+            height: 4px;
           }
   			}
   			.selection-text {
@@ -132,12 +171,14 @@
   		}
     }
 	}
-
 	.product-area {
     width: 50%;
     background-color: $dp;
     // box-shadow: $z_depth_1;
     z-index: 0;
+    @media screen and (max-width: 750px){
+      width: 45%;
+    }
     .drop-in-enter-active, .drop-in-leave-active {
       transition: all 1s;
     }
@@ -167,6 +208,10 @@
           @media screen and (max-width: 1050px){
             height: 80px;
           }
+          @media screen and (max-width: 750px){
+            height: 50px;
+            margin-bottom: 6px;
+          }
 				}
 				.product-name {
           margin-bottom: 20px;
@@ -182,6 +227,11 @@
             font-size: 40px;
             letter-spacing: 8px;
           }
+          @media screen and (max-width: 750px){
+            margin-bottom: 6px;
+            font-size: 26px;
+            letter-spacing: 5px;
+          }
 				}
 				.product-learn-more {
           padding: 2px 4px;
@@ -193,6 +243,10 @@
             font-size: 16px;
             letter-spacing: 2px;
           }
+          @media screen and (max-width: 750px){
+            font-size: 12px;
+            letter-spacing: 2px;
+          }
           &:hover{
             cursor: pointer;
             border-bottom: 2px solid #FFF;
@@ -202,4 +256,85 @@
 			}
 		}
 	}
+  .mobile-area{
+    width: 100%;
+    background-color: $dp;
+    z-index: 0;
+    padding: 60px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width: 380px){
+      padding: 40px 0px;
+    }
+    .solutions{
+      font-size: 18px;
+      margin-bottom: 30px;
+      @media screen and (max-width: 380px){
+        font-size: 14px;
+        margin-bottom: 26px;
+      }
+    }
+		.product{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+			.product-module{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0px;
+        @media screen and (max-width: 380px){
+          margin: 30px 0px;
+        }
+				.product-logo {
+          height: 60px;
+          margin-bottom: 12px;
+          @media screen and (max-width: 380px){
+            height: 50px;
+            margin-bottom: 10px;
+          }
+				}
+				.product-name {
+          font-family: "fresno",sans-serif;
+          font-size: 30px;
+          letter-spacing: 6px;
+          margin-left: 10px;
+          margin-bottom: 16px;
+          @media screen and (max-width: 380px){
+            font-size: 24px;
+            letter-spacing: 5px;
+          }
+				}
+        .product-description{
+          text-align: center;
+          font-size: 12px;
+          margin-bottom: 16px;
+          letter-spacing: 1px;
+          @media screen and (max-width: 380px){
+            font-size: 10px;
+            letter-spacing: 1px;
+          }
+        }
+				.product-learn-more {
+          padding: 2px 4px;
+          font-size: 12px;
+          letter-spacing: 1px;
+          border-bottom: 2px solid rgba(0,0,0,0);
+          color: rgba(255,255,255,0.5);
+          @media screen and (max-width: 380px){
+            font-size: 10px;
+            letter-spacing: 1px;
+          }
+          &:hover{
+            cursor: pointer;
+            border-bottom: 2px solid #FFF;
+            color: #FFF;
+          }
+				}
+			}
+		}
+  }
 }

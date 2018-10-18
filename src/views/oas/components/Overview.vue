@@ -9,35 +9,32 @@
 }
 .section-image{
   position: relative;
-  .box{
-    position: absolute;
-    top: -50px;
-    left: -500px;
-    width: 400px;
-    height: 400px;
-    border: 3px solid $fp;
-  }
-  #orbit-image{
-    margin: 0px 100px 0px -50px;
-  }
-  #intelligent-image{
-    margin: 0px -120px 0px 80px;
-  }
-  #custom-image{
-    margin: -40px 80px 0px -50px;
-  }
+  // .box{
+  //   position: absolute;
+  //   top: -50px;
+  //   left: -500px;
+  //   width: 400px;
+  //   height: 400px;
+  //   border: 3px solid $fp;
+  // }
 }
-.fade-enter, .fade-leave-active {
-  opacity: 0;
-}
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 1s ease;
-}
+// .fade-enter, .fade-leave-active {
+//   opacity: 0;
+// }
+// .fade-enter-active, .fade-leave-active {
+//   transition: opacity 1s ease;
+// }
 
 .respondent-logo{
   width: 150px;
   margin-right: 20px;
   margin-bottom: 10px;
+  @media screen and (max-width: 1000px){
+    width: 100px;
+  }
+  @media screen and (max-width: 600px){
+    width: 70px;
+  }
 }
 
 </style>
@@ -73,7 +70,7 @@
         </div>
       </div> -->
       <div class="page-section full-page">
-        <div class="side-2-side">
+        <div class="side-2-side left">
           <div class="section-image">
             <!-- <div id="orbit-animation"></div> -->
             <!-- <div class="box"></div> -->
@@ -81,7 +78,7 @@
           </div>
           <div class="section-text">
             <div class="section-title">
-              IP Prosecution<br />Redefined
+              IP Prosecution <br />Redefined
             </div>
             <div class="section-sub-title">
 
@@ -93,10 +90,10 @@
         </div>
       </div>
       <div class="page-section full-page">
-        <div class="side-2-side">
+        <div class="side-2-side right">
           <div class="section-text">
             <div class="section-title">
-              Intelligent<br />Information<br />Extraction
+              Intelligent <br />Information <br />Extraction
             </div>
             <div class="section-sub-title">
 
@@ -111,13 +108,13 @@
         </div>
       </div>
       <div class="page-section full-page">
-        <div class="side-2-side">
+        <div class="side-2-side left">
           <div class="section-image">
             <img id="custom-image" src="../assets/custom-01.svg" />
           </div>
           <div class="section-text">
             <div class="section-title">
-              Consistency<br />In Response
+              Consistency <br />In Response
             </div>
             <div class="section-sub-title">
 

@@ -47,6 +47,12 @@
     }
     .message-section{
       padding: 10px;
+      @media screen and (max-width: 1250px){
+        padding: 8px;
+      }
+      @media screen and (max-width: 1050px){
+        padding: 6px;
+      }
       &:hover{
         cursor: pointer;
       }

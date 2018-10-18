@@ -6,6 +6,10 @@
     top: 50vh;
     transform: translateY(-50%);
     cursor: pointer;
+    user-select: none;
+    @media screen and (max-width: 600px){
+      display: none;
+    }
     .section{
       padding: 8px 0px;
       display: flex;

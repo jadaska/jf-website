@@ -267,6 +267,9 @@
         #view-container{
           padding-top: 60px;
           height: calc(100% - 60px);
+          @media screen and (max-width: 750px){
+            padding-top: 40px;
+          }
         }
         #terms-page{
           background-color: $b2;

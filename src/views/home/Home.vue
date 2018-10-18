@@ -2,7 +2,6 @@
 <style src="./styles/frontSection.scss" lang="scss" scoped></style>
 <style src="./styles/messageSection.scss" lang="scss" scoped></style>
 <style src="./styles/productSection.scss" lang="scss" scoped></style>
-<style src="./styles/contactSection.scss" lang="scss" scoped></style>
 
 <template>
   <div id="home-page">
@@ -119,15 +118,7 @@
         </div>
       </div>
     </div>
-    <div id="contact-page">
-      <div class="center-module">
-        <div class="message">
-          Want to sechdule a demo or learn more?<br />
-          Email our team. We are always happy to chat!<br /><br />
-          <div class="email">Sales@JurisFutura.com</div>
-        </div>
-      </div>
-    </div>
+    <contact-footer></contact-footer>
   </div>
 </template>
 

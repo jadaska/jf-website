@@ -2,51 +2,57 @@
 @import "@/styles/constants.scss";
 @import "@/styles/generics.scss";
 @import "@/styles/buttons.scss";
-.button-row{
-  .button{
-    margin-right: 20px;
-  }
-}
-#scribe-text{
-  // width: 600px;
-  // margin-bottom: -90px;
-}
-.section-image{
-  position: relative;
-  .box{
-    position: absolute;
-    top: -50px;
-    left: -500px;
-    width: 400px;
-    height: 400px;
-    border: 3px solid $fp;
-  }
-  #scribe-icon{
-    width: 350px;
-    // margin-left: 200px;
-    margin-left: 120px;
-  }
-  #scribe-icon-1{
-    margin: -40px 100px 0px -50px;
-  }
-  #scribe-icon-2{
-    margin: 0px -80px 0px 30px;
-  }
-  #scribe-icon-3{
-    margin: 0px 100px 0px -50px;
-  }
-}
-.fade-enter, .fade-leave-active {
-  opacity: 0;
-}
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 1s ease;
-}
+// .button-row{
+//   .button{
+//     margin-right: 20px;
+//   }
+// }
+// #scribe-text{
+//   // width: 600px;
+//   // margin-bottom: -90px;
+// }
+// .section-image{
+//   position: relative;
+//   .box{
+//     position: absolute;
+//     top: -50px;
+//     left: -500px;
+//     width: 400px;
+//     height: 400px;
+//     border: 3px solid $fp;
+//   }
+//   #scribe-icon{
+//     width: 350px;
+//     // margin-left: 200px;
+//     margin-left: 120px;
+//   }
+//   #scribe-icon-1{
+//     margin: -40px 100px 0px -50px;
+//   }
+//   #scribe-icon-2{
+//     margin: 0px -80px 0px 30px;
+//   }
+//   #scribe-icon-3{
+//     margin: 0px 100px 0px -50px;
+//   }
+// }
+// .fade-enter, .fade-leave-active {
+//   opacity: 0;
+// }
+// .fade-enter-active, .fade-leave-active {
+//   transition: opacity 1s ease;
+// }
 
 .scribe-logo{
   width: 150px;
   margin-right: 20px;
   margin-bottom: 10px;
+  @media screen and (max-width: 1000px){
+    width: 100px;
+  }
+  @media screen and (max-width: 600px){
+    width: 70px;
+  }
 }
 
 </style>
@@ -94,7 +100,7 @@
         </div>
       </div> -->
       <div class="page-section full-page">
-        <div class="side-2-side">
+        <div class="side-2-side left">
           <div class="section-image">
             <!-- <div id="orbit-animation"></div> -->
             <!-- <div class="box"></div> -->
@@ -123,7 +129,7 @@
         </div>
       </div>
       <div class="page-section full-page">
-        <div class="side-2-side">
+        <div class="side-2-side right">
           <div class="section-text">
             <div class="section-title">
               Simplicity <br />in Numbers
@@ -147,7 +153,7 @@
         </div>
       </div>
       <div class="page-section full-page">
-        <div class="side-2-side">
+        <div class="side-2-side left">
           <div class="section-image">
             <img id="scribe-icon-3" src="../assets/scribe_3.svg" />
           </div>

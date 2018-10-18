@@ -1,7 +1,9 @@
 import { TweenLite, TimelineLite } from "gsap";
 import Mesh from "./components/Mesh.vue";
+import contactFooter from "@/components/footer.vue";
+
 export default{
-  components: { Mesh },
+  components: { Mesh, contactFooter },
   props: [ "appElm", "sections", "saveScroll" ],
   created(){
     // Start punch animations

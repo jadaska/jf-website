@@ -1,35 +1,54 @@
 <style lang="scss" scoped>
   @import "@/styles/constants.scss";
-  #credits-banner{
-    // background-image: url("~@/assets/geo_purple.png");
+
+  #contact-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: $b1;
-    .banner-module{
-      width: 100%;
-      display: flex;
-      color: #FFF;
-      margin: 60px;
-      .col{
-        padding: 20px 50px 10px 50px;
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        &.left-col{
-          border-right: 2px solid #FFF;
-          align-items: flex-end;
+    color: #FFF;
+    height: 400px;
+    box-shadow: $z_depth_2;
+    z-index: 1;
+    @media screen and (max-width: 1550px){
+      height: 350px;
+    }
+    @media screen and (max-width: 1050px){
+      height: 300px;
+    }
+    @media screen and (max-width: 700px){
+      height: 250px;
+    }
+    .center-module{
+      font-size: 28px;
+      .message{
+        @media screen and (max-width: 1550px){
+          font-size: 30px;
         }
-        .title{
-          font-size: 18px;
-          margin-bottom: 20px;
-        }
-        .row{
+        @media screen and (max-width: 1250px){
           font-size: 26px;
-          margin-bottom: 16px;
-          #fututra-credit{
-            width: 180px;
-          }
-          #hh-credit{
-            width: 220px;
-          }
+        }
+        @media screen and (max-width: 1050px){
+          font-size: 22px;
+        }
+        @media screen and (max-width: 870px){
+          font-size: 18px;
+        }
+        @media screen and (max-width: 700px){
+          font-size: 16px;
+        }
+        @media screen and (max-width: 500px){
+          font-size: 14px;
+        }
+        @media screen and (max-width: 400px){
+          font-size: 12px;
+        }
+        @media screen and (max-width: 350px){
+          font-size: 11px;
+        }
+        .email{
+          // font-size: 34px;
+
         }
       }
     }
@@ -37,26 +56,12 @@
 </style>
 
 <template>
-  <div id="credits-banner" class="banner">
-    <div class="banner-module">
-      <div class="col left-col">
-        <div class="title">
-          Contact The Team
-        </div>
-        <div class="row">
-          sales@jurisfutura.com
-        </div>
-      </div>
-      <div class="col">
-        <div class="title">
-          Powered By
-        </div>
-        <div class="row">
-          <img id="fututra-credit" src="../assets/_logos/futura_horizontal_white_red.svg" />
-        </div>
-        <div class="row">
-          <img id="hh-credit" src="../assets/_logos/WhiteHHLogoShort.png" />
-        </div>
+  <div id="contact-page">
+    <div class="center-module">
+      <div class="message">
+        Want to learn more about our solutions?<br />
+        Email our team. We are always happy to chat!<br /><br />
+        <div class="email">Sales@jurisfutura.com</div>
       </div>
     </div>
   </div>

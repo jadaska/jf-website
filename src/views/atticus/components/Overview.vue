@@ -11,34 +11,40 @@
 .section-image{
   position: relative;
   .box{
-    position: absolute;
-    top: -50px;
-    left: -500px;
-    width: 400px;
-    height: 400px;
-    border: 3px solid $fp;
+    // position: absolute;
+    // top: -50px;
+    // left: -500px;
+    // width: 400px;
+    // height: 400px;
+    // border: 3px solid $fp;
   }
   #orbit-image{
-    margin: 0px 100px 0px -50px;
+    // margin: 0px 100px 0px -50px;
   }
   #intelligent-image{
-    margin: 0px -120px 0px 80px;
+    // margin: 0px -120px 0px 80px;
   }
   #custom-image{
-    margin: -40px 80px 0px -50px;
+    // margin: -40px 80px 0px -50px;
   }
 }
-.fade-enter, .fade-leave-active {
-  opacity: 0;
-}
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 1s ease;
-}
+// .fade-enter, .fade-leave-active {
+//   opacity: 0;
+// }
+// .fade-enter-active, .fade-leave-active {
+//   transition: opacity 1s ease;
+// }
 
 .atticus-logo{
   width: 200px;
   margin-right: 20px;
   margin-bottom: 10px;
+  @media screen and (max-width: 1000px){
+    width: 140px;
+  }
+  @media screen and (max-width: 600px){
+    width: 100px;
+  }
 }
 
 </style>
@@ -52,7 +58,7 @@
           Atticus
         </div>
         <div class="product-sub-title">
-          A platform for optimizing<br>legal workflow
+          A platform for optimizing <br>legal workflow
         </div>
       </div>
       <!-- <span class="scroll-down">
@@ -64,7 +70,7 @@
     </div>
     <div class="product-page">
       <div class="page-section full-page">
-        <div class="side-2-side">
+        <div class="side-2-side left">
           <div class="section-image">
             <!-- <div id="orbit-animation"></div> -->
             <!-- <div class="box"></div> -->
@@ -72,7 +78,7 @@
           </div>
           <div class="section-text">
             <div class="section-title">
-              Streamline<br />Your Work
+              Streamline <br />Your Work
             </div>
             <div class="section-sub-title">
               Increase productivity, save time, and enjoy a frictionless technology experience.
@@ -91,10 +97,10 @@
         </div>
       </div>
       <div class="page-section full-page">
-        <div class="side-2-side">
+        <div class="side-2-side right">
           <div class="section-text">
             <div class="section-title">
-              Intelligent<br />Support
+              Intelligent <br />Support
             </div>
             <div class="section-sub-title">
               Leave the non-billable work to the machines and focus on what matters to you.
@@ -115,13 +121,13 @@
         </div>
       </div>
       <div class="page-section full-page">
-        <div class="side-2-side">
+        <div class="side-2-side left">
           <div class="section-image">
             <img id="orbit-image" src="../assets/planet-01.svg" />
           </div>
           <div class="section-text">
             <div class="section-title">
-              Always Learning<br />Always Evolving
+              Always Learning <br />Always Evolving
             </div>
             <div class="section-sub-title">
               The more you use it, the better it gets.

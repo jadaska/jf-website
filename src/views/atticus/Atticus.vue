@@ -9,12 +9,22 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 120px;
+      margin: 120px 0px;
       .title{
         color: #FFF;
         font-size: 42px;
         font-weight: 600;
         margin-bottom: 30px;
+        // @media screen and (max-width: 1300px){
+        //   font-size: 42px;
+        // }
+        @media screen and (max-width: 1000px){
+          font-size: 32px;
+        }
+        @media screen and (max-width: 750px){
+          font-size: 26px;
+          margin-bottom: 20px;
+        }
       }
       .try-now{
         color: #FFF;
@@ -23,6 +33,10 @@
         padding: 10px 30px;
         font-size: 24px;
         transition: all 0.15s ease;
+        @media screen and (max-width: 750px){
+          padding: 8px 24px;
+          font-size: 20px;
+        }
         &:hover{
           background-color: #FFF;
           color: $fr;

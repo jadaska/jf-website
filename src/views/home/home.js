@@ -81,7 +81,7 @@ export default{
           name: "Respondent",
           description: "Rapid Office Action<br>Responses",
           image_path: "./respondent.svg",
-          link_path: "/OAScribe"
+          link_path: "/Respondent"
         },{
           name: "Scribe",
           description: "Simple and Swift<br>Document Creation",

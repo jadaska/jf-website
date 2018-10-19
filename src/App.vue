@@ -346,9 +346,8 @@
             <div @click="goTo('/Atticus')" class="nav-link">
               ATTICUS
             </div>
-            <div @click="goTo('/OAScribe')" class="nav-link">
+            <div @click="goTo('/Respondent')" class="nav-link">
               RESPONDENT
-              <!-- Respondent -->
             </div>
             <div @click="goTo('/Scribe')" class="nav-link">
               SCRIBE
@@ -411,8 +410,8 @@
           <div class="link" @click="goTo('/Atticus')">
             ATTICUS
           </div>
-          <div class="link" @click="goTo('/OAScribe')">
-            SOAR
+          <div class="link" @click="goTo('/Respondent')">
+            RESPONDENT
           </div>
           <div class="link" @click="goTo('/Scribe')">
             SCRIBE

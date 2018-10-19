@@ -12,8 +12,8 @@ import AtticusCustom from './views/atticus/components/Custom.vue'
 import Scribe from './views/scribe/Scribe.vue'
 import ScribeOverview from './views/scribe/components/Overview.vue'
 
-import OAS from './views/oas/OAS.vue'
-import OASOverview from './views/oas/components/Overview.vue'
+import Respondent from './views/oas/OAS.vue'
+import RespondentOverview from './views/oas/components/Overview.vue'
 
 import Story from './views/story/Story.vue'
 
@@ -67,15 +67,15 @@ var router = new Router({
         },
       ]
     },{
-      path: '/OAScribe',
-      name: 'OAScribe',
-      component: OAS,
+      path: '/respondent',
+      name: 'respondent',
+      component: Respondent,
       // meta: { transition_name: },
       children: [
         {
           path: '',
           name: 'overview',
-          component: OASOverview,
+          component: RespondentOverview,
           meta: { transition_name: 'slide', save_scroll: true },
         },
       ]

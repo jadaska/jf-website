@@ -3,6 +3,7 @@
 #front-section{
   position: relative;
   min-height: calc(100vh - 60px);
+  box-shadow: $z_depth_1;
   @media screen and (max-width: 1000px){
     min-height: calc(50vh - 60px);
   }

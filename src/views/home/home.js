@@ -209,7 +209,7 @@ export default{
       }else if(this.active_messages_index > this.messages.length - 1){
         this.active_messages_index = 0;
       }
-      if(inc < 0){
+      if(inc > 0){
         this.last_swipe_direction = "left";
       }else{
         this.last_swipe_direction = "right";

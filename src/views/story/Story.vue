@@ -5,7 +5,7 @@
 
   ul{
     margin: 0px;
-    padding-left: 60px;
+    padding-left: 6vw;
     li:not(:first-child){
       margin-top: 30px;
     }
@@ -25,8 +25,9 @@
       </div>
       <div class="product-page">
         <div class="page-section full-page">
+          <br />
           <div class="section-text">
-            <div class="section-title small">
+            <div class="section-title">
               WHO WE ARE
             </div>
             <div class="section-content">
@@ -50,7 +51,7 @@
         </div>
         <div class="page-section full-page">
           <div class="section-text">
-            <div class="section-title small">
+            <div class="section-title">
               OUR PHILOSOPHY
             </div>
             <div class="section-content">
@@ -69,7 +70,7 @@
         </div>
         <div class="page-section full-page">
           <div class="section-text">
-            <div class="section-title small">
+            <div class="section-title">
               SURPISINGLY SIMPLE SOLUTIONS
             </div>
             <div class="section-content">

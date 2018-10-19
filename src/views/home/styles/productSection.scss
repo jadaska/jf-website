@@ -199,6 +199,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        &:hover{
+          cursor: pointer;
+        }
 				.product-logo {
           height: 130px;
           margin-bottom: 20px;
@@ -289,6 +292,9 @@
         margin: 40px 0px;
         @media screen and (max-width: 380px){
           margin: 30px 0px;
+        }
+        &:hover{
+          cursor: pointer;
         }
 				.product-logo {
           height: 60px;

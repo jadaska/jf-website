@@ -140,11 +140,9 @@ export default{
         });
       }else{
         var x = "100%";
-        console.log(this.last_swipe_direction);
         if(this.last_swipe_direction == "left"){
           x = "-100%";
         }
-        console.log(x);
         swipe_out.add( TweenLite.to(el, 0.5, {x: x, ease: Sine.easeInOut}), 0);
         swipe_out.eventCallback("onComplete", function(){
           done();

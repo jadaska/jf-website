@@ -90,12 +90,12 @@
       <div class="product-area" v-if="!mobile">
         <transition name="drop-in" mode="out-in">
           <div class="product" v-for="(product, product_index) in products" :key="product_index" v-if="active_product_index == product_index">
-            <div class="product-module">
+            <div class="product-module" @click="goTo(product.link_path)">
               <img class="product-logo" :class="product.name.toLowerCase()" :src="product.image_path" />
               <div class="product-name">
                 {{product.name}}
               </div>
-              <div class="product-learn-more" @click="goTo(product.link_path)">
+              <div class="product-learn-more">
                 Learn More
               </div>
             </div>
@@ -107,13 +107,13 @@
           Our Solutions
         </div>
         <div class="product" v-for="(product, product_index) in products">
-          <div class="product-module">
+          <div class="product-module" @click="goTo(product.link_path)">
             <img class="product-logo" :class="product.name.toLowerCase()" :src="product.image_path" />
             <div class="product-name">
               {{product.name}}
             </div>
             <div class="product-description" v-html="product.description"></div>
-            <div class="product-learn-more" @click="goTo(product.link_path)">
+            <div class="product-learn-more">
               Learn More
             </div>
           </div>

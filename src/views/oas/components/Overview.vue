@@ -2,28 +2,6 @@
 @import "@/styles/constants.scss";
 @import "@/styles/generics.scss";
 @import "@/styles/buttons.scss";
-.button-row{
-  .button{
-    margin-right: 20px;
-  }
-}
-.section-image{
-  position: relative;
-  // .box{
-  //   position: absolute;
-  //   top: -50px;
-  //   left: -500px;
-  //   width: 400px;
-  //   height: 400px;
-  //   border: 3px solid $fp;
-  // }
-}
-// .fade-enter, .fade-leave-active {
-//   opacity: 0;
-// }
-// .fade-enter-active, .fade-leave-active {
-//   transition: opacity 1s ease;
-// }
 
 .respondent-logo{
   width: 150px;
@@ -32,7 +10,7 @@
   @media screen and (max-width: 1000px){
     width: 100px;
   }
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 800px){
     width: 70px;
   }
 }

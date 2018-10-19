@@ -187,6 +187,15 @@ export default{
       clearInterval(this.message_loop);
       this.active_messages_index = index;
     },
+    nextMessage(inc){
+      clearInterval(this.message_loop);
+      this.active_messages_index += inc;
+      if(this.active_messages_index < 0){
+        this.active_messages_index = this.messages.length - 1;
+      }else if(this.active_messages_index > this.messages.length - 1){
+        this.active_messages_index = 0;
+      }
+    },
     setProduct(index){
       clearInterval(this.product_loop);
       this.active_product_index = index;

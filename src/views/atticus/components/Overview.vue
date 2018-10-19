@@ -3,38 +3,6 @@
 @import "@/styles/generics.scss";
 @import "@/styles/buttons.scss";
 
-.button-row{
-  .button{
-    margin-right: 20px;
-  }
-}
-.section-image{
-  position: relative;
-  .box{
-    // position: absolute;
-    // top: -50px;
-    // left: -500px;
-    // width: 400px;
-    // height: 400px;
-    // border: 3px solid $fp;
-  }
-  #orbit-image{
-    // margin: 0px 100px 0px -50px;
-  }
-  #intelligent-image{
-    // margin: 0px -120px 0px 80px;
-  }
-  #custom-image{
-    // margin: -40px 80px 0px -50px;
-  }
-}
-// .fade-enter, .fade-leave-active {
-//   opacity: 0;
-// }
-// .fade-enter-active, .fade-leave-active {
-//   transition: opacity 1s ease;
-// }
-
 .atticus-logo{
   width: 200px;
   margin-right: 20px;
@@ -42,7 +10,7 @@
   @media screen and (max-width: 1000px){
     width: 140px;
   }
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 800px){
     width: 100px;
   }
 }

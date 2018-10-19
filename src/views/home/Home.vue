@@ -28,11 +28,11 @@
       </div>
     </div>
     <div id="message-section">
-      <div id="message-nav">
+      <!-- <div id="message-nav">
         <div class="message-section" v-for="(msg, msg_index) in messages" @click="setMessage(msg_index)">
           <div class="tab" :class="{'active': msg_index == active_messages_index}"></div>
         </div>
-      </div>
+      </div> -->
       <transition-group name="swipe" mode="in-out" v-on:leave="leaveMessage">
         <div class="message-module" v-for="(msg, msg_index) in messages" v-if="msg_index == active_messages_index" :key="msg_index" :class="[msg.color]">
           <transition name="swipe-out">
@@ -46,6 +46,8 @@
           </transition>
           <div class="background" :class="{'full': in_message_description}">
             <div class="message-container" @click="in_message_description = !in_message_description; setMessage(msg_index)">
+              <div class="nav next fa fa-caret-right" @click.stop="nextMessage(1)"></div>
+              <div class="nav previous fa fa-caret-left" @click.stop="nextMessage(-1)"></div>
               <div class="module">
                 <div class="title">
                   <span v-html="msg.title"></span>

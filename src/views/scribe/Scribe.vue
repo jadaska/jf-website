@@ -47,7 +47,7 @@
 
 <template>
   <div id="atticus" class="product-container">
-    <section-nav></section-nav>
+    <!-- <section-nav></section-nav> -->
     <!-- <transition :name="transition_name" mode="out-in" @beforeLeave="beforeLeave" @enter="enter"> -->
       <router-view></router-view>
       <!-- :app-elm="app_elm" :sections="sections" @scroll-to-section="(sec)=>{scrollToSection(sec)}" -->

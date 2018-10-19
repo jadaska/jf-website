@@ -23,7 +23,7 @@
   @media screen and (max-width: 1050px){
     height: 400px;
   }
-  @media screen and (max-width: 700px){
+  @media screen and (max-width: 750px){
     height: 340px;
   }
   #message-nav{
@@ -59,7 +59,8 @@
       .tab{
         width: 35px;
         height: 16px;
-        background-color: #FFF;
+        background-color: #000;
+        opacity: 0.1;
         // margin: 10px 0px;
         transition: transform 0.2s ease;
         @media screen and (max-width: 1700px){
@@ -146,7 +147,7 @@
         background-color: $dy;
       }
     }
-    $section_width: 35%;
+    $section_width: 40%;
     .swipe-out-enter, .swipe-out-leave-to{
       transform: translateX(-$section_width);
     }
@@ -210,6 +211,26 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+        .nav{
+          position: absolute;
+          top: 50%;
+          color: #FFF;
+          font-size: 1.6vw;
+          opacity: 0.3;
+          padding: 20px;
+          transform: translateY(-50%);
+          &:hover{
+            opacity: 0.2;
+            cursor: pointer;
+          }
+          &.next{
+            right: 0.4vw;
+          }
+          &.previous{
+            left: 0.4vw;
+          }
+        }
         .module{
           color: $w;
           padding-top: 20px;
@@ -239,11 +260,11 @@
               min-width: 350px;
               margin-bottom: 16px;
             }
-            @media screen and (max-width: 700px){
+            @media screen and (max-width: 750px){
               min-width: 300px;
               margin-bottom: 12px;
             }
-            @media screen and (max-width: 580px){
+            @media screen and (max-width: 650px){
               min-width: 250px;
             }
             @media screen and (max-width: 380px){
@@ -275,11 +296,11 @@
               font-size: 14px;
               max-width: 350px;
             }
-            @media screen and (max-width: 700px){
+            @media screen and (max-width: 750px){
               font-size: 12px;
               max-width: 300px;
             }
-            @media screen and (max-width: 580px){
+            @media screen and (max-width: 650px){
               max-width: 250px;
             }
             @media screen and (max-width: 380px){
@@ -288,7 +309,9 @@
             }
           }
           .message-learn-more, .message-back{
-            color: rgba(255,255,255,0.5);
+            color: #FFF;
+            opacity: 0.4;
+            // font-weight: 600;
             display: inline-block;
             margin-left: -6px;
             padding: 2px 6px;
@@ -306,7 +329,7 @@
             @media screen and (max-width: 870px){
               font-size: 14px;
             }
-            @media screen and (max-width: 700px){
+            @media screen and (max-width: 750px){
               font-size: 12px;
             }
             @media screen and (max-width: 380px){
@@ -314,7 +337,8 @@
             }
             &:hover{
               cursor: pointer;
-              color: #FFF;
+              // opacity: 0.25;
+              // color: #FFF;
               border-bottom: 2px solid #FFF;
             }
           }

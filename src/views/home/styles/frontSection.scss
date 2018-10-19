@@ -2,9 +2,9 @@
 
 #front-section{
   position: relative;
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
   @media screen and (max-width: 1000px){
-    height: calc(50vh - 60px);
+    min-height: calc(50vh - 60px);
   }
   #future-ribbon{
     position: absolute;
@@ -36,7 +36,6 @@
   }
   #punch-title{
     position: relative;
-    margin-bottom: 40px;
     // font-family: "fresno",sans-serif;
     font-weight: 600;
     color: $fp;
@@ -49,7 +48,7 @@
       font-size: 55px;
     }
     @media screen and (max-width: 800px){
-      font-size: 8vw;
+      font-size: 7vw;
     }
     @media screen and (max-width: 350px){
       font-size: 7vw;

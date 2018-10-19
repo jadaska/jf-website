@@ -14,7 +14,7 @@
 
 <template>
   <div id="atticus" class="product-container">
-    <section-nav></section-nav>
+    <!-- <section-nav></section-nav> -->
     <div class="product-col">
       <div class="main-page">
         <div class="title-module">

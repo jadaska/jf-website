@@ -238,7 +238,7 @@
           left: 0px;
           width: 120vw;
           height: 100vh;
-          background-color: $p;
+          background-color: $edp;
           z-index: 50;
           box-shadow: $z_depth_3;
           padding-top: 80px;

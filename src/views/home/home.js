@@ -66,6 +66,7 @@ export default{
       ],
       xDown: null,
       yDown: null,
+      last_swipe_direction: null,
       product_loop: null,
       product_delay: 3000,
       product_callback: null,
@@ -138,7 +139,13 @@ export default{
           done();
         });
       }else{
-        swipe_out.add( TweenLite.to(el, 0.5, {x: "100%", ease: Sine.easeInOut}), 0);
+        var x = "100%";
+        console.log(this.last_swipe_direction);
+        if(this.last_swipe_direction == "left"){
+          x = "-100%";
+        }
+        console.log(x);
+        swipe_out.add( TweenLite.to(el, 0.5, {x: x, ease: Sine.easeInOut}), 0);
         swipe_out.eventCallback("onComplete", function(){
           done();
         });
@@ -202,6 +209,11 @@ export default{
       }else if(this.active_messages_index > this.messages.length - 1){
         this.active_messages_index = 0;
       }
+      if(inc < 0){
+        this.last_swipe_direction = "left";
+      }else{
+        this.last_swipe_direction = "right";
+      }
     },
     setProduct(index){
       clearInterval(this.product_loop);
@@ -234,18 +246,21 @@ export default{
         if( xDiff > 0 ){
           /* left swipe */
           this.nextMessage(-1);
+          this.last_swipe_direction = "left";
         }else{
           /* right swipe */
           this.nextMessage(1);
+          this.last_swipe_direction = "right";
         }
       }else{
         if( yDiff > 0 ){
           /* up swipe */
+          this.last_swipe_direction = "up";
         }else{
           /* down swipe */
+          this.last_swipe_direction = "down";
         }
       }
-      /* reset values */
       this.xDown = null;
       this.yDown = null;
     }

@@ -200,7 +200,7 @@
       transition: padding-left 1s ease;
       @media screen and (max-width: 540px){
         padding-left: 0px;
-        padding-right: 20px;
+        // padding-right: 20px;
       }
       &.full{
         padding-left: 0px;
@@ -216,19 +216,28 @@
           position: absolute;
           top: 50%;
           color: #FFF;
-          font-size: 1.6vw;
-          opacity: 0.3;
+          font-size: 2vw;
+          opacity: 0.4;
           padding: 20px;
           transform: translateY(-50%);
+          @media screen and (max-width: 870px){
+            font-size: 3vw;
+          }
           &:hover{
-            opacity: 0.2;
+            opacity: 0.6;
             cursor: pointer;
           }
           &.next{
             right: 0.4vw;
+            @media screen and (max-width: 870px){
+              right: 0vw;
+            }
           }
           &.previous{
             left: 0.4vw;
+            @media screen and (max-width: 870px){
+              left: 0vw;
+            }
           }
         }
         .module{
@@ -310,7 +319,7 @@
           }
           .message-learn-more, .message-back{
             color: #FFF;
-            opacity: 0.4;
+            opacity: 0.5;
             // font-weight: 600;
             display: inline-block;
             margin-left: -6px;

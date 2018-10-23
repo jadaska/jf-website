@@ -52,17 +52,17 @@
           <div class="section-image">
             <!-- <div id="orbit-animation"></div> -->
             <!-- <div class="box"></div> -->
-            <img id="orbit-image" src="../assets/planet-01.svg" />
+            <img id="orbit-image" src="../assets/img_1.svg" />
           </div>
           <div class="section-text">
-            <div class="section-title">
+            <div class="section-title blue">
               IP Prosecution <br />Redefined
             </div>
             <div class="section-sub-title">
 
             </div>
             <div class="section-content">
-              Scribe Office Action takes an Office Action and dynamically returns a custom shell response and associated materials (e.g., references).
+              Respondent takes an Office Action and dynamically returns a custom shell response and associated materials (e.g., references).
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@
       <div class="page-section full-page">
         <div class="side-2-side right">
           <div class="section-text">
-            <div class="section-title">
+            <div class="section-title blue">
               Intelligent <br />Information <br />Extraction
             </div>
             <div class="section-sub-title">
@@ -81,24 +81,24 @@
             </div>
           </div>
           <div class="section-image">
-            <img id="intelligent-image" src="../assets/intelligent-01.svg" />
+            <img id="intelligent-image" src="../assets/img_1.svg" />
           </div>
         </div>
       </div>
       <div class="page-section full-page">
         <div class="side-2-side left">
           <div class="section-image">
-            <img id="custom-image" src="../assets/custom-01.svg" />
+            <img id="custom-image" src="../assets/img_1.svg" />
           </div>
           <div class="section-text">
-            <div class="section-title">
+            <div class="section-title blue">
               Consistency <br />In Response
             </div>
             <div class="section-sub-title">
 
             </div>
             <div class="section-content">
-              The tool enables a consistent quality in response, thereby reducing human errors, while also supporting your clients’ or attorneys’ preferences.
+              The tool enables a consistent quality in response, reducing human errors, while also supporting your clients’ or attorneys’ preferences.
             </div>
           </div>
         </div>

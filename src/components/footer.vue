@@ -65,7 +65,7 @@
     <div class="center-module">
       <div class="message">
         Want to learn more about our solutions?<br />
-        Email our team. We are always happy to chat!<br /><br />
+        Email our team.<br /><br />
         <div class="email" @click="openMail()">Learn@jurisfutura.com</div>
       </div>
     </div>

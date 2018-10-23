@@ -33,10 +33,11 @@ export default{
       active_product_index: 0,
       punches: [
         "Powerful.",
-        "Simple.",
         "Fast.",
+        "Real.",
         "Beautiful.",
         "Easy.",
+        "For You.",
       ],
       active_messages_index: 0,
       previous_messages_index: 0,
@@ -45,7 +46,7 @@ export default{
       in_message_description: false,
       messages: [
         {
-          title: "Designed Specifically For<br>Legal Practitioners",
+          title: "Designed for Practitioners<br> by Legal Professionals",
           description: "Powered by US law firm Holland & Hart, our team works daily with legal practitioners to understand their needs, and creates technology solutions to support their substantive legal work and administrative workflows.<br><br>Through real-time feedback and direct access, we can help drive efficiencies, cost-savings, and increased productivity to positively impact practitioners’ lives and firms’ bottom lines.<br><br>",
           //"Powered by US law firm Holland & Hart, our team of technology developers work daily with attorneys and practitioners to understand their needs, so we can invent powerful new tools to support their substantive legal work and administrative workflows.",
           image_path: "./Test4.svg",
@@ -100,6 +101,17 @@ export default{
     }
   },
   methods: {
+    scrollToMission(){
+      var elm = document.getElementById("message-section");
+      if(elm){
+        this.scrollToSection(elm);
+      }
+    },
+    scrollToSection(section){
+      var section_margin = section.currentStyle || window.getComputedStyle(section);
+      var section_margin_top = parseInt(section_margin.marginTop.replace("px", ""));
+      TweenLite.to(window, 1, {scrollTo: {y:section.offsetTop - section.scrollTop + section.clientTop - section_margin_top - 60}, ease: Sine.easeInOut})
+    },
     startHomeAnimation(){
       this.punch_loop = setInterval(()=>{
         if(this.active_punch_index >= this.punches.length-1){

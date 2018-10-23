@@ -360,7 +360,7 @@
           </div>
         </div>
         <div class="nav-item">
-          <div class="nav-title">
+          <div class="nav-title" @click="goTo('/Contact')">
             Contact
           </div>
         </div>

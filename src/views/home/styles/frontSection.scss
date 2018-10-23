@@ -4,6 +4,7 @@
   position: relative;
   min-height: calc(100vh - 60px);
   box-shadow: $z_depth_1;
+  user-select: none;
   @media screen and (max-width: 1000px){
     min-height: calc(50vh - 60px);
   }
@@ -33,6 +34,13 @@
     }
     @media screen and (max-width: 430px){
 
+    }
+    &:hover{
+      background-color: $dr;
+      cursor: pointer;
+    }
+    &:active{
+      box-shadow: $z_depth_0;
     }
   }
   #punch-title{

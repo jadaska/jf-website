@@ -2,9 +2,21 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-// import './registerServiceWorker'
 
-Vue.config.productionTip = false
+import VeeValidate from 'vee-validate';
+import { Validator } from 'vee-validate';
+import autosize from 'autosize';
+// import './registerServiceWorker' // TEMP causes conflict with microsoft auth redirect
+
+import Checkbox from './components/inputs/Checkbox.vue';
+import Input from './components/inputs/Input.vue';
+import Select from './components/inputs/Select.vue';
+import Textarea from './components/inputs/Textarea.vue';
+import Datepicker from './components/inputs/Date.vue';
+
+Vue.config.productionTip = false;
+
+Vue.use(VeeValidate);
 
 Vue.directive("click-outside", {
   bind: function(el, binding, vNode){
@@ -30,6 +42,21 @@ Vue.directive("click-outside", {
     el.__vueClickOutside__ = null
   }
 })
+
+Vue.directive("autosize", {
+  inserted: function(el){
+    autosize(el);
+  },
+  update: function(el){
+    autosize(el);
+	},
+})
+
+Vue.component("v-checkbox", Checkbox)
+Vue.component("v-input", Input)
+Vue.component("v-select", Select)
+Vue.component("v-textarea", Textarea)
+Vue.component("v-date", Datepicker)
 
 new Vue({
   router,

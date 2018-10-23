@@ -17,6 +17,8 @@ import RespondentOverview from './views/oas/components/Overview.vue'
 
 import Story from './views/story/Story.vue'
 
+import Contact from './views/contact/Contact.vue'
+
 Vue.use(Router)
 
 var router = new Router({
@@ -84,7 +86,12 @@ var router = new Router({
       name: 'Story',
       component: Story,
       // meta: { transition_name: },
-    },
+    },{
+      path: '/Contact',
+      name: 'Contact',
+      component: Contact,
+      // meta: { transition_name: },
+    }
   ],
   scrollBehavior(to, from, savedPosition){
     // console.log(to);

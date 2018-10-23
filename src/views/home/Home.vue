@@ -7,7 +7,7 @@
   <div id="home-page">
     <!-- <mesh></mesh> -->
     <div id="front-section" class="page">
-      <div id="future-ribbon">
+      <div id="future-ribbon" @click="scrollToMission()">
         The Future of Law is Here
       </div>
       <div class="center-module">

@@ -48,7 +48,12 @@
         }
         .email{
           // font-size: 34px;
-
+          border-bottom: 2px solid rgba(0,0,0,0);
+          display: inline-block;
+          &:hover{
+            cursor: pointer;
+            border-bottom: 2px solid #FFF;
+          }
         }
       }
     }
@@ -61,8 +66,18 @@
       <div class="message">
         Want to learn more about our solutions?<br />
         Email our team. We are always happy to chat!<br /><br />
-        <div class="email">Sales@jurisfutura.com</div>
+        <div class="email" @click="openMail()">Learn@jurisfutura.com</div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+  export default{
+    methods: {
+      openMail(){
+        window.open('mailto:learn@jurisfutura.com');
+      }
+    }
+  }
+</script>

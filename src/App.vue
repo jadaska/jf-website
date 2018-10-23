@@ -566,7 +566,7 @@
           </div>
           <div class="link">
             <a href="https://vuejs.org/" target="_blank">
-              VueJS
+              Vue.js
             </a>
           </div>
           <div class="link">

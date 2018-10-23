@@ -88,7 +88,7 @@
       <div class="page-section full-page">
         <div class="side-2-side left">
           <div class="section-image">
-            <img id="custom-image" src="../assets/img_1.svg" />
+            <img id="custom-image" src="../assets/img_2.svg" />
           </div>
           <div class="section-text">
             <div class="section-title blue">

@@ -271,61 +271,161 @@
             padding-top: 40px;
           }
         }
-        #terms-page{
+        #footer-page{
           background-color: $b2;
           color: #FFF;
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           justify-content: center;
-          height: 80px;
-          z-index: 0;
-          font-size: 16px;
-          @media screen and (max-width: 1550px){
-            font-size: 14px;
-            height: 70px;
+          padding: 80px 30px 20px 30px;
+          @media screen and (max-width: 1200px){
+            padding: 60px 30px 0px 30px;
           }
-          @media screen and (max-width: 1050px){
-            font-size: 12px;
-            height: 60px;
-          }
-          @media screen and (max-width: 700px){
-            font-size: 10px;
-            height: 50px;
+          @media screen and (max-width: 850px){
+            padding: 40px 70px 0px 70px;
+            flex-direction: column;
           }
           @media screen and (max-width: 540px){
-            font-size: 8px;
-            height: 40px;
+            padding: 40px 50px 0px 50px;
           }
-        	.center-module {
+          .group{
             display: flex;
-            align-items: center;
-        		.logo {
-              width: 26px;
-              margin-right: 20px;
-              @media screen and (max-width: 1050px){
-                width: 24px;
-                margin-right: 16px;
-              }
-              @media screen and (max-width: 700px){
-                width: 18px;
-                margin-right: 12px;
-              }
-              @media screen and (max-width: 540px){
-                width: 14px;
-                margin-right: 10px;
-              }
-        		}
-        		.text-container {
-              color: #777;
-              line-height: 140%;
-        			.terms {
-                color: #FFF;
+            @media screen and (max-width: 850px){
+              flex-wrap: wrap;
+            }
+          }
+          .module{
+            margin-right: 80px;
+            @media screen and (max-width: 1200px){
+              margin-right: 60px;
+            }
+            @media screen and (max-width: 1050px){
+              margin-right: 50px;
+            }
+            @media screen and (max-width: 850px){
+              // margin-right: 0px;
+              margin-bottom: 30px;
+              // min-width: 200px;
+            }
+            @media screen and (max-width: 650px){
+              min-width: 160px;
+            }
+            @media screen and (max-width: 540px){
+              // margin-right: 0px;
+              margin-bottom: 10px;
+              // min-width: 200px;
+            }
+            &.power-module{
+              #hh-credit{
+                width: 170px;
+                opacity: 0.4;
+                @media screen and (max-width: 1200px){
+                  width: 160px;
+                }
+                @media screen and (max-width: 1050px){
+                  width: 150px;
+                }
+                @media screen and (max-width: 540px){
+                  margin-bottom: 18px;
+                }
                 &:hover{
+                  opacity: 1;
                   cursor: pointer;
                 }
-        			}
-        		}
-        	}
+              }
+            }
+            .title{
+              font-size: 18px;
+              margin-bottom: 12px;
+              font-weight: 500;
+              color: #FFF;
+              @media screen and (max-width: 1200px){
+                font-size: 16px;
+              }
+              @media screen and (max-width: 1050px){
+                margin-bottom: 18px;
+                font-size: 14px;
+              }
+              @media screen and (max-width: 540px){
+                margin-bottom: 18px;
+                font-size: 12px;
+              }
+            }
+            .link{
+              font-size: 18px;
+              color: #888;
+              margin-bottom: 8px;
+              @media screen and (max-width: 1200px){
+                font-size: 16px;
+              }
+              @media screen and (max-width: 1050px){
+                margin-bottom: 18px;
+                font-size: 14px;
+              }
+              @media screen and (max-width: 540px){
+                margin-bottom: 18px;
+                font-size: 12px;
+              }
+              &:hover{
+                color: #FFF;
+                cursor: pointer;
+              }
+              a{
+                text-decoration: none;
+                color: #888;
+                &:hover{
+                  color: #FFF;
+                }
+              }
+            }
+          }
+          .logo {
+            height: 70px;
+            @media screen and (max-width: 850px){
+              display: none;
+            }
+            @media screen and (max-width: 1050px){
+              height: 60px;
+            }
+            @media screen and (max-width: 540px){
+              height: 50px;
+              margin-bottom: 15px;
+            }
+          }
+        }
+        #terms-page{
+          background-color: $b2;
+          color: #777;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+          padding: 20px 10px 20px 10px;
+          @media screen and (max-width: 1250px){
+            font-size: 12px;
+          }
+          @media screen and (max-width: 540px){
+            font-size: 10px;
+          }
+          &:hover{
+            cursor: pointer;
+          }
+          // @media screen and (max-width: 1550px){
+          //   font-size: 14px;
+          //   height: 70px;
+          // }
+          // @media screen and (max-width: 1050px){
+          //   font-size: 12px;
+          //   height: 60px;
+          // }
+          // @media screen and (max-width: 700px){
+          //   font-size: 10px;
+          //   height: 50px;
+          // }
+          // @media screen and (max-width: 540px){
+          //   font-size: 8px;
+          //   height: 40px;
+          // }
         }
       }
     }
@@ -422,16 +522,63 @@
     <div id="view-container">
       <router-view/>
     </div>
-    <div id="terms-page">
-      <div class="center-module">
+    <div id="footer-page">
+      <div class="module">
         <img class="logo" src="@/assets/futura_logo_grey.svg" />
-        <div class="text-container">
-          Special thanks to VueJS & Font Awesome!<br />
-          <div class="terms">
-            Terms + Conditions
+      </div>
+      <div class="group">
+        <div class="product-module module">
+          <div class="title">
+            Products
+          </div>
+          <div class="link" @click="goTo('/Atticus')">
+            ATTICUS
+          </div>
+          <div class="link" @click="goTo('/Respondent')">
+            RESPONDENT
+          </div>
+          <div class="link" @click="goTo('/Scribe')">
+            SCRIBE
+          </div>
+        </div>
+        <div class="about-module module">
+          <div class="title">
+            About
+          </div>
+          <div class="link" @click="goTo('/Story')">
+            Our Story
+          </div>
+          <div class="link" @click="goTo('/Contact')">
+            Contact
+          </div>
+        </div>
+        <div class="power-module module">
+          <div class="title">
+            Powered by
+          </div>
+          <a href="https://www.hollandhart.com/" target="_blank">
+            <img id="hh-credit" src="./assets/_logos/WhiteHHLogoShort.png" />
+          </a>
+        </div>
+        <div class="support-module module">
+          <div class="title">
+            Special thanks to
+          </div>
+          <div class="link">
+            <a href="https://vuejs.org/" target="_blank">
+              VueJS
+            </a>
+          </div>
+          <div class="link">
+            <a href="https://fontawesome.com/" target="_blank">
+              Font Awesome
+            </a>
           </div>
         </div>
       </div>
+    </div>
+    <div id="terms-page">
+      Terms + Conditions
     </div>
   </div>
 </template>

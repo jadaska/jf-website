@@ -16,32 +16,32 @@
     @media screen and (max-width: 1050px){
       height: 300px;
     }
-    @media screen and (max-width: 700px){
+    @media screen and (max-width: 750px){
       height: 250px;
     }
     .center-module{
       font-size: 28px;
       .message{
         @media screen and (max-width: 1550px){
-          font-size: 30px;
-        }
-        @media screen and (max-width: 1250px){
           font-size: 26px;
         }
-        @media screen and (max-width: 1050px){
+        @media screen and (max-width: 1250px){
           font-size: 22px;
         }
-        @media screen and (max-width: 870px){
+        @media screen and (max-width: 1050px){
           font-size: 18px;
         }
-        @media screen and (max-width: 700px){
+        @media screen and (max-width: 870px){
           font-size: 16px;
         }
-        @media screen and (max-width: 500px){
+        @media screen and (max-width: 700px){
           font-size: 14px;
         }
-        @media screen and (max-width: 400px){
+        @media screen and (max-width: 500px){
           font-size: 12px;
+        }
+        @media screen and (max-width: 400px){
+          font-size: 11px;
         }
         @media screen and (max-width: 350px){
           font-size: 11px;

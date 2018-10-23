@@ -52,7 +52,7 @@
               Increase productivity, save time, and enjoy a frictionless technology experience.
             </div>
             <div class="section-content">
-              Atticus is a digital platform that brings together attorney workflow tools under one convenient and easy-to-use interface that integrates directly into your favorite applications. This removes the need for you to switch between applications to get your work done.
+              It all starts with Atticus. Atticus is a digital platform that brings together attorney workflow tools under one convenient and easy-to-use interface that integrates directly into your favorite applications. This removes the need for you to switch between applications to get your work done.
               <!-- Atticus is a digital platform that brings together attorney workflow tools under one conveint and easy to use interface that integrates directly into your favorite applications. -->
             </div>
             <!-- <span class="scroll-down small">
@@ -74,7 +74,7 @@
               Leave the non-billable work to the machines and focus on what matters to you.
             </div>
             <div class="section-content">
-              Atticus scans your emails and extracts relevant information to your task at hand. While Atticus currently focuses on time entry, document management, and docketing-related applications, we are constantly expanding its functionality and intelligence.
+              Using Artificial Intelligence and Machine Learning, Atticus scans your emails and extracts relevant information to your task at hand. Atticus currently focuses on time entry, document management, and docketing-related applications, and is constantly expanding its functionality and intelligence.
             </div>
             <!-- <span class="scroll-down small">
               <span class="scroll-down-row" @click="$router.push('/atticus/intelligent')">
@@ -101,7 +101,7 @@
               The more you use it, the better it gets.
             </div>
             <div class="section-content">
-              As Atticus starts to learn your workflow and preferences, it will also start to provide recommendations on what else you might like to do, based on tasks that you regularly complete each day.
+              As Atticus starts to learn your workflow and preferences, the AI embedded within it will also start to provide recommendations on what else you might like to do, based on tasks that you regularly complete each day.
             </div>
           </div>
         </div>

@@ -52,7 +52,7 @@
           <div class="section-image">
             <!-- <div id="orbit-animation"></div> -->
             <!-- <div class="box"></div> -->
-            <img id="orbit-image" src="../assets/img_1.svg" />
+            <img id="orbit-image" src="../assets/img_3.svg" />
           </div>
           <div class="section-text">
             <div class="section-title blue">

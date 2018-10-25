@@ -54,11 +54,10 @@
     <!-- </transition> -->
     <div id="get-started-banner" class="banner">
       <div class="banner-module">
-        <div class="title">Try Scribe Today</div>
+        <div class="title">Ready to get started?</div>
         <div class="try-now">Get In Touch</div>
       </div>
     </div>
-    <contact-footer></contact-footer>
   </div>
 </template>
 

@@ -91,7 +91,7 @@
       <div class="page-section full-page">
         <div class="side-2-side left">
           <div class="section-image">
-            <img id="orbit-image" src="../assets/planet-01.svg" />
+            <img id="orbit-image" src="../assets/custom-01.svg" />
           </div>
           <div class="section-text">
             <div class="section-title">

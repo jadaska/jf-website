@@ -58,7 +58,6 @@
         <div class="try-now">Get In Touch</div>
       </div>
     </div>
-    <contact-footer></contact-footer>
   </div>
 </template>
 

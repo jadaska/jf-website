@@ -47,7 +47,7 @@
       }
       &:not(:first-child){
         &:hover{
-          background-color: $elp;
+          cursor: pointer;
         }
         &:active{
           background-color: $p;

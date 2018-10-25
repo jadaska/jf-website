@@ -41,15 +41,15 @@
           #full-nav-container{
             width: 100%;
             height: 100%;
-            max-width: 1000px;
+            max-width: 1200px;
             padding: 0px 40px;
             display: flex;
             align-items: center;
             @media screen and (max-width: 1300px){
               max-width: 800px;
             }
-            @media screen and (max-width: 1000px){
-              max-width: 600px;
+            @media screen and (max-width: 850px){
+              max-width: 700px;
             }
             @media screen and (max-width: 540px){
               max-width: 100%;

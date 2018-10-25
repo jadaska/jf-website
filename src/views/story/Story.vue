@@ -10,25 +10,41 @@
       margin-top: 30px;
     }
   }
+  .story-page{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 850px){
+      width: 120%;
+    }
+    @media screen and (max-width: 540px){
+      width: 150%;
+    }
+    .team{
+      width: 100%;
+    }
+  }
 </style>
 
 <template>
   <div id="atticus" class="product-container">
     <!-- <section-nav></section-nav> -->
     <div class="product-col">
-      <div class="main-page">
-        <div class="title-module">
+      <div class="story-page">
+        <img class="team" src="./assets/team.svg" />
+        <!-- <div class="title-module">
           <div class="product-title">
             Our Story
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="product-page">
         <div class="page-section full-page">
           <br />
           <div class="section-text">
             <div class="section-title">
-              WHO WE ARE
+              Who We Are
             </div>
             <div class="section-content">
               <!-- Juris Futura is a technology subsidiary of US law firm Holland & Hart, created in response to the firm’s first-hand experience of seeing technology drive client value and firm success.  -->
@@ -52,7 +68,7 @@
         <div class="page-section full-page">
           <div class="section-text">
             <div class="section-title">
-              OUR PHILOSOPHY
+              Our Philosophy
             </div>
             <div class="section-content">
               <!-- At Juris Futura we’re unabashed legal technology futurists. From AI to natural language processing to machine learning, we see tremendous opportunities to transform legal services through technology. -->
@@ -71,7 +87,7 @@
         <div class="page-section full-page">
           <div class="section-text">
             <div class="section-title">
-              SURPISINGLY SIMPLE SOLUTIONS
+              Surprisingly Simple
             </div>
             <div class="section-content">
               <!-- Our solutions insert new capabilities into practitioners’ existing workflows, learn users’ behavior and preferences, and automate tasks that do not need to be completed by a legal professional. -->
@@ -85,7 +101,6 @@
         </div>
       </div>
     </div>
-    <contact-footer></contact-footer>
   </div>
 </template>
 

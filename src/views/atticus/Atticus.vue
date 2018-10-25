@@ -29,7 +29,7 @@
       .try-now{
         color: #FFF;
         border: 3px solid #FFF;
-        font-weight: 500;
+        font-weight: 600;
         padding: 10px 30px;
         font-size: 24px;
         transition: all 0.15s ease;
@@ -57,7 +57,7 @@
     <div id="get-started-banner" class="banner">
       <div class="banner-module">
         <div class="title">Want to try Atticus?</div>
-        <div class="try-now">Get In Touch</div>
+        <div class="try-now" @click="$router.push('/Contact')">Get In Touch</div>
       </div>
     </div>
   </div>

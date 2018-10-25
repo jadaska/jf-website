@@ -21,6 +21,7 @@
     }
     .center-module{
       font-size: 28px;
+      font-weight: 500;
       .message{
         @media screen and (max-width: 1550px){
           font-size: 26px;

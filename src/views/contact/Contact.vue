@@ -24,11 +24,12 @@
     }
     .card{
       background-color: #FFF;
-      box-shadow: $z_depth_1;
+      box-shadow: $z_depth_2;
       width: 500px;
       padding: 50px;
       position: relative;
       margin: 30px;
+      // border: 3px solid $lp;
       @media screen and (max-width: 620px){
         width: 100%;
         margin: 20px;
@@ -97,8 +98,9 @@
           background-color: $r;
           color: #FFF;
           padding: 12px 40px;
-          box-shadow: $z_depth_1;
+          box-shadow: $z_depth_2;
           user-select: none;
+          font-weight: 600;
           &:hover{
             cursor: pointer;
             background-color: $dr;
@@ -112,7 +114,7 @@
         font-size: 28px;
         margin-bottom: 25px;
         color: $p;
-        font-weight: 500;
+        font-weight: 600;
         @media screen and (max-width: 620px){
           font-size: 26px;
         }
@@ -171,7 +173,7 @@
           </div>
         </div>
         <div class="send-button">
-          SEND
+          Send
         </div>
       </div>
     </div>

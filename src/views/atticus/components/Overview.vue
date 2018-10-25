@@ -45,7 +45,7 @@
             <img id="orbit-image" src="../assets/planet-01.svg" />
           </div>
           <div class="section-text">
-            <div class="section-title">
+            <div class="section-title blue">
               Streamline <br />Your Work
             </div>
             <div class="section-sub-title">
@@ -67,7 +67,7 @@
       <div class="page-section full-page">
         <div class="side-2-side right">
           <div class="section-text">
-            <div class="section-title">
+            <div class="section-title blue">
               Intelligent <br />Support
             </div>
             <div class="section-sub-title">
@@ -94,11 +94,12 @@
             <img id="orbit-image" src="../assets/custom-01.svg" />
           </div>
           <div class="section-text">
-            <div class="section-title">
-              Always Learning <br />Always Evolving
+            <div class="section-title blue">
+              Always Learning <br />
+              Always Evolving
             </div>
             <div class="section-sub-title">
-              The more you use it, the better it gets.
+              The more you use it, the better it will get.
             </div>
             <div class="section-content">
               As Atticus starts to learn your workflow and preferences, the AI embedded within it will also start to provide recommendations on what else you might like to do, based on tasks that you regularly complete each day.

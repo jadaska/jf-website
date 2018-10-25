@@ -25,6 +25,15 @@
       width: 100%;
     }
   }
+  .section-title{
+    margin-bottom: 60px;
+    @media screen and (max-width: 1300px){
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: 1000px){
+      margin-bottom: 30px;
+    }
+  }
 </style>
 
 <template>

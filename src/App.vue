@@ -72,8 +72,8 @@
               position: relative;
               margin: 0px 20px;
               padding: 3px;
-              font-size: 18px;
-              font-weight: 500;
+              font-size: 20px;
+              font-weight: 600;
               color: $fp;
               letter-spacing: 1px;
               white-space: nowrap;
@@ -137,7 +137,7 @@
                   // letter-spacing: 5px;
                   color: $fp;
                   font-size: 20px;
-                  font-weight: 500;
+                  font-weight: 600;
                   letter-spacing: 1px;
                   white-space:nowrap;
                   @media screen and (max-width: 750px){
@@ -278,6 +278,7 @@
           align-items: flex-start;
           justify-content: center;
           padding: 80px 30px 20px 30px;
+          font-weight: 500;
           @media screen and (max-width: 1200px){
             padding: 60px 30px 0px 30px;
           }
@@ -336,8 +337,8 @@
             }
             .title{
               font-size: 18px;
-              margin-bottom: 12px;
-              font-weight: 500;
+              margin-bottom: 14px;
+              font-weight: 600;
               color: #FFF;
               @media screen and (max-width: 1200px){
                 font-size: 16px;
@@ -354,7 +355,7 @@
             .link{
               font-size: 18px;
               color: #888;
-              margin-bottom: 8px;
+              margin-bottom: 10px;
               @media screen and (max-width: 1200px){
                 font-size: 16px;
               }
@@ -401,6 +402,7 @@
           justify-content: center;
           font-size: 14px;
           padding: 20px 10px 20px 10px;
+          font-weight: 500;
           @media screen and (max-width: 1250px){
             font-size: 12px;
           }

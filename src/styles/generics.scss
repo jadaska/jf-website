@@ -3,6 +3,7 @@
 body{
   // background-image: url("~@/assets/geo.png");
   background-repeat: repeat;
+  font-weight: 500;
 }
 
 * {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
@@ -124,7 +125,7 @@ textarea{
   margin-bottom: 30px;
   color: $fr;
   font-size: 60px;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 100%;
   white-space: nowrap;
   overflow-x: visible;
@@ -176,6 +177,7 @@ textarea{
   margin-bottom: 30px;
   color: #79677e;
   font-size: 26px;
+  font-weight: 500;
   &.bold{
     font-weight: 600;
   }
@@ -245,6 +247,8 @@ textarea{
       min-height: 60vh;
       // min-height: 30vw;
       background-color: $dp;
+      // background-image: url("~@/assets/product_background-01.svg");
+      // background-size: 100%;
       color: #FFF;
       @media screen and (max-width: 1000px){
         min-height: 45vh;
@@ -273,7 +277,7 @@ textarea{
           text-align: center;
           margin-bottom: 30px;
           font-size:  24px;
-          font-weight: 400;
+          font-weight: 500;
           letter-spacing: 2px;
           @media screen and (max-width: 1000px){
             font-size: 18px;

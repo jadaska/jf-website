@@ -29,66 +29,55 @@ var router = new Router({
       component: Home
     },{
       path: '/atticus',
-      name: 'atticus',
       component: Atticus,
       // meta: { transition_name: },
       children: [
         {
           path: '',
-          name: 'overview',
           component: AtticusOverview,
           meta: { transition_name: 'slide', save_scroll: true, scroll_position: 0},
         },{
           path: 'integrations',
-          name: 'integrations',
           component: AtticusIntegrations,
           meta: { transition_name: 'slide', return_scroll: true},
         },{
           path: 'intelligent',
-          name: 'intelligent',
           component: AtticusIntelligent,
           meta: { transition_name: 'slide', return_scroll: true},
         },{
           path: 'custom',
-          name: 'custom',
           component: AtticusCustom,
           meta: { transition_name: 'slide', return_scroll: true},
         }
       ]
     },{
       path: '/scribe',
-      name: 'scribe',
       component: Scribe,
       // meta: { transition_name: },
       children: [
         {
           path: '',
-          name: 'overview',
           component: ScribeOverview,
           meta: { transition_name: 'slide', save_scroll: true },
         },
       ]
     },{
       path: '/respondent',
-      name: 'respondent',
       component: Respondent,
       // meta: { transition_name: },
       children: [
         {
           path: '',
-          name: 'overview',
           component: RespondentOverview,
           meta: { transition_name: 'slide', save_scroll: true },
         },
       ]
     },{
       path: '/Story',
-      name: 'Story',
       component: Story,
       // meta: { transition_name: },
     },{
       path: '/Contact',
-      name: 'Contact',
       component: Contact,
       // meta: { transition_name: },
     }

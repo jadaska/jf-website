@@ -130,7 +130,7 @@
       .email{
         font-size: 20px;
         color: $r;
-        font-weight: 600;
+        font-weight: 500;
         display: inline-block;
         @media screen and (max-width: 620px){
           font-size: 16px;

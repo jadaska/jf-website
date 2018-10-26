@@ -110,6 +110,11 @@ export default{
     scrollToSection(section){
       var section_margin = section.currentStyle || window.getComputedStyle(section);
       var section_margin_top = parseInt(section_margin.marginTop.replace("px", ""));
+      console.log(section.offsetTop);
+      console.log(section.scrollTop);
+      console.log(section.clientTop);
+      console.log(section_margin_top);
+      console.log(section.offsetTop - section.scrollTop + section.clientTop - section_margin_top - 60);
       TweenLite.to(window, 1, {scrollTo: {y:section.offsetTop - section.scrollTop + section.clientTop - section_margin_top - 60}, ease: Sine.easeInOut})
     },
     startHomeAnimation(){

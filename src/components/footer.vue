@@ -67,7 +67,7 @@
       <div class="message">
         Want to learn more about our solutions?<br />
         Contact our team at:<br /><br />
-        <div class="email" @click="openMail()">Learn@jurisfutura.com</div>
+        <div class="email" @click="openMail()">info@jurisfutura.com</div>
       </div>
     </div>
   </div>
@@ -77,7 +77,7 @@
   export default{
     methods: {
       openMail(){
-        window.open('mailto:learn@jurisfutura.com');
+        window.open('mailto:info@jurisfutura.com');
       }
     }
   }

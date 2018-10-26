@@ -12,14 +12,19 @@
     justify-content: center;
     .card-container{
       display: flex;
+      flex-direction: column;
       align-items: center;
       flex-wrap: wrap;
       // padding: 30px;
-      padding-bottom: 40px;
+      padding-top: 40px;
+      padding-bottom: 80px;
       justify-content: center;
       @media screen and (max-width: 620px){
         // padding: 20px;
-        padding-bottom: 30px;
+        // padding-bottom: 30px;
+      }
+      @media screen and (max-width: 550px){
+        padding-top: 20px;
       }
     }
     .card{
@@ -28,20 +33,20 @@
       width: 500px;
       padding: 50px;
       position: relative;
-      margin: 30px;
+      margin: 20px;
       // border: 3px solid $lp;
       @media screen and (max-width: 620px){
         width: 100%;
         margin: 20px;
         padding: 40px;
       }
-      @media screen and (max-width: 400px){
+      @media screen and (max-width: 450px){
         margin: 10px;
         padding: 30px;
       }
       &.contact-card{
         font-size: 16px;
-        @media screen and (max-width: 400px){
+        @media screen and (max-width: 450px){
           font-size: 14px;
         }
         .contact{
@@ -80,12 +85,12 @@
         .checkbox-row{
           display: flex;
           margin-bottom: 20px;
-          @media screen and (max-width: 400px){
+          @media screen and (max-width: 450px){
             flex-direction: column;
           }
           .col{
             width: 50%;
-            @media screen and (max-width: 400px){
+            @media screen and (max-width: 450px){
               width: 100%;
             }
           }
@@ -118,10 +123,29 @@
         @media screen and (max-width: 620px){
           font-size: 26px;
         }
-        @media screen and (max-width: 400px){
+        @media screen and (max-width: 450px){
           font-size: 22px;
         }
       }
+      .email{
+        font-size: 20px;
+        color: $r;
+        font-weight: 600;
+        display: inline-block;
+        @media screen and (max-width: 620px){
+          font-size: 16px;
+        }
+        border-bottom: 2px solid rgba(0,0,0,0);
+        &:hover{
+          cursor: pointer;
+          border-bottom: 2px solid $r;
+        }
+      }
+    }
+    .or{
+      color: #FFF;
+      font-size: 20px;
+      font-weight: 600;
     }
   }
 </style>
@@ -131,9 +155,12 @@
     <div class="card-container">
       <div class="contact-card card">
         <div class="card-title">
-          Contact
+          Email Our Team
         </div>
-        <div class="contact">
+        <div class="email" @click="openMail('info@jurisfutura.com')">
+          info@jurisfutura.com
+        </div>
+        <!-- <div class="contact">
           <div class="role">Operations/Commercial</div>
           <div class="name">Brian Fitzgerald</div>
           <div class="email" @click="openMail('bwfitzgerald@jurisfutura.com')">bwfitzgerald@jurisfutura.com</div>
@@ -147,7 +174,10 @@
           <div class="role">Product Development</div>
           <div class="name">Jason Adaska</div>
           <div class="email" @click="openMail('jwadaska@jurisfutura.com')">jwadaska@jurisfutura.com</div>
-        </div>
+        </div> -->
+      </div>
+      <div class="or">
+        or
       </div>
       <div class="message-card card">
         <div class="card-title">

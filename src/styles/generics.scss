@@ -491,11 +491,17 @@ textarea{
             }
             .section-image{
               margin-right: 6%;
+              @media screen and (max-width: 600px){
+                margin-right: 0px;
+              }
             }
           }
           &.right{
             .section-image{
               margin-left: 6%;
+              @media screen and (max-width: 600px){
+                margin-left: 0px;
+              }
             }
           }
           .section-image{

@@ -143,9 +143,9 @@
       }
     }
     .or{
-      color: $p;
+      color: $lp;
       font-size: 20px;
-      font-weight: 600;
+      font-weight: 500;
     }
     .sending, .sent{
       display: flex;

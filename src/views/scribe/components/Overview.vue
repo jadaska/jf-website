@@ -20,8 +20,9 @@
 <template>
   <div class="product-col">
     <div class="main-page">
+      <img class="image-module" src="../assets/img_1.svg"></img>
       <div class="title-module">
-        <img class="scribe-logo" src="@/../public/scribe.svg"></img>
+        <!-- <img class="scribe-logo" src="@/../public/scribe.svg"></img> -->
         <div class="product-title">
           Scribe
         </div>
@@ -29,6 +30,9 @@
           Simple and Swift<br />
           Document Creation
         </div>
+      </div>
+      <div class="scroll-down">
+        Learn More
       </div>
     </div>
     <div class="product-page">
@@ -60,12 +64,7 @@
         </div>
       </div> -->
       <div class="page-section full-page">
-        <div class="side-2-side left">
-          <div class="section-image">
-            <!-- <div id="orbit-animation"></div> -->
-            <!-- <div class="box"></div> -->
-            <img id="scribe-icon-1" src="../assets/scribe_1.svg" />
-          </div>
+        <div class="side-2-side right">
           <div class="section-text">
             <div class="section-title">
               More Files<br />
@@ -86,10 +85,18 @@
               </span>
             </span> -->
           </div>
+          <div class="section-image">
+            <!-- <div id="orbit-animation"></div> -->
+            <!-- <div class="box"></div> -->
+            <img id="scribe-icon-1" src="../assets/scribe_1.svg" />
+          </div>
         </div>
       </div>
       <div class="page-section full-page">
-        <div class="side-2-side right">
+        <div class="side-2-side left">
+          <div class="section-image">
+            <img id="scribe-icon-2" src="../assets/scribe_2.svg" />
+          </div>
           <div class="section-text">
             <div class="section-title">
               Simplicity <br />in Numbers
@@ -107,16 +114,10 @@
               </span>
             </span> -->
           </div>
-          <div class="section-image">
-            <img id="scribe-icon-2" src="../assets/scribe_2.svg" />
-          </div>
         </div>
       </div>
       <div class="page-section full-page">
-        <div class="side-2-side left">
-          <div class="section-image">
-            <img id="scribe-icon-3" src="../assets/scribe_3.svg" />
-          </div>
+        <div class="side-2-side right">
           <div class="section-text">
             <div class="section-title">
               Available <br />On-the-go
@@ -133,6 +134,9 @@
                 <span class="fa fa-arrow-right"></span>
               </span>
             </span> -->
+          </div>
+          <div class="section-image">
+            <img id="scribe-icon-3" src="../assets/scribe_3.svg" />
           </div>
         </div>
       </div>

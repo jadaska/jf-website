@@ -20,13 +20,17 @@
 <template>
   <div class="product-col">
     <div class="main-page">
+      <img class="image-module" src="../assets/img_3.svg"></img>
       <div class="title-module">
-        <img class="atticus-logo" src="@/../public/futura_atticus.svg"></img>
-        <div class="product-title">
+        <!-- <img class="atticus-logo" src="@/../public/futura_atticus.svg"></img> -->
+        <div class="product-title blue">
           Atticus
         </div>
         <div class="product-sub-title">
           A platform for optimizing <br>legal workflow
+        </div>
+        <div class="scroll-down blue">
+          Learn More
         </div>
       </div>
       <!-- <span class="scroll-down">
@@ -38,12 +42,7 @@
     </div>
     <div class="product-page">
       <div class="page-section full-page">
-        <div class="side-2-side left">
-          <div class="section-image">
-            <!-- <div id="orbit-animation"></div> -->
-            <!-- <div class="box"></div> -->
-            <img id="orbit-image" src="../assets/planet-01.svg" />
-          </div>
+        <div class="side-2-side right">
           <div class="section-text">
             <div class="section-title blue">
               Streamline <br />Your Work
@@ -62,10 +61,18 @@
               </span>
             </span> -->
           </div>
+          <div class="section-image">
+            <!-- <div id="orbit-animation"></div> -->
+            <!-- <div class="box"></div> -->
+            <img id="orbit-image" src="../assets/planet-01.svg" />
+          </div>
         </div>
       </div>
       <div class="page-section full-page">
-        <div class="side-2-side right">
+        <div class="side-2-side left">
+          <div class="section-image">
+            <img id="intelligent-image" src="../assets/intelligent-01.svg" />
+          </div>
           <div class="section-text">
             <div class="section-title blue">
               Intelligent <br />Support
@@ -83,16 +90,10 @@
               </span>
             </span> -->
           </div>
-          <div class="section-image">
-            <img id="intelligent-image" src="../assets/intelligent-01.svg" />
-          </div>
         </div>
       </div>
       <div class="page-section full-page">
-        <div class="side-2-side left">
-          <div class="section-image">
-            <img id="orbit-image" src="../assets/custom-01.svg" />
-          </div>
+        <div class="side-2-side right">
           <div class="section-text">
             <div class="section-title blue">
               Always Learning <br />
@@ -104,6 +105,9 @@
             <div class="section-content">
               As Atticus starts to learn your workflow and preferences, the AI embedded within it will also start to provide recommendations on what else you might like to do, based on tasks that you regularly complete each day.
             </div>
+          </div>
+          <div class="section-image">
+            <img id="orbit-image" src="../assets/custom-01.svg" />
           </div>
         </div>
       </div>

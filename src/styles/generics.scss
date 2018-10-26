@@ -384,12 +384,12 @@ textarea{
           font-size: 50px;
           font-weight: 600;
           @media screen and (max-width: 1300px){
-            font-size: 40px;
+            font-size: 38px;
           }
           @media screen and (max-width: 1000px){
             font-size: 30px;
           }
-          @media screen and (max-width: 7500px){
+          @media screen and (max-width: 750px){
             font-size: 20px;
           }
         }
@@ -399,13 +399,16 @@ textarea{
         bottom: 7%;
         right: 0px;
         padding: 20px 40px;
+        padding-right: 50px;
         font-size: 20px;
         font-weight: 600;
         color: #FFF;
         background-color: $r;
         box-shadow: $z_depth_1;
         @media screen and (max-width: 1300px){
+          font-size: 16px;
           padding: 15px 30px;
+          padding-right: 40px;
         }
         @media screen and (max-width: 1000px){
           display: none;
@@ -463,15 +466,15 @@ textarea{
           margin-bottom: 60px;
         }
         &:first-child{
-          margin-top: 40px;
+          margin-top: 80px;
           @media screen and (max-width: 1300px){
-            margin-top: 30px;
+            margin-top: 60px;
           }
           @media screen and (max-width: 1000px){
-            margin-top: 20px;
+            margin-top: 40px;
           }
           @media screen and (max-width: 600px){
-            margin-top: 10px;
+            margin-top: 20px;
           }
         }
         .button-row{

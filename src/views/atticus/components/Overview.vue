@@ -29,7 +29,7 @@
         <div class="product-sub-title">
           A platform for optimizing <br>legal workflow
         </div>
-        <div class="scroll-down blue">
+        <div class="scroll-down blue" @click="scroll()">
           Learn More
         </div>
       </div>
@@ -41,7 +41,7 @@
       </span> -->
     </div>
     <div class="product-page">
-      <div class="page-section full-page">
+      <div id="first-section" class="page-section full-page">
         <div class="side-2-side right">
           <div class="section-text">
             <div class="section-title blue">
@@ -116,19 +116,17 @@
 </template>
 
 <script>
-  import { TweenLite, TimelineLite } from "gsap";
+  import sectionController from '@/mixins/sectionController.js';
+
   export default{
-    props: [ "sections", "saveScroll" ],
-    mounted: function(){
-      if(this.saveScroll){
-        this.$nextTick(()=>{
-          window.scrollTo( 0, this.saveScroll );
-        })
-      }else{
-        this.$nextTick(()=>{
-          window.scrollTo( 0, 0 );
-        })
-      }
+    mixins: [ sectionController ],
+    methods: {
+      scroll(){
+        var elm = document.getElementById("first-section");
+        if(elm){
+          this.scrollToSection(elm);
+        }
+      },
     }
   }
 </script>

@@ -31,7 +31,7 @@
           Document Creation
         </div>
       </div>
-      <div class="scroll-down">
+      <div class="scroll-down" @click="scroll()">
         Learn More
       </div>
     </div>
@@ -63,7 +63,7 @@
           </div>
         </div>
       </div> -->
-      <div class="page-section full-page">
+      <div id="first-section" class="page-section full-page">
         <div class="side-2-side right">
           <div class="section-text">
             <div class="section-title">
@@ -145,8 +145,17 @@
 </template>
 
 <script>
-  import { TweenLite, TimelineLite } from "gsap";
+  import sectionController from '@/mixins/sectionController.js';
+
   export default{
-    props: [ "appElm", "sections", "saveScroll" ],
+    mixins: [ sectionController ],
+    methods: {
+      scroll(){
+        var elm = document.getElementById("first-section");
+        if(elm){
+          this.scrollToSection(elm);
+        }
+      },
+    }
   }
 </script>

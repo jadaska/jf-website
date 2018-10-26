@@ -365,7 +365,7 @@
           <div class="email" @click="openMail('jwadaska@jurisfutura.com')">jwadaska@jurisfutura.com</div>
         </div> -->
       </div>
-      <div class="or">
+      <!-- <div class="or">
         or
       </div>
       <div class="message-card card">
@@ -437,7 +437,7 @@
             Send
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

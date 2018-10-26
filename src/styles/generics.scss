@@ -304,8 +304,9 @@ textarea{
       width: 100vw;
       position: relative;
       @media screen and (max-width: 1000px){
-        height: calc(50vh - 60px);
-        margin-bottom: 40px;
+        min-height: calc(50vh);
+        height: auto;
+        margin: 40px 0px;
       }
       @media screen and (max-width: 600px){
         flex-direction: column;

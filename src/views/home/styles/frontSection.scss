@@ -6,7 +6,8 @@
   box-shadow: $z_depth_1;
   user-select: none;
   @media screen and (max-width: 1000px){
-    height: calc(50vh - 60px);
+    min-height: calc(50vh);
+    height: auto;
   }
   #future-ribbon{
     position: absolute;

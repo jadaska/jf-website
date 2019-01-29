@@ -84,7 +84,7 @@
 
             </div>
             <div class="section-content">
-              Through scanning the USPTO office action, and extracting the core arguments/information, Scribe Office Action quickly pre-populates a response for the IP practitioner to review.
+              Through scanning the USPTO office action, and extracting the core arguments/information, Respondent quickly pre-populates a response for the IP practitioner to review.
             </div>
           </div>
         </div>

@@ -81,7 +81,7 @@
               Leave the non-billable work to the machines and focus on what matters to you.
             </div>
             <div class="section-content">
-              Using Artificial Intelligence and Machine Learning, Atticus scans your emails and extracts relevant information to your task at hand. Atticus currently focuses on time entry, document management, and docketing-related applications, and is constantly expanding its functionality and intelligence.
+              Using Artificial Intelligence and Machine Learning, Atticus scans your emails and extracts relevant information to apply to your task at hand. Atticus currently focuses on time entry, document management, and docketing-related applications, and is constantly expanding its functionality and intelligence.
             </div>
             <!-- <span class="scroll-down small">
               <span class="scroll-down-row" @click="$router.push('/atticus/intelligent')">

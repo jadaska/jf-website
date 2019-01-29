@@ -57,7 +57,7 @@
             </div>
             <div class="section-content">
               <!-- Juris Futura is a technology subsidiary of US law firm Holland & Hart, created in response to the firm’s first-hand experience of seeing technology drive client value and firm success.  -->
-              Juris Futura is a technology subsidiary of the US law firm Holland & Hart, created in response to the firm’s first-hand experience of increasing client value and firm success through technological innovation.
+              Juris Futura is a technology subsidiary of the US law firm Holland & Hart, created in response to the firm’s success with technological innovation.
               <br /><br />
               <!-- Through years of direct collaboration with our legal practitioners, our team of technologists and business professionals observed that practitioners share similar challenges: -->
               Through years of direct collaboration with the firm’s legal practitioners, our team of technologists and business professionals witnessed a common pattern of challenges:

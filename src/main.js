@@ -14,6 +14,8 @@ import Select from './components/inputs/Select.vue';
 import Textarea from './components/inputs/Textarea.vue';
 import Datepicker from './components/inputs/Date.vue';
 
+import requests from './mixins/requests.js';
+
 Vue.config.productionTip = false;
 
 Vue.use(VeeValidate);
@@ -57,6 +59,8 @@ Vue.component("v-input", Input)
 Vue.component("v-select", Select)
 Vue.component("v-textarea", Textarea)
 Vue.component("v-date", Datepicker)
+
+Vue.mixin(requests);
 
 new Vue({
   router,

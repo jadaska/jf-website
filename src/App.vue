@@ -409,8 +409,12 @@
           @media screen and (max-width: 540px){
             font-size: 10px;
           }
-          &:hover{
-            cursor: pointer;
+          div{
+            margin: 0px 8px;
+            &:hover{
+              cursor: pointer;
+              color: #FFF;
+            }
           }
           // @media screen and (max-width: 1550px){
           //   font-size: 14px;
@@ -580,7 +584,12 @@
       </div>
     </div>
     <div id="terms-page">
-      Terms + Conditions
+      <div @click="downloadFile('https://jurisfutura.com/futura-landing/Juris_Futura_Terms_of_Use.pdf')">
+        Terms + Conditions
+      </div>/
+      <div @click="downloadFile('https://jurisfutura.com/futura-landing/Juris_Futura_Privacy_Policy.pdf')">
+        Privacy Policy
+      </div>
     </div>
   </div>
 </template>

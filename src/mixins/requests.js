@@ -66,5 +66,16 @@ export default {
         }
       });
     },
+    downloadFile(url){
+      window.onbeforeunload = null; // disable page leave warning
+      var link = document.createElement("a");
+      if(url.indexOf("http") < 0){
+        url = "http://" + url;
+      }
+      link.target = "_blank"
+      link.href = url;
+      link.click();
+      window.onbeforeunload = ()=>{ return true; }; // re-enable page leave warning
+    },
   }
 }

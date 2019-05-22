@@ -7,10 +7,8 @@
   <div id="home-page">
     <!-- <mesh></mesh> -->
     <div id="front-section" class="page">
-      <div id="future-ribbon" @click="scrollToMission()">
-        The Future of Law is Here
-      </div>
-      <div class="center-module">
+      <div id="splash-container">
+        <img class="splash-image" src="../../assets/splash_illustration.svg" />
         <div id="punch-title">
           <div class="static">
             We Make <br />Legal Technology
@@ -20,12 +18,15 @@
               {{p}}
             </div>
           </transition>
+          <div id="future-ribbon" @click="scrollToMission()">
+            The Future of Law is Here
+          </div>
         </div>
-        <!-- <div id="punch-sub-title">
-          The Future of Law is Here.
-        </div> -->
-        <!-- <img class="arrow-down" src="@/assets/arrow_down.svg" /> -->
       </div>
+      <!-- <div id="punch-sub-title">
+        The Future of Law is Here.
+      </div> -->
+      <!-- <img class="arrow-down" src="@/assets/arrow_down.svg" /> -->
     </div>
     <div id="message-section">
       <!-- <div id="message-nav">
@@ -71,7 +72,56 @@
       </transition-group>
     </div>
     <div id="product-section">
-      <div class="selection-area" v-if="!mobile">
+      <div class="product-card">
+        <div class="product-name">
+          Respondent
+        </div>
+        <div class="product-description">
+          Rapid Office Action<br />
+          Responses
+        </div>
+        <div class="learn-more">
+          Learn more
+        </div>
+        <div class="product-logo">
+          <img src="../../assets/respondent_logo.svg" />
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="main-card"></div>
+        <div class="solutions-header">
+          Our Solutions
+        </div>
+        <div class="product-name main">
+          Juvo
+        </div>
+        <div class="product-description">
+          A platform for optimizing<br />
+          legal workflows
+        </div>
+        <div class="learn-more">
+          Learn more
+        </div>
+        <div class="product-logo">
+          <img src="../../assets/juvo_logo.svg" />
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-name">
+          Scribe
+        </div>
+        <div class="product-description">
+          Simple and Swift<br />
+          Document Creation
+        </div>
+        <div class="learn-more">
+          Learn more
+        </div>
+        <div class="product-logo">
+          <img src="../../assets/scribe_logo.svg" />
+        </div>
+      </div>
+      <!-- <div class="selection-area" v-if="!mobile">
         <div class="row">
           <div class="selection-title">
             Our Solutions
@@ -118,7 +168,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <contact-footer></contact-footer>
   </div>

@@ -1,352 +1,411 @@
 @import "@/styles/constants.scss";
 
 #product-section {
-  width: 100%;
-  height: 700px;
-  background-color: $lp;
-  color: $w;
   display: flex;
-  @media screen and (max-width: 1550px){
-    height: 500px;
-  }
-  @media screen and (max-width: 1050px){
-    height: 400px;
-  }
-  @media screen and (max-width: 750px){
-    height: 350px;
-  }
-  @media screen and (max-width: 650px){
-    height: 300px;
-  }
-  @media screen and (max-width: 540px){
-    height: auto;
-  }
-	.selection-area {
-    width: 50%;
+  background-color: #69536F;
+  color: #FFF;
+  .product-card {
+    height: 600px;
+    width: 33.33%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: $z_depth_1;
-    z-index: 1;
-    @media screen and (max-width: 750px){
-      width: 55%;
+    position: relative;
+    .solutions-header{
+      z-index: 3;
+      font-size: 34px;
+      margin-bottom: 60px;
+      font-weight: 600;
     }
-    .row{
-      width: 100%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 30px 0px;
-      @media screen and (max-width: 1550px){
-        padding: 20px 0px;
+  	.product-name {
+      z-index: 3;
+      font-family: "fresno", sans-serif;
+      font-size: 40px;
+      letter-spacing: 8px;
+      margin-bottom: 20px;
+      &.main{
+        font-size: 70px;
       }
-      @media screen and (max-width: 650px){
-        padding: 16px 0px;
-      }
-      &:not(:first-child){
-        &:hover{
-          cursor: pointer;
-        }
-        &:active{
-          background-color: $p;
-        }
-      }
-      .select{
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        background-color: $p;
-      }
-      .selection-title {
-        width: 500px;
-        font-weight: 600;
-        font-size: 40px;
-        margin-bottom: 10px;
-        @media screen and (max-width: 1700px){
-          font-size: 40px;
-        }
-        @media screen and (max-width: 1550px){
-          width: 400px;
-          font-size: 32px;
-          margin-bottom: 5px;
-        }
-        @media screen and (max-width: 1250px){
-          font-size: 26px;
-        }
-        @media screen and (max-width: 1050px){
-          width: 300px;
-          font-size: 20px;
-        }
-        @media screen and (max-width: 870px){
-          width: 250px;
-          font-size: 18px;
-        }
-        @media screen and (max-width: 380px){
-          font-size: 14px;
-        }
-        @media screen and (max-width: 650px){
-          width: 200px;
-        }
-  		}
-  		.selection {
-        width: 500px;
-        display: flex;
-        z-index: 1;
-        pointer-events: none;
-        @media screen and (max-width: 1550px){
-          width: 400px;
-        }
-        @media screen and (max-width: 1050px){
-          width: 300px;
-        }
-        @media screen and (max-width: 870px){
-          width: 250px;
-        }
-        @media screen and (max-width: 650px){
-          width: 200px;
-        }
-  			.bullet {
-          width: 34px;
-          height: 15px;
-          background-color: #FFF;
-          margin-top: 10px;
-          margin-right: 40px;
-          @media screen and (max-width: 1700px){
-            width: 30px;
-            height: 14px;
-          }
-          @media screen and (max-width: 1550px){
-           margin-top: 5px;
-           margin-right: 30px;
-         }
-          @media screen and (max-width: 1250px){
-            width: 25px;
-            height: 10px;
-          }
-          @media screen and (max-width: 1050px){
-            width: 20px;
-            height: 8px;
-            margin-top: 3px;
-            margin-right: 20px;
-          }
-          @media screen and (max-width: 850px){
-            width: 12px;
-            height: 6px;
-          }
-          @media screen and (max-width: 540px){
-            width: 12px;
-            height: 6px;
-          }
-          @media screen and (max-width: 380px){
-            width: 10px;
-            height: 4px;
-          }
-  			}
-  			.selection-text {
-          font-size: 28px;
-          font-weight: 500;
-          @media screen and (max-width: 1550px){
-            font-size: 20px;
-          }
-          @media screen and (max-width: 1250px){
-            font-size: 18px;
-          }
-          @media screen and (max-width: 1050px){
-            font-size: 16px;
-          }
-          @media screen and (max-width: 870px){
-            font-size: 14px;
-          }
-          @media screen and (max-width: 700px){
-            font-size: 12px;
-          }
-          @media screen and (max-width: 380px){
-            font-size: 10px;
-          }
-  			}
-  		}
-    }
-	}
-	.product-area {
-    width: 50%;
-    background-color: $dp;
-    // box-shadow: $z_depth_1;
-    z-index: 0;
-    @media screen and (max-width: 750px){
-      width: 45%;
-    }
-    .drop-in-enter-active, .drop-in-leave-active {
-      transition: all 1s;
-    }
-    .drop-in-enter{
-      opacity: 0;
-    }
-    .drop-in-leave-to{
-      opacity: 0;
-    }
-		.product{
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-			.product-module{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        &:hover{
-          cursor: pointer;
-        }
-				.product-logo {
-          height: 130px;
-          margin-bottom: 20px;
-          @media screen and (max-width: 1250px){
-            height: 100px;
-          }
-          @media screen and (max-width: 1050px){
-            height: 80px;
-            margin-bottom: 12px;
-          }
-          @media screen and (max-width: 750px){
-            height: 50px;
-            margin-bottom: 6px;
-          }
-				}
-				.product-name {
-          margin-bottom: 20px;
-          font-family: "fresno",sans-serif;
-          font-size: 60px;
-          letter-spacing: 16px;
-          margin-left: 10px;
-          @media screen and (max-width: 1250px){
-            font-size: 50px;
-            letter-spacing: 12px;
-          }
-          @media screen and (max-width: 1050px){
-            font-size: 40px;
-            letter-spacing: 8px;
-            margin-bottom: 12px;
-          }
-          @media screen and (max-width: 750px){
-            margin-bottom: 6px;
-            font-size: 26px;
-            letter-spacing: 5px;
-          }
-				}
-				.product-learn-more {
-          padding: 2px 4px;
-          font-size: 20px;
-          letter-spacing: 2px;
-          border-bottom: 2px solid rgba(0,0,0,0);
-          color: #FFF;
-          opacity: 0.4;
-          font-weight: 500;
-          @media screen and (max-width: 1250px){
-            font-size: 16px;
-            letter-spacing: 2px;
-          }
-          @media screen and (max-width: 750px){
-            font-size: 12px;
-            letter-spacing: 2px;
-          }
-          &:hover{
-            cursor: pointer;
-            border-bottom: 2px solid #FFF;
-            color: #FFF;
-          }
-				}
-			}
-		}
-	}
-  .mobile-area{
-    width: 100%;
-    background-color: $dp;
-    z-index: 0;
-    padding: 60px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media screen and (max-width: 380px){
-      padding: 40px 0px;
-    }
-    .solutions{
-      font-size: 18px;
+  	}
+  	.product-description {
+      z-index: 3;
+      font-size: 26px;
+      text-align: center;
       margin-bottom: 30px;
-      font-weight: 500;
-      @media screen and (max-width: 380px){
-        font-size: 14px;
-        margin-bottom: 26px;
+  	}
+  	.learn-more {
+      z-index: 3;
+      padding: 8px 20px;
+      color: $y;
+      border: 2px solid $y;
+      margin-bottom: 34px;
+      &:hover{
+        background-color: rgba(255,255,255,0.2);
+        // color: #FFF;
       }
+  	}
+  	.product-logo {
+      z-index: 3;
+      width: 34px;
+  	}
+    .main-card{
+      z-index: 2;
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      width: calc(100% + 10px);
+      height: calc(100% + 20px);
+      background-color: #7A6181;
+      box-shadow: $z_depth_3;
     }
-		.product{
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-			.product-module{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 40px 0px;
-        @media screen and (max-width: 380px){
-          margin: 30px 0px;
-        }
-        &:hover{
-          cursor: pointer;
-        }
-				.product-logo {
-          height: 60px;
-          margin-bottom: 12px;
-          @media screen and (max-width: 380px){
-            height: 50px;
-            margin-bottom: 10px;
-          }
-				}
-				.product-name {
-          font-family: "fresno",sans-serif;
-          font-size: 30px;
-          letter-spacing: 6px;
-          margin-left: 10px;
-          margin-bottom: 16px;
-          @media screen and (max-width: 380px){
-            font-size: 24px;
-            letter-spacing: 5px;
-          }
-				}
-        .product-description{
-          text-align: center;
-          font-size: 12px;
-          margin-bottom: 16px;
-          letter-spacing: 1px;
-          @media screen and (max-width: 380px){
-            font-size: 10px;
-            letter-spacing: 1px;
-          }
-        }
-				.product-learn-more {
-          padding: 2px 4px;
-          font-size: 12px;
-          letter-spacing: 1px;
-          border-bottom: 2px solid rgba(0,0,0,0);
-          color: rgba(255,255,255,0.5);
-          @media screen and (max-width: 380px){
-            font-size: 10px;
-            letter-spacing: 1px;
-          }
-          &:hover{
-            cursor: pointer;
-            border-bottom: 2px solid #FFF;
-            color: #FFF;
-          }
-				}
-			}
-		}
   }
+  // width: 100%;
+  // height: 700px;
+  // background-color: $lp;
+  // color: $w;
+  // display: flex;
+  // @media screen and (max-width: 1550px){
+  //   height: 500px;
+  // }
+  // @media screen and (max-width: 1050px){
+  //   height: 400px;
+  // }
+  // @media screen and (max-width: 750px){
+  //   height: 350px;
+  // }
+  // @media screen and (max-width: 650px){
+  //   height: 300px;
+  // }
+  // @media screen and (max-width: 540px){
+  //   height: auto;
+  // }
+	// .selection-area {
+  //   width: 50%;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+  //   box-shadow: $z_depth_1;
+  //   z-index: 1;
+  //   @media screen and (max-width: 750px){
+  //     width: 55%;
+  //   }
+  //   .row{
+  //     width: 100%;
+  //     position: relative;
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+  //     padding: 30px 0px;
+  //     @media screen and (max-width: 1550px){
+  //       padding: 20px 0px;
+  //     }
+  //     @media screen and (max-width: 650px){
+  //       padding: 16px 0px;
+  //     }
+  //     &:not(:first-child){
+  //       &:hover{
+  //         cursor: pointer;
+  //       }
+  //       &:active{
+  //         background-color: $p;
+  //       }
+  //     }
+  //     .select{
+  //       position: absolute;
+  //       top: 0px;
+  //       left: 0px;
+  //       width: 100%;
+  //       height: 100%;
+  //       z-index: 0;
+  //       background-color: $p;
+  //     }
+  //     .selection-title {
+  //       width: 500px;
+  //       font-weight: 600;
+  //       font-size: 40px;
+  //       margin-bottom: 10px;
+  //       @media screen and (max-width: 1700px){
+  //         font-size: 40px;
+  //       }
+  //       @media screen and (max-width: 1550px){
+  //         width: 400px;
+  //         font-size: 32px;
+  //         margin-bottom: 5px;
+  //       }
+  //       @media screen and (max-width: 1250px){
+  //         font-size: 26px;
+  //       }
+  //       @media screen and (max-width: 1050px){
+  //         width: 300px;
+  //         font-size: 20px;
+  //       }
+  //       @media screen and (max-width: 870px){
+  //         width: 250px;
+  //         font-size: 18px;
+  //       }
+  //       @media screen and (max-width: 380px){
+  //         font-size: 14px;
+  //       }
+  //       @media screen and (max-width: 650px){
+  //         width: 200px;
+  //       }
+  // 		}
+  // 		.selection {
+  //       width: 500px;
+  //       display: flex;
+  //       z-index: 1;
+  //       pointer-events: none;
+  //       @media screen and (max-width: 1550px){
+  //         width: 400px;
+  //       }
+  //       @media screen and (max-width: 1050px){
+  //         width: 300px;
+  //       }
+  //       @media screen and (max-width: 870px){
+  //         width: 250px;
+  //       }
+  //       @media screen and (max-width: 650px){
+  //         width: 200px;
+  //       }
+  // 			.bullet {
+  //         width: 34px;
+  //         height: 15px;
+  //         background-color: #FFF;
+  //         margin-top: 10px;
+  //         margin-right: 40px;
+  //         @media screen and (max-width: 1700px){
+  //           width: 30px;
+  //           height: 14px;
+  //         }
+  //         @media screen and (max-width: 1550px){
+  //          margin-top: 5px;
+  //          margin-right: 30px;
+  //        }
+  //         @media screen and (max-width: 1250px){
+  //           width: 25px;
+  //           height: 10px;
+  //         }
+  //         @media screen and (max-width: 1050px){
+  //           width: 20px;
+  //           height: 8px;
+  //           margin-top: 3px;
+  //           margin-right: 20px;
+  //         }
+  //         @media screen and (max-width: 850px){
+  //           width: 12px;
+  //           height: 6px;
+  //         }
+  //         @media screen and (max-width: 540px){
+  //           width: 12px;
+  //           height: 6px;
+  //         }
+  //         @media screen and (max-width: 380px){
+  //           width: 10px;
+  //           height: 4px;
+  //         }
+  // 			}
+  // 			.selection-text {
+  //         font-size: 28px;
+  //         font-weight: 500;
+  //         @media screen and (max-width: 1550px){
+  //           font-size: 20px;
+  //         }
+  //         @media screen and (max-width: 1250px){
+  //           font-size: 18px;
+  //         }
+  //         @media screen and (max-width: 1050px){
+  //           font-size: 16px;
+  //         }
+  //         @media screen and (max-width: 870px){
+  //           font-size: 14px;
+  //         }
+  //         @media screen and (max-width: 700px){
+  //           font-size: 12px;
+  //         }
+  //         @media screen and (max-width: 380px){
+  //           font-size: 10px;
+  //         }
+  // 			}
+  // 		}
+  //   }
+	// }
+	// .product-area {
+  //   width: 50%;
+  //   background-color: $dp;
+  //   // box-shadow: $z_depth_1;
+  //   z-index: 0;
+  //   @media screen and (max-width: 750px){
+  //     width: 45%;
+  //   }
+  //   .drop-in-enter-active, .drop-in-leave-active {
+  //     transition: all 1s;
+  //   }
+  //   .drop-in-enter{
+  //     opacity: 0;
+  //   }
+  //   .drop-in-leave-to{
+  //     opacity: 0;
+  //   }
+	// 	.product{
+  //     width: 100%;
+  //     height: 100%;
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+	// 		.product-module{
+  //       display: flex;
+  //       flex-direction: column;
+  //       align-items: center;
+  //       justify-content: center;
+  //       &:hover{
+  //         cursor: pointer;
+  //       }
+	// 			.product-logo {
+  //         height: 130px;
+  //         margin-bottom: 20px;
+  //         @media screen and (max-width: 1250px){
+  //           height: 100px;
+  //         }
+  //         @media screen and (max-width: 1050px){
+  //           height: 80px;
+  //           margin-bottom: 12px;
+  //         }
+  //         @media screen and (max-width: 750px){
+  //           height: 50px;
+  //           margin-bottom: 6px;
+  //         }
+	// 			}
+	// 			.product-name {
+  //         margin-bottom: 20px;
+  //         font-family: "fresno",sans-serif;
+  //         font-size: 60px;
+  //         letter-spacing: 16px;
+  //         margin-left: 10px;
+  //         @media screen and (max-width: 1250px){
+  //           font-size: 50px;
+  //           letter-spacing: 12px;
+  //         }
+  //         @media screen and (max-width: 1050px){
+  //           font-size: 40px;
+  //           letter-spacing: 8px;
+  //           margin-bottom: 12px;
+  //         }
+  //         @media screen and (max-width: 750px){
+  //           margin-bottom: 6px;
+  //           font-size: 26px;
+  //           letter-spacing: 5px;
+  //         }
+	// 			}
+	// 			.product-learn-more {
+  //         padding: 2px 4px;
+  //         font-size: 20px;
+  //         letter-spacing: 2px;
+  //         border-bottom: 2px solid rgba(0,0,0,0);
+  //         color: #FFF;
+  //         opacity: 0.4;
+  //         font-weight: 500;
+  //         @media screen and (max-width: 1250px){
+  //           font-size: 16px;
+  //           letter-spacing: 2px;
+  //         }
+  //         @media screen and (max-width: 750px){
+  //           font-size: 12px;
+  //           letter-spacing: 2px;
+  //         }
+  //         &:hover{
+  //           cursor: pointer;
+  //           border-bottom: 2px solid #FFF;
+  //           color: #FFF;
+  //         }
+	// 			}
+	// 		}
+	// 	}
+	// }
+  // .mobile-area{
+  //   width: 100%;
+  //   background-color: $dp;
+  //   z-index: 0;
+  //   padding: 60px 0px;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   @media screen and (max-width: 380px){
+  //     padding: 40px 0px;
+  //   }
+  //   .solutions{
+  //     font-size: 18px;
+  //     margin-bottom: 30px;
+  //     font-weight: 500;
+  //     @media screen and (max-width: 380px){
+  //       font-size: 14px;
+  //       margin-bottom: 26px;
+  //     }
+  //   }
+	// 	.product{
+  //     width: 100%;
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+	// 		.product-module{
+  //       display: flex;
+  //       flex-direction: column;
+  //       align-items: center;
+  //       justify-content: center;
+  //       margin: 40px 0px;
+  //       @media screen and (max-width: 380px){
+  //         margin: 30px 0px;
+  //       }
+  //       &:hover{
+  //         cursor: pointer;
+  //       }
+	// 			.product-logo {
+  //         height: 60px;
+  //         margin-bottom: 12px;
+  //         @media screen and (max-width: 380px){
+  //           height: 50px;
+  //           margin-bottom: 10px;
+  //         }
+	// 			}
+	// 			.product-name {
+  //         font-family: "fresno",sans-serif;
+  //         font-size: 30px;
+  //         letter-spacing: 6px;
+  //         margin-left: 10px;
+  //         margin-bottom: 16px;
+  //         @media screen and (max-width: 380px){
+  //           font-size: 24px;
+  //           letter-spacing: 5px;
+  //         }
+	// 			}
+  //       .product-description{
+  //         text-align: center;
+  //         font-size: 12px;
+  //         margin-bottom: 16px;
+  //         letter-spacing: 1px;
+  //         @media screen and (max-width: 380px){
+  //           font-size: 10px;
+  //           letter-spacing: 1px;
+  //         }
+  //       }
+	// 			.product-learn-more {
+  //         padding: 2px 4px;
+  //         font-size: 12px;
+  //         letter-spacing: 1px;
+  //         border-bottom: 2px solid rgba(0,0,0,0);
+  //         color: rgba(255,255,255,0.5);
+  //         @media screen and (max-width: 380px){
+  //           font-size: 10px;
+  //           letter-spacing: 1px;
+  //         }
+  //         &:hover{
+  //           cursor: pointer;
+  //           border-bottom: 2px solid #FFF;
+  //           color: #FFF;
+  //         }
+	// 			}
+	// 		}
+	// 	}
+  //}
 }

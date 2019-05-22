@@ -450,7 +450,7 @@
           <div class="nav-menu" v-if="nav_selected == 0" v-click-outside="()=>{nav_selected = -1}">
             <div class="nav-mask"></div>
             <div @click="goTo('/Atticus')" class="nav-link">
-              ATTICUS
+              JUVO
             </div>
             <div @click="goTo('/Respondent')" class="nav-link">
               RESPONDENT
@@ -538,7 +538,7 @@
             Products
           </div>
           <div class="link" @click="goTo('/Atticus')">
-            ATTICUS
+            JUVO
           </div>
           <div class="link" @click="goTo('/Respondent')">
             RESPONDENT

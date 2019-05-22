@@ -15,6 +15,22 @@
   }
 }
 
+.image-module{
+  width: 450px;
+  @media screen and (max-width: 1300px){
+    width: 350px;
+  }
+  @media screen and (max-width: 1000px){
+    width: 260px;
+  }
+  @media screen and (max-width: 750px){
+    width: 32%;
+  }
+  @media screen and (max-width: 600px){
+    width: 50%;
+  }
+}
+
 </style>
 
 <template>

@@ -5,8 +5,10 @@
   height: 700px;
   position: relative;
   background-color: #FFF;
-  overflow-x: hidden;
+  // overflow-y: visible;
+  // overflow-x: hidden;
   max-width: 100vw;
+  // z-index: 5;
   // .swipe-enter-active, .swipe-leave-active {
   //   transition: all 1s;
   // }
@@ -163,9 +165,9 @@
       pointer-events: none;
       .slider{
         position: absolute;
-        top: 0px;
+        top: -10px;
         left: 0px;
-        height: 100%;
+        height: calc(100% + 20px);
         z-index: 1;
         width: $section_width;
         box-shadow: $z_depth_2;

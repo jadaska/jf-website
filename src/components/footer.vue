@@ -5,56 +5,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $b1;
-    color: #FFF;
-    height: 400px;
-    box-shadow: $z_depth_2;
+    background-color: #FFF;
+    color: #7A6181;
+    height: 900px;
+    // box-shadow: $z_depth_2;
     z-index: 1;
-    @media screen and (max-width: 1550px){
-      height: 350px;
-    }
-    @media screen and (max-width: 1050px){
-      height: 300px;
-    }
-    @media screen and (max-width: 750px){
-      height: 250px;
-    }
     .center-module{
       font-size: 28px;
       font-weight: 500;
+      display: flex;
+      align-items: center;
       .message{
-        @media screen and (max-width: 1550px){
-          font-size: 26px;
+        margin-right: 150px;
+        .hello{
+          font-size: 50px;
+          font-weight: 700;
+          margin-bottom: 20px;
         }
-        @media screen and (max-width: 1250px){
-          font-size: 22px;
+        .text{
+
         }
-        @media screen and (max-width: 1050px){
-          font-size: 18px;
+        .contact{
+          margin-top: 40px;
+          margin-bottom: 5px;
+          font-weight: 700;
         }
-        @media screen and (max-width: 870px){
-          font-size: 16px;
-        }
-        @media screen and (max-width: 700px){
-          font-size: 14px;
-        }
-        @media screen and (max-width: 500px){
-          font-size: 12px;
-        }
-        @media screen and (max-width: 400px){
-          font-size: 11px;
-        }
-        @media screen and (max-width: 350px){
-          font-size: 11px;
-        }
-        .email{
-          // font-size: 34px;
-          border-bottom: 2px solid rgba(0,0,0,0);
-          display: inline-block;
-          &:hover{
-            cursor: pointer;
-            border-bottom: 2px solid #FFF;
-          }
+      }
+      .contact-image-container{
+        .contact-image{
+          width: 450px;
         }
       }
     }
@@ -65,9 +44,22 @@
   <div id="contact-page">
     <div class="center-module">
       <div class="message">
-        Want to learn more about our solutions?<br />
-        Contact our team at:<br /><br />
-        <div class="email" @click="openMail()">info@jurisfutura.com</div>
+        <div class="hello">
+          Hello,
+        </div>
+        <div class="text">
+          If you’d like to learn more about how <br />
+          you can benefit from our tools
+        </div>
+        <div class="contact">
+          Contact
+        </div>
+        <div class="email text">
+          Sales@JurisFutura.com
+        </div>
+      </div>
+      <div class="contact-image-container">
+        <img class="contact-image" src="../assets/contact.png" />
       </div>
     </div>
   </div>

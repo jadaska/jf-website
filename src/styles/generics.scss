@@ -123,8 +123,8 @@ textarea{
 
 .section-title{
   margin-bottom: 30px;
-  color: $fr;
-  font-size: 60px;
+  color: $elp;
+  font-size: 50px;
   font-weight: 600;
   line-height: 100%;
   white-space: nowrap;
@@ -149,19 +149,19 @@ textarea{
   &.small{
     font-size: 50px;
   }
-  &.black{
-    color: $fp;
-  }
-  &.blue{
-    color: $b;
-  }
-  &.yellow{
-    color: $y;
-  }
+  // &.black{
+  //   color: $fp;
+  // }
+  // &.blue{
+  //   color: $b;
+  // }
+  // &.yellow{
+  //   color: $y;
+  // }
 }
 .section-sub-title{
   margin-bottom: 30px;
-  color: $fp;
+  color: $r;
   font-size:  32px;
   font-weight: 600;
   @media screen and (max-width: 1300px){
@@ -313,23 +313,23 @@ textarea{
         height: auto;
       }
       .image-module{
-        width: 400px;
+        // width: 400px;
         margin-right: 40px;
         @media screen and (max-width: 1300px){
-          width: 300px;
+          // width: 300px;
           margin-right: 30px;
         }
         @media screen and (max-width: 1000px){
-          width: 260px;
+          // width: 260px;
           margin-right: 30px;
         }
         @media screen and (max-width: 750px){
-          width: 32%;
+          // width: 32%;
           margin-right: 10px;
           margin-left: 60px;
         }
         @media screen and (max-width: 600px){
-          width: 50%;
+          // width: 50%;
           margin-right: 0px;
           margin-left: 0px;
           margin-top: 60px;
@@ -351,47 +351,48 @@ textarea{
           padding: 20px 50px;
         }
         .product-title{
-          margin-bottom: 14px;
+          margin-bottom: 10px;
           font-family: "fresno",sans-serif;
           font-size: 80px;
-          letter-spacing: 12px;
-          color: $r;
+          letter-spacing: 14px;
+          color: $elp;
           @media screen and (max-width: 1300px){
-            font-size: 60px;
+            font-size: 80px;
             letter-spacing: 10px;
           }
           @media screen and (max-width: 1000px){
             font-size: 50px;
             letter-spacing: 8px;
+            margin-bottom: 4px;
           }
           @media screen and (max-width: 750px){
             font-size: 40px;
             letter-spacing: 6px;
           }
-          &.yellow{
-            color: $y;
-          }
-          &.red{
-            color: $r;
-          }
-          &.blue{
-            color: $b;
-          }
+          // &.yellow{
+          //   color: $y;
+          // }
+          // &.red{
+          //   color: $r;
+          // }
+          // &.blue{
+          //   color: $b;
+          // }
         }
         .product-sub-title{
-          color: $lp;
+          color: $elp;
           // text-align: center;
           margin-bottom: 30px;
-          font-size: 50px;
+          font-size: 40px;
           font-weight: 600;
           @media screen and (max-width: 1300px){
-            font-size: 38px;
-          }
-          @media screen and (max-width: 1000px){
             font-size: 30px;
           }
+          @media screen and (max-width: 1000px){
+            font-size: 22px;
+          }
           @media screen and (max-width: 750px){
-            font-size: 20px;
+            font-size: 18px;
           }
         }
       }
@@ -421,18 +422,18 @@ textarea{
         &:active{
           box-shadow: $z_depth_0;
         }
-        &.yellow{
-          background-color: $y;
-          &:hover{
-            background-color: $dy;
-          }
-        }
-        &.blue{
-          background-color: $b;
-          &:hover{
-            background-color: $db;
-          }
-        }
+        // &.yellow{
+        //   background-color: $y;
+        //   &:hover{
+        //     background-color: $dy;
+        //   }
+        // }
+        // &.blue{
+        //   background-color: $b;
+        //   &:hover{
+        //     background-color: $db;
+        //   }
+        // }
       }
     }
     .product-page{

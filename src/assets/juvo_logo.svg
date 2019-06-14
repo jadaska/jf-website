@@ -6,7 +6,12 @@
 	.st0{fill:#F7D372;}
 </style>
 <g id="Group_1323" transform="translate(-738.407 -305.438)">
-	<rect id="Rectangle_1588" x="738.4" y="305.4" class="st0" width="15.8" height="35"/>
-	<path id="Path_1506" class="st0" d="M759.2,305.4v40h-20.8V358h36.3v-52.5H759.2z"/>
+	<rect id="Rectangle_1588" x="802.1" y="305.4" class="st0" width="15.8" height="35"/>
+	<path id="Path_1506" class="st0" d="M822.9,305.4v40h-20.8V358h36.3v-52.5h-15.5V305.4z"/>
+</g>
+<g>
+	<rect y="21.4" class="st0" width="17.3" height="15.5"/>
+	<rect y="0" class="st0" width="17.3" height="16.5"/>
+	<polygon class="st0" points="22.3,0 22.3,37 22.3,42 17.3,42 0,42 0,52.6 36.3,52.6 36.3,0 	"/>
 </g>
 </svg>

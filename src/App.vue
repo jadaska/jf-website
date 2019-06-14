@@ -29,20 +29,24 @@
           height: 60px;
           width: 100%;
           max-width: 100vw;
+          padding: 0px 10px;
           display: flex;
           align-items: center;
-          justify-content: center;
-          box-shadow: $z_depth_1;
+          justify-content: space-between;
           background-color: #FFF;
           z-index: 100;
+          transition: box-shadow 0.4s ease;
           @media screen and (max-width: 750px){
             height: 40px;
+          }
+          &.floating{
+            box-shadow: $z_depth_1;
           }
           #full-nav-container{
             width: 100%;
             height: 100%;
             max-width: 1200px;
-            padding: 0px 40px;
+            padding: 0px 30px;
             display: flex;
             align-items: center;
             @media screen and (max-width: 1300px){
@@ -57,8 +61,9 @@
             }
             #futura-banner-logo{
               height: 30px;
-              width: 205px;
-              margin-right: 30px;
+              width: 30px;
+              margin-right: 15px;
+              transition: transform 0.1s ease;
               @media screen and (max-width: 750px){
                 height: 20px;
                 width: 137px;
@@ -66,14 +71,15 @@
               }
               &:hover{
                 cursor: pointer;
+                transform: scale(1.1);
               }
             }
             .nav-item{
               position: relative;
-              margin: 0px 20px;
-              padding: 3px;
-              font-size: 20px;
-              font-weight: 600;
+              margin: 0px 0px;
+              // padding: 3px;
+              font-size: 18px;
+              font-weight: 700;
               color: $fp;
               letter-spacing: 1px;
               white-space: nowrap;
@@ -88,16 +94,20 @@
                 position: relative;
                 // border: 3px solid #FFF;
                 user-select: none;
-                padding: 2px 4px;
-                border-bottom: 2px solid #FFF;
+                padding: 8px 25px;
+                border-radius: 3px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 &:hover{
                   cursor: pointer;
-                  color: $fp;
-                  border-bottom: 2px solid $p;
+                  // color: $fp;
+                  // border-bottom: 2px solid $p;
+                  color: $fr;
                 }
                 &.active{
-                  color: $fp;
-                  border-bottom: 2px solid $p;
+                  // color: $fp;
+                  // border-bottom: 2px solid $p;
                   // &::after{
                   //   content: "";
                   //   position: absolute;
@@ -112,33 +122,34 @@
               }
               .nav-menu{
                 position: absolute;
-                bottom: -16px;
-                left: -24px;
+                bottom: -5px;
+                left: 0px;
                 transform: translateY(100%);
                 background-color: #FFF;
-                padding: 15px 0px 5px 0px;
+                padding: 15px 0px 15px 0px;
                 box-shadow: $z_depth_1;
                 @media screen and (max-width: 750px){
                   bottom: -8px;
                 }
                 .nav-mask{
                   position: absolute;
-                  top: -5px;
+                  top: -9px;
                   left: 0px;
                   width: 100%;
-                  height: 10px;
+                  height: 15px;
                   background-color: #FFF;
+                  transform: scaleX(1.2);
                 }
                 .nav-link{
                   display: block;
                   text-decoration: none;
-                  padding: 0px 50px 22px 30px;
+                  padding: 10px 50px 10px 30px;
                   // font-family: "fresno",sans-serif;
                   // letter-spacing: 5px;
                   color: $fp;
                   font-size: 20px;
-                  font-weight: 600;
-                  letter-spacing: 1px;
+                  font-weight: 700;
+                  // letter-spacing: 1px;
                   white-space:nowrap;
                   @media screen and (max-width: 750px){
                     font-size: 16px;
@@ -167,6 +178,27 @@
                   color: $fr;
                 }
               }
+            }
+          }
+          #login{
+            position: relative;
+            // margin: 0px 30px;
+            padding: 8px 25px;
+            font-size: 18px;
+            font-weight: 700;
+            color: $fp;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            @media screen and (max-width: 1000px){
+              margin: 0px 10px;
+            }
+            @media screen and (max-width: 750px){
+              margin: 0px 5px;
+              font-size: 14px;
+            }
+            &:hover{
+              cursor: pointer;
+              color: $fr;
             }
           }
           #mobile-nav-container{
@@ -265,7 +297,7 @@
           }
         }
         #view-container{
-          padding-top: 60px;
+          padding-top: 26px;
           height: calc(100% - 60px);
           @media screen and (max-width: 750px){
             padding-top: 40px;
@@ -440,15 +472,20 @@
 
 <template>
   <div id="app">
-    <div id="nav-bar">
+    <div id="nav-bar" :class="{'floating': float_nav}">
       <div id="full-nav-container" v-if="!$store.getters.mobile">
-        <img id="futura-banner-logo" src="@/assets/_logos/futura_horizontal.svg" @click="goTo('/')" />
+        <img id="futura-banner-logo" src="@/assets/_logos/futura_logo.svg" @click="goTo('/')" />
+        <div class="nav-item">
+          <div class="nav-title" @click="goTo('/Contact')">
+            CONTACT
+          </div>
+        </div>
         <div class="nav-item">
           <div class="nav-title" :class="{'active': nav_selected == 0}" @click="nav_selected = 0">
-            Products
+            SOLUTIONS
           </div>
           <div class="nav-menu" v-if="nav_selected == 0" v-click-outside="()=>{nav_selected = -1}">
-            <div class="nav-mask"></div>
+            <div class="nav-mask" v-show="float_nav"></div>
             <div @click="goTo('/Atticus')" class="nav-link">
               JUVO
             </div>
@@ -462,12 +499,12 @@
         </div>
         <div class="nav-item">
           <div class="nav-title" @click="goTo('/Story')">
-            Our Story
+            OUR STORY
           </div>
         </div>
         <div class="nav-item">
           <div class="nav-title" @click="goTo('/Contact')">
-            Contact
+            JOBS
           </div>
         </div>
         <!-- <div class="nav-fill">
@@ -476,7 +513,10 @@
           </div>
         </div> -->
       </div>
-      <div id="mobile-nav-container" v-else>
+      <div id="login" v-if="!$store.getters.mobile">
+        LOGIN
+      </div>
+      <div id="mobile-nav-container" v-if="$store.getters.mobile">
         <div class="menu-button" @click="menu_open = !menu_open">
           <div class="menu-icon" :class="{'back': menu_open}">
             <div class="first"></div>
@@ -600,17 +640,29 @@
       window.addEventListener('resize', this.handleResize)
       this.handleResize();
     },
+    mounted(){
+      this.handleScroll()
+      document.addEventListener('scroll', this.handleScroll);
+    },
     destroyed() {
       window.removeEventListener('resize', this.handleResize)
     },
     data(){
       return{
         nav_selected: -1,
-        menu_open: false
+        menu_open: false,
+        float_nav: false
       }
     },
     methods: {
-      handleResize() {
+      handleScroll(){
+        if((window.pageYOffset || document.scrollTop)  - (document.clientTop || 0)){
+          this.float_nav = true;
+        }else{
+          this.float_nav = false;
+        }
+      },
+      handleResize(){
         this.$store.commit('updateScreenSize', {
           width: window.innerWidth,
           height: window.innerHeight

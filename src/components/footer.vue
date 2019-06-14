@@ -18,12 +18,12 @@
       .message{
         margin-right: 150px;
         .hello{
-          font-size: 50px;
+          font-size: 80px;
           font-weight: 700;
           margin-bottom: 20px;
         }
         .text{
-
+          font-weight: 600;
         }
         .contact{
           margin-top: 40px;

@@ -3,31 +3,121 @@
 @import "@/styles/generics.scss";
 @import "@/styles/buttons.scss";
 
-.atticus-logo{
-  width: 200px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  @media screen and (max-width: 1000px){
-    width: 140px;
+// .respondent-logo{
+//   width: 150px;
+//   margin-right: 20px;
+//   margin-bottom: 10px;
+//   @media screen and (max-width: 1000px){
+//     width: 100px;
+//   }
+//   @media screen and (max-width: 800px){
+//     width: 70px;
+//   }
+// }
+//
+// .image-module{
+//   width: 450px;
+//   @media screen and (max-width: 1300px){
+//     width: 350px;
+//   }
+//   @media screen and (max-width: 1000px){
+//     width: 260px;
+//   }
+//   @media screen and (max-width: 750px){
+//     width: 32%;
+//   }
+//   @media screen and (max-width: 600px){
+//     width: 50%;
+//   }
+// }
+
+.main-page{
+  .product-hook-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    .product-hook {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      position: relative;
+      .flair{
+        position: absolute;
+        &.top{
+          top: 0px;
+          left: 0px;
+          transform: translateX(-70%) translateY(-90%);
+        }
+        &.bottom{
+          bottom: 0px;
+          right: 0px;
+          transform: translateX(70%) translateY(100%);
+        }
+      }
+      .product-title{
+        color: #5D5179;
+        font-size: 56px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .product-sub-title{
+        color: #5D5179;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 40px;
+      }
+      .get-started-container {
+        display: flex;
+        .email {
+          width: 300px;
+          padding: 10px 18px;
+          border: 2px solid #5D5179;
+          border-radius: 3px;
+          margin-right: 10px;
+        }
+        .get-started {
+          padding: 10px 26px;
+          background-color: $r;
+          color: #FFF;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 3px;
+        }
+      }
+    }
   }
-  @media screen and (max-width: 800px){
-    width: 100px;
+  .splash-container{
+    width: 50%;
+    .splash{
+      width: 85%;
+      // margin-left: -50px;
+    }
   }
 }
 
-.image-module{
-  width: 450px;
-  @media screen and (max-width: 1300px){
-    width: 350px;
+.row{
+  &.first-section{
+    margin-bottom: 120px;
+    .relax-image{
+      // transform: scale(0.9);
+    }
   }
-  @media screen and (max-width: 1000px){
-    width: 260px;
+  &.second-section{
+    margin-bottom: 240px;
+    .stride-image{
+      transform: scale(1.4);
+    }
   }
-  @media screen and (max-width: 750px){
-    width: 32%;
-  }
-  @media screen and (max-width: 600px){
-    width: 50%;
+  &.third-section{
+    margin-bottom: 60px;
+    .machine-learning-image{
+      margin-left: 60px;
+      transform: scale(2.2);
+    }
   }
 }
 
@@ -36,94 +126,115 @@
 <template>
   <div class="product-col">
     <div class="main-page">
-      <img class="image-module" src="../assets/img_3.svg"></img>
-      <div class="title-module">
-        <!-- <img class="atticus-logo" src="@/../public/futura_atticus.svg"></img> -->
-        <div class="product-title blue">
-          Atticus
-        </div>
-        <div class="product-sub-title">
-          A platform for optimizing <br>legal workflow
-        </div>
-        <div class="scroll-down blue" @click="scroll()">
-          Learn More
+      <div class="product-hook-container">
+        <div class="product-hook">
+          <!-- <img class="respondent-logo" src="@/../public/respondent.svg"></img> -->
+          <img class="flair top" src="../assets/top_flair.svg" />
+          <div class="product-title">
+            JUVO
+          </div>
+          <div class="product-sub-title">
+            A Better Legal Workflow<br />
+            Inside The Tools You <br />
+            Already Rely On<br />
+          </div>
+          <!-- <div class="scroll-down yellow" @click="scroll()">
+            Learn More
+          </div> -->
+          <div class="get-started-container">
+            <div class="email">
+              Email
+            </div>
+            <div class="get-started">
+              Get Started
+            </div>
+          </div>
+          <img class="flair bottom" src="../assets/bottom_flair.svg" />
         </div>
       </div>
-      <!-- <span class="scroll-down">
-        <span class="scroll-down-row" @click="$emit('scroll-to-section', sections[1])">
-          <span class="fa fa-arrow-down"></span>
-          Learn More
-        </span>
-      </span> -->
+      <div class="splash-container">
+        <img class="splash" src="../assets/platform_computer.svg" />
+      </div>
     </div>
     <div class="product-page">
-      <div id="first-section" class="page-section full-page">
-        <div class="side-2-side right">
-          <div class="section-text">
-            <div class="section-title blue">
-              Streamline <br />Your Work
-            </div>
-            <div class="section-sub-title">
-              Increase productivity, save time, and enjoy a frictionless technology experience.
-            </div>
-            <div class="section-content">
-              It all starts with Atticus. Atticus is a digital platform that brings together attorney workflow tools under one convenient and easy-to-use interface that integrates directly into your favorite applications. This removes the need for you to switch between applications to get your work done.
-              <!-- Atticus is a digital platform that brings together attorney workflow tools under one conveint and easy to use interface that integrates directly into your favorite applications. -->
-            </div>
-            <!-- <span class="scroll-down small">
-              <span class="scroll-down-row" @click="$router.push('/atticus/integrations')">
-                Learn More
-                <span class="fa fa-arrow-right"></span>
-              </span>
-            </span> -->
+      <!-- <div class="page-section full-page">
+        <div class="futura-title">
+          OA Scribe
+        </div>
+        <div class="futura-sub-title">
+          *Something
+        </div>
+        <div class="button-row">
+          <div class="button f-white">
+            Get Started
           </div>
+          <div class="button f-white">
+            See What's New
+          </div>
+        </div>
+      </div> -->
+      <div class="first-section row">
+        <div class="col image">
           <div class="section-image">
             <!-- <div id="orbit-animation"></div> -->
             <!-- <div class="box"></div> -->
-            <img id="orbit-image" src="../assets/planet-01.svg" />
+            <img class="relax-image" src="../assets/relax.svg" />
+          </div>
+        </div>
+        <div class="col text">
+          <div class="section-text">
+            <div class="section-title">
+              Enjoy a frictionless <br />
+              technology experience.
+            </div>
+            <div class="section-sub-title">
+
+            </div>
+            <div class="section-content">
+              Juvo is a digital platform that provides you with cutting edge legal tools under one easy-to-use interface that integrates directly into your favorite applications.
+            </div>
           </div>
         </div>
       </div>
-      <div class="page-section full-page">
-        <div class="side-2-side left">
-          <div class="section-image">
-            <img id="intelligent-image" src="../assets/intelligent-01.svg" />
-          </div>
+      <div class="second-section row">
+        <div class="col text">
           <div class="section-text">
-            <div class="section-title blue">
-              Intelligent <br />Support
+            <div class="section-title yellow">
+              Leave the non-billable<br />
+              work to the machines.
             </div>
             <div class="section-sub-title">
-              Leave the non-billable work to the machines and focus on what matters to you.
+
             </div>
             <div class="section-content">
-              Using Artificial Intelligence and Machine Learning, Atticus scans your emails and extracts relevant information to apply to your task at hand. Atticus currently focuses on time entry, document management, and docketing-related applications, and is constantly expanding its functionality and intelligence.
+              Using Artificial Intelligence and Machine Learning, Juvo will help you extract information, gather resources, draft emails and generate documents.
             </div>
-            <!-- <span class="scroll-down small">
-              <span class="scroll-down-row" @click="$router.push('/atticus/intelligent')">
-                Learn More
-                <span class="fa fa-arrow-right"></span>
-              </span>
-            </span> -->
+          </div>
+        </div>
+        <div class="col image">
+          <div class="section-image">
+            <img class="stride-image" src="../assets/stride.svg" />
           </div>
         </div>
       </div>
-      <div class="page-section full-page">
-        <div class="side-2-side right">
+      <div class="third-section row">
+        <div class="col image">
+          <div class="section-image">
+            <img class="machine-learning-image" src="../assets/machineLearning.gif" />
+          </div>
+        </div>
+        <div class="col text">
           <div class="section-text">
-            <div class="section-title blue">
-              Always Learning <br />
-              Always Evolving
+            <div class="section-title yellow">
+              The more you use it, <br />
+              the better it gets.
             </div>
             <div class="section-sub-title">
-              The more you use it, the better it will get.
+
             </div>
             <div class="section-content">
-              As Atticus starts to learn your workflow and preferences, the AI embedded within it will also start to provide recommendations on what else you might like to do, based on tasks that you regularly complete each day.
+              As you interact with Juvo it will start to adapt to your desired workflow and personal preferences so that you can focus your time on what matters the most.
             </div>
-          </div>
-          <div class="section-image">
-            <img id="orbit-image" src="../assets/custom-01.svg" />
           </div>
         </div>
       </div>
